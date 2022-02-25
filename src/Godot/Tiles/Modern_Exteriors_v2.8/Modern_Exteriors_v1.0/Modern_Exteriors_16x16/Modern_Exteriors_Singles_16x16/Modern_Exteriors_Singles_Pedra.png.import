@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player.png-3d0801c65bdfc563657cfa304115f1c7.stex"
+path="res://.import/Modern_Exteriors_Singles_Pedra.png-d79b7c6ae65095acec0181404689989a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/Player.png"
-dest_files=[ "res://.import/Player.png-3d0801c65bdfc563657cfa304115f1c7.stex" ]
+source_file="res://Tiles/Modern_Exteriors_v2.8/Modern_Exteriors_v1.0/Modern_Exteriors_16x16/Modern_Exteriors_Singles_16x16/Modern_Exteriors_Singles_Pedra.png"
+dest_files=[ "res://.import/Modern_Exteriors_Singles_Pedra.png-d79b7c6ae65095acec0181404689989a.stex" ]
 
 [params]
 
