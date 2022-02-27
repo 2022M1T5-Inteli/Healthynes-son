@@ -14,7 +14,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="MAPA"
+config/name="MED USP"
 run/main_scene="res://World.tscn"
 
 [display]
