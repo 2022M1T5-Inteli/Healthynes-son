@@ -8,6 +8,7 @@ func _physics_process(delta):
 		for body in bodies:
 			if body.name == "Player":
 				$AnimationPlayer.play("idle")
+				get_tree().change_scene("House.tscn")
 				
 				if body.name != "Player":
 					 $AnimationPlayer.play("closed_door")
