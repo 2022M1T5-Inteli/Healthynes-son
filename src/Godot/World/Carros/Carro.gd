@@ -39,7 +39,7 @@ func _physics_process(delta):
 	if bodies:
 		for body in bodies:
 			if body.name == "Player":
-				body.position.x = 0
-				body.position.y = 0
+				body.position.x = 450
+				body.position.y = -300
 				
 	

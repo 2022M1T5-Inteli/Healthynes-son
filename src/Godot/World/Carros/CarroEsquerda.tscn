@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Tiles/Modern_Exteriors_v2.8/Modern_Exteriors_v1.0/Modern_Exteriors_16x16/Vehicles_16x16/Car_classic_blue_complete_.png" type="Texture" id=1]
 [ext_resource path="res://Tiles/Modern_Exteriors_v2.8/Modern_Exteriors_v1.0/Modern_Exteriors_16x16/Vehicles_16x16/Car_classic_red_complete_.png" type="Texture" id=2]
@@ -7,48 +7,6 @@
 [ext_resource path="res://Tiles/Modern_Exteriors_v2.8/Modern_Exteriors_v1.0/Modern_Exteriors_16x16/Vehicles_16x16/Car_classic_green_complete_.png" type="Texture" id=5]
 [ext_resource path="res://Tiles/Modern_Exteriors_v2.8/Modern_Exteriors_v1.0/Modern_Exteriors_16x16/Vehicles_16x16/Car_classic_green_2_complete_.png" type="Texture" id=6]
 [ext_resource path="res://World/Carros/CarroEsquerda.gd" type="Script" id=7]
-
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 80, 37 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 1 )
-region = Rect2( 80, 0, 80, 37 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 1 )
-region = Rect2( 160, 0, 80, 37 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 1 )
-region = Rect2( 240, 0, 80, 37 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 1 )
-region = Rect2( 320, 0, 80, 37 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 1 )
-region = Rect2( 400, 0, 80, 37 )
-
-[sub_resource type="AtlasTexture" id=38]
-region = Rect2( 0, 0, 76, 51 )
-
-[sub_resource type="AtlasTexture" id=39]
-region = Rect2( 76, 0, 76, 51 )
-
-[sub_resource type="AtlasTexture" id=40]
-region = Rect2( 152, 0, 76, 51 )
-
-[sub_resource type="AtlasTexture" id=41]
-region = Rect2( 228, 0, 76, 51 )
-
-[sub_resource type="AtlasTexture" id=42]
-region = Rect2( 304, 0, 76, 51 )
-
-[sub_resource type="AtlasTexture" id=43]
-region = Rect2( 380, 0, 76, 51 )
 
 [sub_resource type="AtlasTexture" id=26]
 atlas = ExtResource( 2 )
@@ -122,30 +80,6 @@ region = Rect2( 320, 0, 80, 79 )
 atlas = ExtResource( 6 )
 region = Rect2( 400, 0, 80, 79 )
 
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 80, 87 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 3 )
-region = Rect2( 80, 0, 80, 87 )
-
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 3 )
-region = Rect2( 160, 0, 80, 87 )
-
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 3 )
-region = Rect2( 240, 0, 80, 87 )
-
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 3 )
-region = Rect2( 320, 0, 80, 87 )
-
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 3 )
-region = Rect2( 400, 0, 80, 87 )
-
 [sub_resource type="AtlasTexture" id=32]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 80, 84 )
@@ -170,13 +104,56 @@ region = Rect2( 320, 0, 80, 84 )
 atlas = ExtResource( 5 )
 region = Rect2( 400, 0, 80, 84 )
 
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 80, 87 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 3 )
+region = Rect2( 80, 0, 80, 87 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 3 )
+region = Rect2( 160, 0, 80, 87 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 240, 0, 80, 87 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
+region = Rect2( 320, 0, 80, 87 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 400, 0, 80, 87 )
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 80, 37 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 80, 0, 80, 37 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 160, 0, 80, 37 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 240, 0, 80, 37 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 320, 0, 80, 37 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 400, 0, 80, 37 )
+
 [sub_resource type="SpriteFrames" id=44]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ) ],
-"loop": true,
-"name": "DireitaAzul",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ) ],
 "loop": true,
 "name": "DireitaVermelho",
@@ -192,18 +169,23 @@ animations = [ {
 "name": "DireitaCiano",
 "speed": 5.0
 }, {
+"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ) ],
+"loop": true,
+"name": "DireitaVerde",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
 "name": "DireitaLaranja",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
-"name": "DireitaVerde",
+"name": "DireitaAzul",
 "speed": 5.0
 } ]
 
-[node name="CarroEsquerda" type="KinematicBody2D"]
+[node name="CarroEsquerda" type="Area2D"]
 script = ExtResource( 7 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
