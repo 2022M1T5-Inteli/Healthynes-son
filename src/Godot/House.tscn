@@ -498,23 +498,29 @@ __meta__ = {
 
 [node name="Cozinha" type="YSort" parent="."]
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Cozinha"]
+[node name="Mesa" type="StaticBody2D" parent="Cozinha"]
 
-[node name="Sprite" type="Sprite" parent="Cozinha/StaticBody2D2"]
-position = Vector2( 88.5565, 43.8359 )
-scale = Vector2( 2.21675, 2.16647 )
+[node name="Sprite" type="Sprite" parent="Cozinha/Mesa"]
+position = Vector2( 85.5566, 40.3359 )
+scale = Vector2( 2.07041, 1.89724 )
 texture = ExtResource( 20 )
 
-[node name="StaticBody2D6" type="StaticBody2D" parent="Cozinha"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cozinha/Mesa"]
+position = Vector2( 85.5566, 40.3359 )
+scale = Vector2( 2.07041, 1.89724 )
+build_mode = 1
+polygon = PoolVector2Array( -19.1057, -10.7187, 18.085, -10.7187, 18.085, 13, 17.602, 13, 16.153, 13, 14.2211, 13, 12.2891, 13, -9.92873, 13, -13.7927, 13, -19.5887, 13, -19.5887, 9.83751, -19.5887, 6.67502 )
 
-[node name="Sprite" type="Sprite" parent="Cozinha/StaticBody2D6"]
-position = Vector2( 89, 36 )
+[node name="Frutas" type="StaticBody2D" parent="Cozinha"]
+
+[node name="Sprite" type="Sprite" parent="Cozinha/Frutas"]
+position = Vector2( 88, 34 )
 scale = Vector2( 1.24983, 1.1543 )
 texture = ExtResource( 17 )
 
-[node name="StaticBody2D7" type="StaticBody2D" parent="Cozinha/StaticBody2D6"]
+[node name="StaticBody2D7" type="StaticBody2D" parent="Cozinha/Frutas"]
 
-[node name="Sprite" type="Sprite" parent="Cozinha/StaticBody2D6/StaticBody2D7"]
+[node name="Sprite" type="Sprite" parent="Cozinha/Frutas/StaticBody2D7"]
 position = Vector2( 290, -44 )
 scale = Vector2( 2.95065, 2.85343 )
 texture = ExtResource( 15 )
@@ -522,11 +528,15 @@ texture = ExtResource( 15 )
 [node name="StaticBody2D4" type="StaticBody2D" parent="Cozinha"]
 
 [node name="Sprite" type="Sprite" parent="Cozinha/StaticBody2D4"]
-position = Vector2( 144, 35 )
-scale = Vector2( 1.74821, 1.55078 )
+position = Vector2( 139, 32 )
+scale = Vector2( 1.60744, 1.36914 )
 texture = ExtResource( 18 )
 hframes = 2
 frame = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cozinha/StaticBody2D4"]
+position = Vector2( 139, 32 )
+scale = Vector2( 1.60744, 1.36914 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Cozinha"]
 
@@ -538,8 +548,8 @@ texture = ExtResource( 21 )
 [node name="StaticBody2D3" type="StaticBody2D" parent="Cozinha"]
 
 [node name="Sprite" type="Sprite" parent="Cozinha/StaticBody2D3"]
-position = Vector2( 33, 34 )
-scale = Vector2( 1.88155, 1.56641 )
+position = Vector2( 31.9442, 30.9687 )
+scale = Vector2( 1.74077, 1.37695 )
 texture = ExtResource( 18 )
 hframes = 2
 
@@ -618,7 +628,7 @@ texture = ExtResource( 48 )
 position = Vector2( 5, 3 )
 
 [node name="Sprite" type="Sprite" parent="Quarto1/Abajour"]
-position = Vector2( 368, 153 )
+position = Vector2( 374, 99 )
 scale = Vector2( 2.04067, 2.29995 )
 texture = ExtResource( 45 )
 
