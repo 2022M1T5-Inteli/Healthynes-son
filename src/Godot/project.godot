@@ -17,6 +17,11 @@ _global_script_class_icons={
 config/name="MED USP"
 run/main_scene="res://World.tscn"
 
+[autoload]
+
+vars="*res://World/Mini-games/Pacman.tscn"
+tempo="*res://World/Mini-games/Pacman/tempo/scripts/timer_label.gd"
+
 [display]
 
 window/size/width=320
@@ -88,4 +93,4 @@ attack={
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://World/default_env.tres"

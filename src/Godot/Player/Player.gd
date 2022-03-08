@@ -41,6 +41,6 @@ func andar_state(delta):
 		animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, friccao * delta)
 	
-	velocity = move_and_slide(velocity) #COLLISION
+	move_and_slide(velocity) #COLLISION
 
 

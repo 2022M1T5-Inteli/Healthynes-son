@@ -1,0 +1,229 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Enemies/Bat.png" type="Texture" id=2]
+[ext_resource path="res://World/Mini-games/Pacman/Mão.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Mini-games/Pacman/tempo/scripts/timer_label.gd" type="Script" id=6]
+[ext_resource path="res://World/Mini-games/Pacman/Pontuacao.gd" type="Script" id=7]
+[ext_resource path="res://World/Mini-games/Pacman/tempo/pngegg.png" type="Texture" id=8]
+[ext_resource path="res://World/Mini-games/Pacman/tempo/Basic Comical Regular NC.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+"
+
+[sub_resource type="DynamicFont" id=4]
+size = 7
+outline_size = 2
+outline_color = Color( 0.160784, 0.0117647, 0, 0 )
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://World/tempo/Basic Comical Regular NC.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 15
+font_data = SubResource( 2 )
+
+[node name="Fase" type="Node2D"]
+position = Vector2( 0, -1 )
+script = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_priority = 100
+
+[node name="Pontuacao" type="Node2D" parent="CanvasLayer"]
+visible = false
+script = ExtResource( 7 )
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Pontuacao"]
+margin_right = 320.0
+margin_bottom = 180.0
+color = Color( 0, 0, 0, 0.156863 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Pontuacao"]
+margin_left = 112.0
+margin_top = 40.0
+margin_right = 201.0
+margin_bottom = 163.0
+color = Color( 0.517647, 0.45098, 0.45098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer/Pontuacao"]
+margin_left = 112.0
+margin_top = 40.0
+margin_right = 201.0
+margin_bottom = 137.0
+color = Color( 0.517647, 0.45098, 0.45098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CanvasLayer/Pontuacao"]
+pause_mode = 2
+margin_left = 121.0
+margin_top = 115.0
+margin_right = 197.0
+margin_bottom = 135.0
+text = "reiniciar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="CanvasLayer/Pontuacao"]
+margin_left = 122.0
+margin_top = 139.0
+margin_right = 196.0
+margin_bottom = 159.0
+text = "continuar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tempo" type="Label" parent="CanvasLayer/Pontuacao"]
+anchor_right = 1.0
+margin_left = -98.0
+margin_top = 98.0
+margin_right = 414.0
+margin_bottom = 152.0
+custom_colors/font_color = Color( 1, 0.772549, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "\"00:00:00:00:00\""
+align = 1
+script = ExtResource( 6 )
+
+[node name="P" type="Label" parent="CanvasLayer/Pontuacao"]
+margin_left = 125.0
+margin_top = 41.0
+margin_right = 191.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 3 )
+text = "Pontuacao"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="CanvasLayer/Pontuacao"]
+position = Vector2( 128, 81 )
+scale = Vector2( 0.0336914, 0.03125 )
+texture = ExtResource( 8 )
+
+[node name="Sprite3" type="Sprite" parent="CanvasLayer/Pontuacao"]
+position = Vector2( 156, 81 )
+scale = Vector2( 0.0336914, 0.03125 )
+texture = ExtResource( 8 )
+
+[node name="Sprite4" type="Sprite" parent="CanvasLayer/Pontuacao"]
+position = Vector2( 184, 81 )
+scale = Vector2( 0.0336914, 0.03125 )
+texture = ExtResource( 8 )
+
+[node name="timer_label" type="Label" parent="."]
+margin_left = -99.0
+margin_top = 4.0
+margin_right = 413.0
+margin_bottom = 58.0
+custom_colors/font_color = Color( 1, 0.772549, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "\"00:00:00:00:00\""
+align = 1
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Iten" type="Node2D" parent="."]
+
+[node name="Iten" type="StaticBody2D" parent="Iten" groups=["Itens"]]
+position = Vector2( 166, 57 )
+
+[node name="Sprite" type="Sprite" parent="Iten/Iten"]
+texture = ExtResource( 2 )
+hframes = 5
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Iten/Iten"]
+polygon = PoolVector2Array( -8, -1, -8, 0, -7, 0, -7, 1, -4, 1, -4, 0, -1, 0, -1, 1, 0, 1, 0, 0, 1, 0, 1, -1, 2, -1, 2, 0, 3, 0, 3, -1, 6, -1, 5, -1, 5, 0, 8, 0, 8, -2, 7, -2, 7, -4, 6, -4, 6, -6, 5, -6, 5, -7, 4, -7, 4, -9, 3, -9, 3, -10, 2, -10, 2, -9, 0, -9, 0, -10, -1, -10, -1, -9, -2, -9, -2, -7, -3, -7, -3, -6, -4, -6, -4, -4, -5, -4, -5, -3, -6, -3, -6, -2, -7, -2, -7, -1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Iten2" type="StaticBody2D" parent="Iten" groups=["Itens"]]
+position = Vector2( 133, 64 )
+
+[node name="Sprite" type="Sprite" parent="Iten/Iten2"]
+texture = ExtResource( 2 )
+hframes = 5
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Iten/Iten2"]
+polygon = PoolVector2Array( -8, -1, -8, 0, -7, 0, -7, 1, -4, 1, -4, 0, -1, 0, -1, 1, 0, 1, 0, 0, 1, 0, 1, -1, 2, -1, 2, 0, 3, 0, 3, -1, 6, -1, 5, -1, 5, 0, 8, 0, 8, -2, 7, -2, 7, -4, 6, -4, 6, -6, 5, -6, 5, -7, 4, -7, 4, -9, 3, -9, 3, -10, 2, -10, 2, -9, 0, -9, 0, -10, -1, -10, -1, -9, -2, -9, -2, -7, -3, -7, -3, -6, -4, -6, -4, -4, -5, -4, -5, -3, -6, -3, -6, -2, -7, -2, -7, -1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Iten3" type="StaticBody2D" parent="Iten" groups=["Itens"]]
+position = Vector2( 163, 86 )
+
+[node name="Sprite" type="Sprite" parent="Iten/Iten3"]
+texture = ExtResource( 2 )
+hframes = 5
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Iten/Iten3"]
+polygon = PoolVector2Array( -8, -1, -8, 0, -7, 0, -7, 1, -4, 1, -4, 0, -1, 0, -1, 1, 0, 1, 0, 0, 1, 0, 1, -1, 2, -1, 2, 0, 3, 0, 3, -1, 6, -1, 5, -1, 5, 0, 8, 0, 8, -2, 7, -2, 7, -4, 6, -4, 6, -6, 5, -6, 5, -7, 4, -7, 4, -9, 3, -9, 3, -10, 2, -10, 2, -9, 0, -9, 0, -10, -1, -10, -1, -9, -2, -9, -2, -7, -3, -7, -3, -6, -4, -6, -4, -4, -5, -4, -5, -3, -6, -3, -6, -2, -7, -2, -7, -1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Iten4" type="StaticBody2D" parent="Iten" groups=["Itens"]]
+position = Vector2( 151, 72 )
+
+[node name="Sprite" type="Sprite" parent="Iten/Iten4"]
+texture = ExtResource( 2 )
+hframes = 5
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Iten/Iten4"]
+polygon = PoolVector2Array( -8, -1, -8, 0, -7, 0, -7, 1, -4, 1, -4, 0, -1, 0, -1, 1, 0, 1, 0, 0, 1, 0, 1, -1, 2, -1, 2, 0, 3, 0, 3, -1, 6, -1, 5, -1, 5, 0, 8, 0, 8, -2, 7, -2, 7, -4, 6, -4, 6, -6, 5, -6, 5, -7, 4, -7, 4, -9, 3, -9, 3, -10, 2, -10, 2, -9, 0, -9, 0, -10, -1, -10, -1, -9, -2, -9, -2, -7, -3, -7, -3, -6, -4, -6, -4, -4, -5, -4, -5, -3, -6, -3, -6, -2, -7, -2, -7, -1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Iten5" type="StaticBody2D" parent="Iten" groups=["Itens"]]
+position = Vector2( 136, 85 )
+
+[node name="Sprite" type="Sprite" parent="Iten/Iten5"]
+texture = ExtResource( 2 )
+hframes = 5
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Iten/Iten5"]
+polygon = PoolVector2Array( -8, -1, -8, 0, -7, 0, -7, 1, -4, 1, -4, 0, -1, 0, -1, 1, 0, 1, 0, 0, 1, 0, 1, -1, 2, -1, 2, 0, 3, 0, 3, -1, 6, -1, 5, -1, 5, 0, 8, 0, 8, -2, 7, -2, 7, -4, 6, -4, 6, -6, 5, -6, 5, -7, 4, -7, 4, -9, 3, -9, 3, -10, 2, -10, 2, -9, 0, -9, 0, -10, -1, -10, -1, -9, -2, -9, -2, -7, -3, -7, -3, -6, -4, -6, -4, -4, -5, -4, -5, -3, -6, -3, -6, -2, -7, -2, -7, -1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 219, 83 )
+
+[node name="Mão" parent="Player" instance=ExtResource( 3 )]
+position = Vector2( 0, -9 )
+
+[connection signal="pressed" from="CanvasLayer/Pontuacao/Button" to="CanvasLayer/Pontuacao" method="_on_Button_pressed"]
