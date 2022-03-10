@@ -4,11 +4,11 @@ func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	var overlapping = false
 	if bodies:
-		$AnimationPlayer.play("closed_door")
 		for body in bodies:
 			if body.name == "Player":
-				$AnimationPlayer.play("idle")
-				get_tree().change_scene("res://World/House.tscn")
+				print("corpo sobre o copo")
+				get_tree().change_scene("MenuTask1.tscn")
 				
 				if body.name != "Player":
-					 $AnimationPlayer.play("closed_door")
+					print("corpo não esta sobre o copo")
+				
