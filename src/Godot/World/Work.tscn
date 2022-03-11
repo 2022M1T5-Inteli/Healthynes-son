@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/Office/office.png" type="Texture" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://Tiles/Office/cadeira-lateralRed.png" type="Texture" id=31]
 [ext_resource path="res://Tiles/Office/caixa-cigarro.png" type="Texture" id=32]
 [ext_resource path="res://Tiles/Office/cigarro.png" type="Texture" id=33]
+[ext_resource path="res://World/Cigarros.gd" type="Script" id=34]
 
 [sub_resource type="TileSet" id=1]
 0/name = "green.png 0"
@@ -67,7 +68,8 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 471, 179 )
+position = Vector2( 693, 434 )
+z_index = 10
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
@@ -498,10 +500,16 @@ scale = Vector2( 0.659672, 0.637468 )
 z_index = 3
 texture = ExtResource( 32 )
 
-[node name="Cigarros2" type="StaticBody2D" parent="Sala3"]
+[node name="Cigarros2" type="Area2D" parent="Sala3"]
+script = ExtResource( 34 )
 
 [node name="Sprite" type="Sprite" parent="Sala3/Cigarros2"]
 position = Vector2( 170.11, 196.399 )
 scale = Vector2( 0.0943316, 0.127524 )
 z_index = 3
 texture = ExtResource( 33 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sala3/Cigarros2"]
+position = Vector2( 170.11, 196.399 )
+scale = Vector2( 0.0943316, 0.127524 )
+polygon = PoolVector2Array( -22.3679, 43.9212, -107.175, 43.9212, -107.175, 12.5545, 136.646, 12.5545, 136.646, 43.9212 )
