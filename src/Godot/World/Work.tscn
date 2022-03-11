@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/Office/office.png" type="Texture" id=2]
@@ -14,6 +14,25 @@
 [ext_resource path="res://Tiles/Office/computador-lateral.png" type="Texture" id=12]
 [ext_resource path="res://Tiles/Office/plantinha.png" type="Texture" id=13]
 [ext_resource path="res://Tiles/Office/gondola.png" type="Texture" id=14]
+[ext_resource path="res://Tiles/Office/jornal.png" type="Texture" id=15]
+[ext_resource path="res://Tiles/Office/mesa2.png" type="Texture" id=16]
+[ext_resource path="res://Tiles/Office/items-office.png" type="Texture" id=17]
+[ext_resource path="res://Tiles/Office/items-office2.png" type="Texture" id=18]
+[ext_resource path="res://Tiles/Office/estante.png" type="Texture" id=19]
+[ext_resource path="res://Tiles/Office/mesas.png" type="Texture" id=20]
+[ext_resource path="res://Tiles/Office/cadeira-costas.png" type="Texture" id=21]
+[ext_resource path="res://Tiles/Office/cadeira-frente.png" type="Texture" id=22]
+[ext_resource path="res://Tiles/Office/lousa.png" type="Texture" id=23]
+[ext_resource path="res://Tiles/Office/telefone.png" type="Texture" id=24]
+[ext_resource path="res://Tiles/Office/arquivos.png" type="Texture" id=25]
+[ext_resource path="res://Tiles/Office/certificados.png" type="Texture" id=26]
+[ext_resource path="res://Tiles/Office/computador-costas.png" type="Texture" id=27]
+[ext_resource path="res://Tiles/Office/lampadinha.png" type="Texture" id=28]
+[ext_resource path="res://Tiles/Office/mesa-reuniao.png" type="Texture" id=29]
+[ext_resource path="res://Tiles/Office/lousa2.png" type="Texture" id=30]
+[ext_resource path="res://Tiles/Office/cadeira-lateralRed.png" type="Texture" id=31]
+[ext_resource path="res://Tiles/Office/caixa-cigarro.png" type="Texture" id=32]
+[ext_resource path="res://Tiles/Office/cigarro.png" type="Texture" id=33]
 
 [sub_resource type="TileSet" id=1]
 0/name = "green.png 0"
@@ -43,9 +62,12 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 position = Vector2( 500, 239 )
 scale = Vector2( 2.63393, 1.97664 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 693, 424 )
+position = Vector2( 471, 179 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
@@ -130,9 +152,356 @@ texture = ExtResource( 4 )
 
 [node name="Sala2" type="YSort" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sala2"]
+[node name="Cadeira1" type="StaticBody2D" parent="Sala2"]
 
-[node name="Sprite" type="Sprite" parent="Sala2/StaticBody2D"]
-position = Vector2( 798, 115 )
+[node name="Sprite" type="Sprite" parent="Sala2/Cadeira1"]
+position = Vector2( 764, 154 )
+scale = Vector2( 1.57619, 1.39362 )
+z_index = 2
+texture = ExtResource( 21 )
+
+[node name="Cadeira2" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Cadeira2"]
+position = Vector2( 841, 153 )
+scale = Vector2( 1.57619, 1.39362 )
+z_index = 3
+texture = ExtResource( 21 )
+
+[node name="Cadeira3" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Cadeira3"]
+position = Vector2( 765, 97 )
+scale = Vector2( 1.57619, 1.39362 )
+texture = ExtResource( 22 )
+
+[node name="Cadeira5" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Cadeira5"]
+position = Vector2( 550, 95 )
+scale = Vector2( 1.57619, 1.39362 )
+texture = ExtResource( 22 )
+
+[node name="Cadeira6" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Cadeira6"]
+position = Vector2( 623, 95 )
+scale = Vector2( 1.57619, 1.39362 )
+texture = ExtResource( 22 )
+
+[node name="Cadeira4" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Cadeira4"]
+position = Vector2( 842, 98 )
+scale = Vector2( 1.57619, 1.39362 )
+texture = ExtResource( 22 )
+
+[node name="ItensGondola" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/ItensGondola"]
+position = Vector2( 763, 124 )
+scale = Vector2( 1.57619, 1.39362 )
+z_index = 2
+texture = ExtResource( 17 )
+
+[node name="Sprite2" type="Sprite" parent="Sala2/ItensGondola"]
+position = Vector2( 838, 126 )
+scale = Vector2( 1.57619, 1.39362 )
+z_index = 2
+texture = ExtResource( 18 )
+
+[node name="MesasGondola" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/MesasGondola"]
+position = Vector2( 762, 137 )
+scale = Vector2( 1.57619, 1.39362 )
+z_index = 1
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="Sala2/MesasGondola"]
+position = Vector2( 840, 137 )
+scale = Vector2( 1.57619, 1.39362 )
+z_index = 1
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MesaJornal" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite2" type="Sprite" parent="Sala2/MesaJornal"]
+position = Vector2( 850, 204 )
+scale = Vector2( 1.89246, 1.81986 )
+z_index = 1
+texture = ExtResource( 15 )
+
+[node name="Sprite" type="Sprite" parent="Sala2/MesaJornal"]
+position = Vector2( 849, 218 )
+scale = Vector2( 1.91309, 1.95487 )
+texture = ExtResource( 11 )
+
+[node name="MesaImpressora" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite2" type="Sprite" parent="Sala2/MesaImpressora"]
+position = Vector2( 525, 206 )
+scale = Vector2( 1.89246, 1.81986 )
+z_index = 1
+texture = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="Sala2/MesaImpressora"]
+position = Vector2( 525, 217 )
+scale = Vector2( 1.91309, 1.95487 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Gondola" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Gondola"]
+position = Vector2( 798, 118 )
 scale = Vector2( 1.57619, 1.39362 )
 texture = ExtResource( 14 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Mesa" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Mesa"]
+position = Vector2( 798, 118 )
+scale = Vector2( 1.57619, 1.39362 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Lousa" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Lousa"]
+position = Vector2( 842, 54 )
+scale = Vector2( 1.57619, 1.39362 )
+texture = ExtResource( 23 )
+
+[node name="Lousa2" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Lousa2"]
+position = Vector2( 763, 54 )
+scale = Vector2( 1.57619, 1.39362 )
+texture = ExtResource( 23 )
+
+[node name="Estante" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Estante"]
+position = Vector2( 706, 67 )
+scale = Vector2( 1.57619, 1.39362 )
+texture = ExtResource( 19 )
+
+[node name="Mesas" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Mesas"]
+position = Vector2( 585, 118 )
+scale = Vector2( 1.57619, 1.39362 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Computador1" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Computador1"]
+position = Vector2( 628, 108 )
+scale = Vector2( 1.57619, 1.39362 )
+texture = ExtResource( 27 )
+
+[node name="Computador2" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Computador2"]
+position = Vector2( 549, 108 )
+scale = Vector2( 1.57619, 1.39362 )
+texture = ExtResource( 27 )
+hframes = 2
+
+[node name="Lampadinha" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Lampadinha"]
+position = Vector2( 571, 105 )
+scale = Vector2( 1.57619, 1.39362 )
+z_index = 3
+texture = ExtResource( 28 )
+
+[node name="Telefone" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Telefone"]
+position = Vector2( 529, 111 )
+scale = Vector2( 1.57619, 1.39362 )
+z_index = 3
+texture = ExtResource( 24 )
+
+[node name="Certificados" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Certificados"]
+position = Vector2( 589, 59 )
+scale = Vector2( 1.57619, 1.39362 )
+z_index = 3
+texture = ExtResource( 26 )
+
+[node name="Arquivos" type="StaticBody2D" parent="Sala2"]
+
+[node name="Sprite" type="Sprite" parent="Sala2/Arquivos"]
+position = Vector2( 664.467, 71.0426 )
+scale = Vector2( 1.39524, 1.3357 )
+z_index = 3
+texture = ExtResource( 25 )
+
+[node name="Sala3" type="YSort" parent="."]
+
+[node name="MesaReuniao" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/MesaReuniao"]
+position = Vector2( 148.5, 170 )
+scale = Vector2( 2.82143, 2.65217 )
+texture = ExtResource( 29 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cadeira" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Cadeira"]
+position = Vector2( 196, 132 )
+scale = Vector2( 1.92381, 1.76923 )
+texture = ExtResource( 31 )
+hframes = 2
+
+[node name="Cadeira2" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Cadeira2"]
+position = Vector2( 196, 160 )
+scale = Vector2( 1.92381, 1.76923 )
+texture = ExtResource( 31 )
+hframes = 2
+
+[node name="Cadeira3" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Cadeira3"]
+position = Vector2( 197, 188 )
+scale = Vector2( 1.92381, 1.76923 )
+texture = ExtResource( 31 )
+hframes = 2
+
+[node name="Cadeira4" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Cadeira4"]
+position = Vector2( 102.429, 135 )
+scale = Vector2( 1.92381, 1.76923 )
+texture = ExtResource( 31 )
+hframes = 2
+frame = 1
+
+[node name="Cadeira5" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Cadeira5"]
+position = Vector2( 102.429, 165 )
+scale = Vector2( 1.92381, 1.76923 )
+texture = ExtResource( 31 )
+hframes = 2
+frame = 1
+
+[node name="Cadeira6" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Cadeira6"]
+position = Vector2( 101.429, 195 )
+scale = Vector2( 1.92381, 1.76923 )
+texture = ExtResource( 31 )
+hframes = 2
+frame = 1
+
+[node name="Lousa" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Lousa"]
+position = Vector2( 149, 66 )
+scale = Vector2( 1.92381, 1.76923 )
+z_index = 2
+texture = ExtResource( 30 )
+
+[node name="Mesas" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Mesas"]
+position = Vector2( 323, 124 )
+scale = Vector2( 1.57619, 1.39362 )
+z_index = 1
+texture = ExtResource( 20 )
+
+[node name="Flor" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Flor"]
+position = Vector2( 232, 93 )
+scale = Vector2( 1.57619, 1.39362 )
+texture = ExtResource( 13 )
+
+[node name="Cadeira7" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Cadeira7"]
+position = Vector2( 288, 102 )
+scale = Vector2( 1.57619, 1.39362 )
+texture = ExtResource( 22 )
+
+[node name="Cadeira8" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Cadeira8"]
+position = Vector2( 360, 102 )
+scale = Vector2( 1.57619, 1.39362 )
+texture = ExtResource( 22 )
+
+[node name="Computador1" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Computador1"]
+position = Vector2( 288, 115 )
+scale = Vector2( 1.57619, 1.39362 )
+z_index = 1
+texture = ExtResource( 27 )
+
+[node name="Computador2" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Computador2"]
+position = Vector2( 361, 113 )
+scale = Vector2( 1.57619, 1.39362 )
+z_index = 1
+texture = ExtResource( 27 )
+hframes = 2
+
+[node name="Lampadinha" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Lampadinha"]
+position = Vector2( 386, 110 )
+scale = Vector2( 1.57619, 1.39362 )
+z_index = 3
+texture = ExtResource( 28 )
+
+[node name="Telefone" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Telefone"]
+position = Vector2( 341, 120 )
+scale = Vector2( 1.57619, 1.39362 )
+z_index = 3
+texture = ExtResource( 24 )
+
+[node name="Cigarros" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Cigarros"]
+position = Vector2( 169.11, 189.399 )
+scale = Vector2( 0.659672, 0.637468 )
+z_index = 3
+texture = ExtResource( 32 )
+
+[node name="Cigarros2" type="StaticBody2D" parent="Sala3"]
+
+[node name="Sprite" type="Sprite" parent="Sala3/Cigarros2"]
+position = Vector2( 170.11, 196.399 )
+scale = Vector2( 0.0943316, 0.127524 )
+z_index = 3
+texture = ExtResource( 33 )
