@@ -443,7 +443,7 @@ __meta__ = {
 position = Vector2( 0, 14 )
 frames = SubResource( 13 )
 animation = "Display"
-frame = 1
+frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true

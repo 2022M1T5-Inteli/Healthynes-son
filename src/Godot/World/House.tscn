@@ -536,16 +536,28 @@ texture = ExtResource( 66 )
 
 [node name="Estante" type="StaticBody2D" parent="Cozinha"]
 
-[node name="Sprite" type="Sprite" parent="Cozinha/Estante"]
-position = Vector2( 198.673, -1.06327 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cozinha/Estante"]
+position = Vector2( 206, 7 )
 scale = Vector2( 2.26925, 2.00744 )
+build_mode = 1
+polygon = PoolVector2Array( -20.5676, -13.4184, 23.0592, -13.4184, 23.4998, 8.50001, -18.5083, 8.96664, -18.949, -6.47591, -22.4744, -6.47591, -22.3303, -13.4184 )
+
+[node name="Sprite" type="Sprite" parent="Cozinha/Estante"]
+position = Vector2( 208.5, 3.43674 )
+scale = Vector2( 2.06383, 2.53685 )
 texture = ExtResource( 68 )
 
 [node name="Pia" type="StaticBody2D" parent="Cozinha"]
 
-[node name="Sprite" type="Sprite" parent="Cozinha/Pia"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cozinha/Pia"]
 position = Vector2( 290, -7 )
 scale = Vector2( 2.07041, 1.89724 )
+build_mode = 1
+polygon = PoolVector2Array( -15.4559, -9.48746, -0.483002, -8.96038, -0.483002, -12.65, 8.21094, -12.65, 8.21094, -9.48746, 14.0069, -9.48746, 14.0069, 18.4478, -15.9389, 18.4478 )
+
+[node name="Sprite" type="Sprite" parent="Cozinha/Pia"]
+position = Vector2( 288, -6 )
+scale = Vector2( 2.07041, 1.91291 )
 texture = ExtResource( 64 )
 
 [node name="Mesa" type="StaticBody2D" parent="Cozinha"]
@@ -578,16 +590,22 @@ hframes = 3
 
 [node name="Cadeira1" type="StaticBody2D" parent="Cozinha"]
 
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Cozinha/Cadeira1"]
+position = Vector2( 139, 32 )
+scale = Vector2( 1.60744, 1.36914 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cozinha/Cadeira1"]
+position = Vector2( 139, 34 )
+scale = Vector2( 1.47039, 1.09082 )
+build_mode = 1
+polygon = PoolVector2Array( 2.04028, -5.50045, 6.12083, -5.50045, 6.12083, 13.7511, -6.12083, 13.7511, -6.80092, -2.75023, 1.36018, -2.75023 )
+
 [node name="Sprite" type="Sprite" parent="Cozinha/Cadeira1"]
 position = Vector2( 139, 34 )
 scale = Vector2( 1.47039, 1.09082 )
 texture = ExtResource( 18 )
 hframes = 2
 frame = 1
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cozinha/Cadeira1"]
-position = Vector2( 139, 32 )
-scale = Vector2( 1.60744, 1.36914 )
 
 [node name="Geladeira" type="StaticBody2D" parent="Cozinha"]
 
@@ -596,9 +614,21 @@ position = Vector2( 102, -28 )
 scale = Vector2( 2.36309, 2.07031 )
 texture = ExtResource( 65 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Cozinha"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cozinha/Geladeira"]
+position = Vector2( 102, -28 )
+scale = Vector2( 2.36309, 2.07031 )
+build_mode = 1
+polygon = PoolVector2Array( -11.8489, 18.8378, 4.65492, 19.3208, 4.65492, 6.76227, 11.0025, 0.966039, 11.4257, 0.966039, 4.23175, -7.24529, 3.80857, -15.9396, -11.0025, -15.9396 )
 
-[node name="Sprite" type="Sprite" parent="Cozinha/StaticBody2D3"]
+[node name="Cadeira2" type="StaticBody2D" parent="Cozinha"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cozinha/Cadeira2"]
+position = Vector2( 33, 35 )
+scale = Vector2( 1.34077, 1.09375 )
+build_mode = 1
+polygon = PoolVector2Array( -6.71256, -12.8, -6.71256, 12.8, 5.96672, 12.8, 5.96672, -0.914286, -3.7292, -0.914286, -3.7292, -12.8 )
+
+[node name="Sprite" type="Sprite" parent="Cozinha/Cadeira2"]
 position = Vector2( 33, 35 )
 scale = Vector2( 1.34077, 1.09375 )
 texture = ExtResource( 18 )
@@ -606,12 +636,24 @@ hframes = 2
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Cozinha"]
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cozinha/StaticBody2D8"]
+position = Vector2( 328, 78 )
+scale = Vector2( 1.88052, 1.7002 )
+build_mode = 1
+polygon = PoolVector2Array( -7.97652, -14.116, 9.57182, -14.116, 9.04005, 1.17633, 3.72238, 0.588165, 2.65884, 5.88166, 6.38121, 5.2935, 5.84944, 14.7042, -4.25414, 14.7042, -3.72237, 4.70533, -1.06354, 5.2935, -1.06354, 0.588165, -7.97652, 0.588165 )
+
 [node name="Sprite" type="Sprite" parent="Cozinha/StaticBody2D8"]
 position = Vector2( 328, 78 )
 scale = Vector2( 1.88052, 1.7002 )
 texture = ExtResource( 19 )
 
 [node name="Fogao" type="StaticBody2D" parent="Cozinha"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cozinha/Fogao"]
+position = Vector2( 41, -39 )
+scale = Vector2( 2.14015, 2.42969 )
+build_mode = 1
+polygon = PoolVector2Array( -1.86903, -20.9903, -8.87788, -20.9903, -8.87788, 21.4019, 8.41063, 22.2251, 7.94337, -20.9903 )
 
 [node name="Sprite" type="Sprite" parent="Cozinha/Fogao"]
 position = Vector2( 41, -39 )
@@ -642,12 +684,24 @@ texture = ExtResource( 35 )
 
 [node name="Cama" type="StaticBody2D" parent="Quarto1"]
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Quarto1/Cama"]
+position = Vector2( 536.172, 46.5001 )
+scale = Vector2( 2.1108, 1.86 )
+build_mode = 1
+polygon = PoolVector2Array( -18.0841, -28.2258, -6.2403, -28.2258, 16.9737, -27.6882, 16.9737, 23.9247, -18.5579, 23.9247 )
+
 [node name="Sprite" type="Sprite" parent="Quarto1/Cama"]
-position = Vector2( 536.172, 45.8144 )
-scale = Vector2( 2.1108, 1.88743 )
+position = Vector2( 536.172, 46.5001 )
+scale = Vector2( 2.1108, 1.86 )
 texture = ExtResource( 34 )
 
 [node name="Guarda-Roupa" type="StaticBody2D" parent="Quarto1"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Quarto1/Guarda-Roupa"]
+position = Vector2( 626, -14 )
+scale = Vector2( 2.04067, 2.29995 )
+build_mode = 1
+polygon = PoolVector2Array( -16.1711, 20.0004, 14.211, 20.0004, 14.211, -20.87, -16.1711, -20.87 )
 
 [node name="Sprite" type="Sprite" parent="Quarto1/Guarda-Roupa"]
 position = Vector2( 626, -14 )
@@ -656,12 +710,24 @@ texture = ExtResource( 33 )
 
 [node name="Penteadeira" type="StaticBody2D" parent="Quarto1"]
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Quarto1/Penteadeira"]
+position = Vector2( 399, -4 )
+scale = Vector2( 1.98808, 2.17775 )
+build_mode = 1
+polygon = PoolVector2Array( -15.5929, -11.9389, -7.54497, -11.9389, -7.54497, -16.5308, 7.04198, -16.5308, 7.04198, -11.4797, 16.5989, -11.4797, 16.5989, 15.6124, -14.5869, 16.0716 )
+
 [node name="Sprite" type="Sprite" parent="Quarto1/Penteadeira"]
 position = Vector2( 399, -4 )
 scale = Vector2( 1.98808, 2.17775 )
 texture = ExtResource( 32 )
 
 [node name="Espelho" type="StaticBody2D" parent="Quarto1"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Quarto1/Espelho"]
+position = Vector2( 678, -10 )
+scale = Vector2( 2.04067, 2.29995 )
+build_mode = 1
+polygon = PoolVector2Array( -7.35052, -17.3917, -7.35052, -13.0438, -10.2907, -13.0438, -9.31067, 18.2613, 11.7608, 18.2613, 11.7608, -13.0438, 8.82062, -13.4786, 8.82062, -17.3917 )
 
 [node name="Sprite" type="Sprite" parent="Quarto1/Espelho"]
 position = Vector2( 678, -10 )
@@ -670,15 +736,27 @@ texture = ExtResource( 40 )
 
 [node name="Banqueta" type="StaticBody2D" parent="Quarto1"]
 
-[node name="Sprite" type="Sprite" parent="Quarto1/Banqueta"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Quarto1/Banqueta"]
 position = Vector2( 471, -5 )
 scale = Vector2( 2.04067, 2.29995 )
+build_mode = 1
+polygon = PoolVector2Array( -4.41031, -13.9133, 6.8605, -13.9133, 6.8605, -4.34792, 9.31067, -4.34792, 9.31067, 15.2177, -9.31067, 15.2177, -9.31067, -4.34792, -3.92027, -4.34792 )
+
+[node name="Sprite" type="Sprite" parent="Quarto1/Banqueta"]
+position = Vector2( 470.673, -4.02466 )
+scale = Vector2( 2.07916, 2.3722 )
 texture = ExtResource( 46 )
 
 [node name="Puffs" type="StaticBody2D" parent="Quarto1"]
 
 [node name="Abajour" type="StaticBody2D" parent="Quarto1"]
 position = Vector2( 5, 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Quarto1/Abajour"]
+position = Vector2( 362, 95 )
+scale = Vector2( 1.687, 1.93258 )
+build_mode = 1
+polygon = PoolVector2Array( -4.14937, -23.2849, 5.33492, -23.2849, 7.70599, -20.6977, 7.70599, -10.8663, 5.33492, -7.76165, 1.18555, -7.2442, 2.37108, 12.4186, 4.74216, 12.9361, 6.52046, 15.5233, 6.52046, 18.1105, -4.14937, 18.6279, -5.33492, 17.0756, -5.33492, 13.971, -3.55661, 12.9361, -0.592758, 12.4186, -0.592758, -7.2442, -4.14937, -7.2442, -5.92767, -10.3489, -5.92767, -20.1803 )
 
 [node name="Sprite" type="Sprite" parent="Quarto1/Abajour"]
 position = Vector2( 362, 95 )
@@ -690,6 +768,12 @@ position = Vector2( -309, 238 )
 
 [node name="Poster" type="StaticBody2D" parent="Quarto2"]
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Quarto2/Poster"]
+position = Vector2( 451, -99 )
+scale = Vector2( 2.1108, 1.88743 )
+build_mode = 1
+polygon = PoolVector2Array( -22.2664, -7.94732, -22.2664, 7.94731, 21.7927, 7.94731, 67.2731, 7.94731, 67.2731, 7.94731, 67.2731, -7.94732 )
+
 [node name="Sprite" type="Sprite" parent="Quarto2/Poster"]
 position = Vector2( 451, -99 )
 scale = Vector2( 2.1108, 1.88743 )
@@ -697,16 +781,27 @@ texture = ExtResource( 56 )
 
 [node name="Cama" type="StaticBody2D" parent="Quarto2"]
 
-[node name="Sprite" type="Sprite" parent="Quarto2/Cama"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Quarto2/Cama"]
 position = Vector2( 537, -35 )
+scale = Vector2( 2.1108, 1.88743 )
+build_mode = 1
+polygon = PoolVector2Array( -10.4226, -20.1332, -10.8963, 18.5437, 12.7914, 18.0139, 12.7914, -19.6034 )
+
+[node name="Sprite" type="Sprite" parent="Quarto2/Cama"]
+position = Vector2( 538, -33 )
 scale = Vector2( 2.1108, 1.88743 )
 texture = ExtResource( 55 )
 
 [node name="Armario" type="StaticBody2D" parent="Quarto2"]
 
-[node name="Sprite" type="Sprite" parent="Quarto2/Armario"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Quarto2/Armario"]
 position = Vector2( 455, -36 )
 scale = Vector2( 2.04067, 2.29995 )
+build_mode = 1
+polygon = PoolVector2Array( -7.35052, -18.6961, -7.35052, -12.1742, -28.422, -12.609, -28.9121, 10.0002, 25.9719, 9.13064, 24.9918, -12.1742, 8.82063, -12.1742, 8.82063, -18.2613 )
+
+[node name="Sprite" type="Sprite" parent="Quarto2/Armario/CollisionPolygon2D"]
+position = Vector2( -1.47011, 1.30438 )
 texture = ExtResource( 54 )
 
 [node name="Robos" type="StaticBody2D" parent="Quarto2"]
@@ -719,13 +814,23 @@ texture = ExtResource( 51 )
 [node name="Table" type="StaticBody2D" parent="Quarto2"]
 position = Vector2( 20, 12 )
 
-[node name="Sprite" type="Sprite" parent="Quarto2/Table"]
-position = Vector2( 437, 32 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Quarto2/Table"]
+position = Vector2( 436, 35 )
 scale = Vector2( 1.875, 1.475 )
+build_mode = 1
+polygon = PoolVector2Array( 1.06667, -26.4407, -17.0667, -10.8475, -17.0667, 0.677963, -1.06667, 16.2712, 17.0667, 2.03389, 17.0667, -10.8475 )
+
+[node name="Sprite" type="Sprite" parent="Quarto2/Table"]
+position = Vector2( 435, 33 )
+scale = Vector2( 1.89583, 1.475 )
 texture = ExtResource( 53 )
 
 [node name="Tapete" type="StaticBody2D" parent="Quarto2"]
 position = Vector2( 10, 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Quarto2/Tapete"]
+position = Vector2( 529, 22 )
+scale = Vector2( 1.875, 1.475 )
 
 [node name="Sprite" type="Sprite" parent="Quarto2/Tapete"]
 position = Vector2( 529, 22 )
@@ -742,6 +847,10 @@ texture = ExtResource( 44 )
 
 [node name="Trem" type="StaticBody2D" parent="Quarto2"]
 position = Vector2( 3, -1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Quarto2/Trem"]
+position = Vector2( 577, 67 )
+polygon = PoolVector2Array( -30, -14, -45, -1, -42, 9, -3, 20, 18, 20, 50, 11, 53, -3, 42, -12, 0, -17 )
 
 [node name="Sprite" type="Sprite" parent="Quarto2/Trem"]
 position = Vector2( 576, 66 )
@@ -782,6 +891,10 @@ texture = ExtResource( 58 )
 hframes = 3
 frame = 2
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Parede Sala/Parede-sala6"]
+position = Vector2( 0, 0.348484 )
+polygon = PoolVector2Array( 5.2148, 13.5909, 5.2148, -11.5, -9.48146, -11.8485, -9.48146, 13.5909 )
+
 [node name="Sala" type="YSort" parent="."]
 
 [node name="Almofadas" type="StaticBody2D" parent="Sala"]
@@ -794,12 +907,25 @@ texture = ExtResource( 35 )
 
 [node name="Sofa2" type="StaticBody2D" parent="Sala"]
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sala/Sofa2"]
+position = Vector2( 676, 265 )
+scale = Vector2( 2.40103, 2.12883 )
+build_mode = 1
+polygon = PoolVector2Array( 12.0781, -19.7291, 11.2452, 22.0779, -13.3276, 22.5476, -12.9111, -11.7435, 1.66595, -12.2133, 2.49893, -19.7291 )
+disabled = true
+
 [node name="Sprite" type="Sprite" parent="Sala/Sofa2"]
-position = Vector2( 689, 256 )
+position = Vector2( 678, 262 )
 scale = Vector2( 2.40103, 2.12883 )
 texture = ExtResource( 16 )
 
 [node name="Estante" type="StaticBody2D" parent="Sala"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sala/Estante"]
+position = Vector2( 476, 188 )
+scale = Vector2( 2.39228, 2.13614 )
+build_mode = 1
+polygon = PoolVector2Array( -15.0484, -15.4484, -14.6304, 16.8528, 17.1385, 17.321, 16.7204, -15.9166 )
 
 [node name="Sprite" type="Sprite" parent="Sala/Estante"]
 position = Vector2( 476, 188 )
@@ -808,15 +934,27 @@ texture = ExtResource( 59 )
 
 [node name="Sofa3" type="StaticBody2D" parent="Sala"]
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sala/Sofa3"]
+position = Vector2( 432, 263 )
+scale = Vector2( 2.39389, 2.01199 )
+build_mode = 1
+polygon = PoolVector2Array( -6.22208, -14.5239, -9.98166, -9.55371, -10.3994, 4.85988, -10.4433, 14.4136, 8.77234, 14.4136, 9.23393, -6.57159, -0.373856, -6.57159, -0.791595, -15.0209 )
+
 [node name="Sprite" type="Sprite" parent="Sala/Sofa3"]
-position = Vector2( 380.895, 316.222 )
+position = Vector2( 433, 262 )
 scale = Vector2( 2.39389, 2.01199 )
 texture = ExtResource( 60 )
 
 [node name="Vasos" type="StaticBody2D" parent="Sala"]
 
-[node name="Sprite" type="Sprite" parent="Sala/Vasos"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sala/Vasos"]
 position = Vector2( 549, 325 )
+scale = Vector2( 1.80123, 1.88474 )
+build_mode = 1
+polygon = PoolVector2Array( -27.7588, -10.081, -27.7588, 9.01981, 24.4278, 9.01981, 23.8726, -9.5504 )
+
+[node name="Sprite" type="Sprite" parent="Sala/Vasos"]
+position = Vector2( 547, 328 )
 scale = Vector2( 1.80123, 1.88474 )
 texture = ExtResource( 62 )
 
@@ -829,7 +967,12 @@ texture = ExtResource( 61 )
 
 [node name="Sofa" type="StaticBody2D" parent="Sala"]
 
-[node name="Sprite" type="Sprite" parent="Sala/Sofa"]
-position = Vector2( 578, 205 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sala/Sofa"]
+position = Vector2( 576, 208 )
 scale = Vector2( 2.4652, 2.18614 )
+polygon = PoolVector2Array( -23.9332, -20.1268, -24.3388, 17.3822, 25.1501, 16.4674, 23.9332, 0.914856, 28.3952, 1.37228, 28.8009, 10.0634, 38.5364, 10.5208, 38.1308, 1.82971, 56.3849, 0.457428, 56.3849, -21.9565, 23.9331, -21.9565, 23.5275, -19.6694 )
+
+[node name="Sprite" type="Sprite" parent="Sala/Sofa"]
+position = Vector2( 577.582, 204.697 )
+scale = Vector2( 2.4826, 2.1645 )
 texture = ExtResource( 21 )
