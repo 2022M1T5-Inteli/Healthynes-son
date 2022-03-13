@@ -8,3 +8,6 @@ func _physics_process(delta):
 		if body.is_in_group("Itens"):
 			body.queue_free()
 			tempo.pontos += 100
+	for body in bodies:
+		if body.is_in_group("Enemy"):
+			tempo.player_dead = true

@@ -24,6 +24,8 @@ func _process(delta):
 	match state:
 		ANDAR:
 			andar_state(delta)
+	if tempo.player_dead:
+		queue_free()
 
 # MOVIMENTACAO 
 func andar_state(delta):

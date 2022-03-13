@@ -26,6 +26,7 @@ tempo="*res://World/Mini-games/Pacman/tempo/scripts/timer_label.gd"
 
 window/size/width=320
 window/size/height=180
+window/size/fullscreen=true
 window/size/test_width=1280
 window/size/test_height=720
 window/stretch/mode="2d"
@@ -90,6 +91,12 @@ attack={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":74,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[layer_names]
+
+2d_physics/layer_1="Environment"
+2d_physics/layer_2=" Player"
+2d_physics/layer_3="Enemy"
 
 [rendering]
 

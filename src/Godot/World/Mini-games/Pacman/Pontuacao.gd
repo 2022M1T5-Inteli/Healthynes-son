@@ -6,6 +6,7 @@ func _input(event):
 		get_tree().paused = true
 		visible = true
 		
+		
 func _process(delta):
 	
 	
@@ -32,9 +33,7 @@ func _process(delta):
 		$ColorRect.visible = false
 		
 		
-func stopTimer():
-	if vars.pontos == 500:
-		tempo.timer_on = false
+
 		
 
 
