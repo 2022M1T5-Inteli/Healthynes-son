@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://World/Mini-games/Pacman/MoveMae/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -7,9 +7,10 @@
 [ext_resource path="res://World/Mini-games/Pacman/tempo/Basic Comical Regular NC.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://World/Mini-games/Pacman/Pontuacao.gd" type="Script" id=6]
 [ext_resource path="res://World/Mini-games/Pacman/tempo/scripts/timer_label.gd" type="Script" id=7]
-[ext_resource path="res://Enemies/Bat.png" type="Texture" id=8]
+[ext_resource path="res://World/Mini-games/Pacman/MoveMae/Iten.gd" type="Script" id=8]
 [ext_resource path="res://World/Mini-games/Pacman/tempo/pngegg.png" type="Texture" id=9]
 [ext_resource path="res://World/Mini-games/Pacman/Mão.tscn" type="PackedScene" id=10]
+[ext_resource path="res://World/Mini-games/Pacman/Itens/Whisky.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=3]
 size = 7
@@ -33,9 +34,6 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 
 [node name="Enemy" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
 position = Vector2( 274, 129 )
-
-[node name="Enemy2" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
-position = Vector2( 21, 23 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 107, 93 )
@@ -168,84 +166,100 @@ text = "\"00:00:00:00:00\""
 align = 1
 script = ExtResource( 7 )
 
-[node name="Iten" type="Node2D" parent="."]
+[node name="Itens" type="Node2D" parent="."]
+script = ExtResource( 8 )
 
-[node name="Iten" type="StaticBody2D" parent="Iten" groups=["Itens"]]
-position = Vector2( 296, 16 )
+[node name="Whisky" type="StaticBody2D" parent="Itens" groups=["Itens"]]
+position = Vector2( 213, 119 )
 
-[node name="Sprite" type="Sprite" parent="Iten/Iten"]
-texture = ExtResource( 8 )
-hframes = 5
+[node name="Whisky" type="Sprite" parent="Itens/Whisky"]
+position = Vector2( 2, 2 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Iten/Iten"]
-polygon = PoolVector2Array( -8, -1, -8, 0, -7, 0, -7, 1, -4, 1, -4, 0, -1, 0, -1, 1, 0, 1, 0, 0, 1, 0, 1, -1, 2, -1, 2, 0, 3, 0, 3, -1, 6, -1, 5, -1, 5, 0, 8, 0, 8, -2, 7, -2, 7, -4, 6, -4, 6, -6, 5, -6, 5, -7, 4, -7, 4, -9, 3, -9, 3, -10, 2, -10, 2, -9, 0, -9, 0, -10, -1, -10, -1, -9, -2, -9, -2, -7, -3, -7, -3, -6, -4, -6, -4, -4, -5, -4, -5, -3, -6, -3, -6, -2, -7, -2, -7, -1 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Itens/Whisky"]
+position = Vector2( 0.166667, 0 )
+scale = Vector2( 0.833333, 1 )
+polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Iten2" type="StaticBody2D" parent="Iten" groups=["Itens"]]
-position = Vector2( 58, 129 )
+[node name="Whisky2" type="StaticBody2D" parent="Itens" groups=["Itens"]]
+position = Vector2( 78, 77 )
 
-[node name="Sprite" type="Sprite" parent="Iten/Iten2"]
-texture = ExtResource( 8 )
-hframes = 5
+[node name="Whisky" type="Sprite" parent="Itens/Whisky2"]
+position = Vector2( 2, 2 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Iten/Iten2"]
-polygon = PoolVector2Array( -8, -1, -8, 0, -7, 0, -7, 1, -4, 1, -4, 0, -1, 0, -1, 1, 0, 1, 0, 0, 1, 0, 1, -1, 2, -1, 2, 0, 3, 0, 3, -1, 6, -1, 5, -1, 5, 0, 8, 0, 8, -2, 7, -2, 7, -4, 6, -4, 6, -6, 5, -6, 5, -7, 4, -7, 4, -9, 3, -9, 3, -10, 2, -10, 2, -9, 0, -9, 0, -10, -1, -10, -1, -9, -2, -9, -2, -7, -3, -7, -3, -6, -4, -6, -4, -4, -5, -4, -5, -3, -6, -3, -6, -2, -7, -2, -7, -1 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Itens/Whisky2"]
+position = Vector2( 0.166667, 0 )
+scale = Vector2( 0.833333, 1 )
+polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Iten3" type="StaticBody2D" parent="Iten" groups=["Itens"]]
-position = Vector2( 183, 129 )
+[node name="Whisky3" type="StaticBody2D" parent="Itens" groups=["Itens"]]
+position = Vector2( 120, 152 )
 
-[node name="Sprite" type="Sprite" parent="Iten/Iten3"]
-texture = ExtResource( 8 )
-hframes = 5
+[node name="Whisky" type="Sprite" parent="Itens/Whisky3"]
+position = Vector2( 2, 2 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Iten/Iten3"]
-polygon = PoolVector2Array( -8, -1, -8, 0, -7, 0, -7, 1, -4, 1, -4, 0, -1, 0, -1, 1, 0, 1, 0, 0, 1, 0, 1, -1, 2, -1, 2, 0, 3, 0, 3, -1, 6, -1, 5, -1, 5, 0, 8, 0, 8, -2, 7, -2, 7, -4, 6, -4, 6, -6, 5, -6, 5, -7, 4, -7, 4, -9, 3, -9, 3, -10, 2, -10, 2, -9, 0, -9, 0, -10, -1, -10, -1, -9, -2, -9, -2, -7, -3, -7, -3, -6, -4, -6, -4, -4, -5, -4, -5, -3, -6, -3, -6, -2, -7, -2, -7, -1 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Itens/Whisky3"]
+position = Vector2( 0.166667, 0 )
+scale = Vector2( 0.833333, 1 )
+polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Iten4" type="StaticBody2D" parent="Iten" groups=["Itens"]]
-position = Vector2( 45, 21 )
+[node name="Whisky4" type="StaticBody2D" parent="Itens" groups=["Itens"]]
+position = Vector2( 32, 90 )
 
-[node name="Sprite" type="Sprite" parent="Iten/Iten4"]
-texture = ExtResource( 8 )
-hframes = 5
+[node name="Whisky" type="Sprite" parent="Itens/Whisky4"]
+position = Vector2( 2, 2 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Iten/Iten4"]
-polygon = PoolVector2Array( -8, -1, -8, 0, -7, 0, -7, 1, -4, 1, -4, 0, -1, 0, -1, 1, 0, 1, 0, 0, 1, 0, 1, -1, 2, -1, 2, 0, 3, 0, 3, -1, 6, -1, 5, -1, 5, 0, 8, 0, 8, -2, 7, -2, 7, -4, 6, -4, 6, -6, 5, -6, 5, -7, 4, -7, 4, -9, 3, -9, 3, -10, 2, -10, 2, -9, 0, -9, 0, -10, -1, -10, -1, -9, -2, -9, -2, -7, -3, -7, -3, -6, -4, -6, -4, -4, -5, -4, -5, -3, -6, -3, -6, -2, -7, -2, -7, -1 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Itens/Whisky4"]
+position = Vector2( 0.166667, 0 )
+scale = Vector2( 0.833333, 1 )
+polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Iten5" type="StaticBody2D" parent="Iten" groups=["Itens"]]
-position = Vector2( 290, 151 )
+[node name="Whisky5" type="StaticBody2D" parent="Itens" groups=["Itens"]]
+position = Vector2( 284, 16 )
 
-[node name="Sprite" type="Sprite" parent="Iten/Iten5"]
-texture = ExtResource( 8 )
-hframes = 5
+[node name="Whisky" type="Sprite" parent="Itens/Whisky5"]
+position = Vector2( 2, 2 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Iten/Iten5"]
-polygon = PoolVector2Array( -8, -1, -8, 0, -7, 0, -7, 1, -4, 1, -4, 0, -1, 0, -1, 1, 0, 1, 0, 0, 1, 0, 1, -1, 2, -1, 2, 0, 3, 0, 3, -1, 6, -1, 5, -1, 5, 0, 8, 0, 8, -2, 7, -2, 7, -4, 6, -4, 6, -6, 5, -6, 5, -7, 4, -7, 4, -9, 3, -9, 3, -10, 2, -10, 2, -9, 0, -9, 0, -10, -1, -10, -1, -9, -2, -9, -2, -7, -3, -7, -3, -6, -4, -6, -4, -4, -5, -4, -5, -3, -6, -3, -6, -2, -7, -2, -7, -1 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Itens/Whisky5"]
+position = Vector2( 0.166667, 0 )
+scale = Vector2( 0.833333, 1 )
+polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
 __meta__ = {
 "_edit_lock_": true
 }

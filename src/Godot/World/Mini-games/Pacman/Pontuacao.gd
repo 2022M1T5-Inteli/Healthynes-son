@@ -2,7 +2,7 @@ extends Node2D
 
 func _input(event):
 	print(tempo.pontos)
-	if tempo.pontos == 500:
+	if tempo.pontos == 2000:
 		get_tree().paused = true
 		visible = true
 		

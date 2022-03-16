@@ -21,7 +21,7 @@ func _process(delta):
 	text = time_passed
 	
 func stopTimer():
-	if tempo.pontos == 500:
+	if tempo.pontos == 2000:
 		timer_on = false
 		
 
