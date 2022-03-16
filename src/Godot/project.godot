@@ -20,7 +20,7 @@ run/main_scene="res://World.tscn"
 [autoload]
 
 vars="*res://World/Mini-games/Pacman.tscn"
-tempo="*res://World/Mini-games/Pacman/tempo/scripts/timer_label.gd"
+tempo="*res://Pacman/tempo/scripts/timer_label.gd"
 
 [display]
 

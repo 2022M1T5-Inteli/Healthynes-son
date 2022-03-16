@@ -6,7 +6,7 @@
 [ext_resource path="res://Tiles/backButton.png" type="Texture" id=4]
 [ext_resource path="res://Tiles/backButtonHover.png" type="Texture" id=5]
 [ext_resource path="res://Tiles/playButtonHover.png" type="Texture" id=6]
-[ext_resource path="res://World/Mini-games/Pacman/Cards/Card1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Pacman/Cards/Card1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Tiles/backgroundMenuTask1.png" type="Texture" id=8]
 
 [node name="Node2D" type="Node2D"]
