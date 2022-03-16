@@ -31,7 +31,7 @@ func _process(delta):
 		$Sprite4.visible = false	
 		$Button2.visible = false
 		$ColorRect.visible = false
-		
+		$ColorRect3.visible = true
 		
 
 		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Pacman/MoveMae/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -11,7 +11,7 @@
 [ext_resource path="res://Pacman/tempo/pngegg.png" type="Texture" id=9]
 [ext_resource path="res://Pacman/Mão.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Pacman/Itens/Whisky.png" type="Texture" id=11]
-
+[ext_resource path="res://Pacman/Mapa/menuPontuação.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=3]
 size = 7
@@ -73,29 +73,31 @@ script = ExtResource( 6 )
 margin_right = 320.0
 margin_bottom = 180.0
 color = Color( 0, 0, 0, 0.156863 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Pontuacao"]
 margin_left = 112.0
 margin_top = 40.0
 margin_right = 201.0
 margin_bottom = 163.0
-color = Color( 0.517647, 0.45098, 0.45098, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color( 0.517647, 0.45098, 0.45098, 0 )
+
+[node name="MenuPontuação" type="Sprite" parent="CanvasLayer/Pontuacao/ColorRect"]
+visible = false
+position = Vector2( 44, 58 )
+scale = Vector2( 2.09375, 2.18311 )
+texture = ExtResource( 12 )
 
 [node name="ColorRect3" type="ColorRect" parent="CanvasLayer/Pontuacao"]
-margin_left = 112.0
-margin_top = 40.0
-margin_right = 201.0
-margin_bottom = 137.0
-color = Color( 0.517647, 0.45098, 0.45098, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = 109.0
+margin_top = 46.0
+margin_right = 198.0
+margin_bottom = 143.0
+color = Color( 0.517647, 0.45098, 0.45098, 0 )
+
+[node name="MenuPontuação2" type="Sprite" parent="CanvasLayer/Pontuacao/ColorRect3"]
+position = Vector2( 47, 41.2852 )
+scale = Vector2( 2.09375, 1.83484 )
+texture = ExtResource( 12 )
 
 [node name="Button" type="Button" parent="CanvasLayer/Pontuacao"]
 pause_mode = 2
