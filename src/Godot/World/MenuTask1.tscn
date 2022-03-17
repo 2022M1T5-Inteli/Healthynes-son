@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Tiles/playButton.png" type="Texture" id=1]
 [ext_resource path="res://Tiles/menu1.png" type="Texture" id=2]
@@ -6,10 +6,8 @@
 [ext_resource path="res://Tiles/backButton.png" type="Texture" id=4]
 [ext_resource path="res://Tiles/backButtonHover.png" type="Texture" id=5]
 [ext_resource path="res://Tiles/playButtonHover.png" type="Texture" id=6]
-[ext_resource path="res://World/Mini-games/Pacman/Cards/Card1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Pacman/Cards/Card1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Tiles/backgroundMenuTask1.png" type="Texture" id=8]
-[ext_resource path="res://World/Mini-games/Pacman/Cards/Card3.tscn" type="PackedScene" id=9]
-[ext_resource path="res://World/Mini-games/Pacman/Cards/Card2.tscn" type="PackedScene" id=10]
 
 [node name="Node2D" type="Node2D"]
 
@@ -76,14 +74,7 @@ collision_layer = 3
 position = Vector2( 0, -13.1664 )
 
 [node name="Card1" parent="CanvasLayer/Cards/Card" instance=ExtResource( 7 )]
-position = Vector2( 1, 1.0128 )
-
-[node name="Card2" parent="CanvasLayer/Cards/Card" instance=ExtResource( 10 )]
-position = Vector2( 1, -1.0128 )
-
-[node name="Card3" parent="CanvasLayer/Cards/Card" instance=ExtResource( 9 )]
-position = Vector2( 0, -2.0256 )
-scale = Vector2( 1, 0.988405 )
+position = Vector2( 4, -1.01282 )
 
 [node name="Area2D" type="Area2D" parent="CanvasLayer"]
 position = Vector2( 160, 98 )

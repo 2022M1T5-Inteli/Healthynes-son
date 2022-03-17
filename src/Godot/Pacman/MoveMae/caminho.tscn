@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Pacman/MoveMae/caminho.gd" type="Script" id=1]
+
+
+[node name="caminho" type="Area2D" groups=["Caminhos"]]
+position = Vector2( 25, 115 )
+script = ExtResource( 1 )
