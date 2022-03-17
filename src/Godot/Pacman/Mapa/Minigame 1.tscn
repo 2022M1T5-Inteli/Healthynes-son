@@ -3151,7 +3151,7 @@ tile_set = SubResource( 17 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 65545, 20, 0, 131081, 26, 0, 262150, 37, 0, 262162, 3, 0, 262163, 3, 0, 262164, 3, 0, 327686, 36, 0, 327688, 23, 0, 327689, 37, 0, 327690, 37, 0, 327697, 5, 0, 393222, 36, 0, 393225, 26, 0, 393226, 26, 0, 393233, 0, 0, 393234, 1, 0, 393235, 1, 0, 393236, 1, 0, 393237, 2, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589842, 30, 0, 655368, 5, 0, 655373, 6, 0, 655376, 31, 0, 720904, 5, 0, 720910, 6, 0, 720913, 31, 0, 786440, 0, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 2, 0 )
+tile_data = PoolIntArray( 65545, 20, 0, 131081, 26, 0, 262150, 37, 0, 262162, 3, 0, 262163, 3, 0, 262164, 3, 0, 327686, 36, 0, 327688, 23, 0, 327689, 37, 0, 327690, 37, 0, 327697, 5, 0, 393222, 36, 0, 393225, 26, 0, 393226, 26, 0, 393233, 0, 0, 393234, 1, 0, 393235, 1, 0, 393236, 1, 0, 393237, 2, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589842, 30, 0, 655368, 5, 0, 655373, 6, 0, 720904, 5, 0, 720910, 6, 0, 786440, 0, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 2, 0 )
 
 [node name="TileMap" type="TileMap" parent="Móveis 3"]
 tile_set = SubResource( 52 )
@@ -3179,7 +3179,7 @@ cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 collision_use_parent = true
 format = 1
-tile_data = PoolIntArray( 13, 0, 0, 14, 0, 0, 65547, 12, 0, 262146, 15, 0, 327682, 15, 0, 327697, 10, 0, 327698, 2, 0, 327699, 2, 0, 327700, 2, 0, 327701, 3, 0, 393235, 30, 0, 393236, 30, 0, 458772, 31, 0, 524305, 16, 0, 655368, 24, 0, 655369, 25, 0, 655370, 25, 0, 655371, 25, 0, 655372, 25, 0, 655373, 26, 0, 655377, 37, 0, 720904, 27, 0, 720905, 28, 0, 720906, 28, 0, 720907, 28, 0, 720908, 28, 0, 720909, 22, 0, 786441, 30, 0, 786442, 30, 0, 786443, 30, 0, 786444, 30, 0 )
+tile_data = PoolIntArray( 13, 0, 0, 14, 0, 0, 65547, 12, 0, 262146, 15, 0, 327682, 15, 0, 327697, 10, 0, 327698, 2, 0, 327699, 2, 0, 327700, 2, 0, 327701, 3, 0, 393235, 30, 0, 393236, 30, 0, 458771, 31, 0, 458773, 31, 0, 655368, 24, 0, 655369, 25, 0, 655370, 25, 0, 655371, 25, 0, 655372, 25, 0, 655373, 26, 0, 655377, 37, 0, 720904, 27, 0, 720905, 28, 0, 720906, 28, 0, 720907, 28, 0, 720908, 28, 0, 720909, 22, 0, 786441, 30, 0, 786442, 30, 0, 786443, 30, 0, 786444, 30, 0 )
 
 [node name="TileMap" type="TileMap" parent="Móveis 2"]
 tile_set = SubResource( 56 )
@@ -3193,7 +3193,7 @@ tile_set = SubResource( 24 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 65545, 22, 0, 65548, 22, 0, 65551, 14, 0, 65552, 16, 0, 65553, 14, 0, 65554, 15, 0, 65555, 15, 0, 65556, 15, 0, 65557, 16, 0, 131075, 6, 0, 131084, 21, 0, 131087, 21, 0, 131088, 21, 0, 131089, 13, 0, 196610, 6, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 1, 0, 196623, 1, 0, 262148, 2, 0, 327699, 24, 0, 327700, 24, 0, 458756, 5, 0, 458769, 11, 0, 589845, 8, 0, 655381, 9, 0, 720898, 3, 0, 720905, 24, 0, 720906, 24, 0, 720907, 24, 0, 720908, 24, 0, 720917, 9, 0, 786453, 10, 0 )
+tile_data = PoolIntArray( 65545, 22, 0, 65548, 22, 0, 65551, 14, 0, 65552, 16, 0, 65553, 14, 0, 65554, 15, 0, 65555, 15, 0, 65556, 15, 0, 65557, 16, 0, 131075, 6, 0, 131084, 21, 0, 131087, 21, 0, 131088, 21, 0, 131089, 13, 0, 196610, 6, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 1, 0, 196623, 1, 0, 262148, 2, 0, 327699, 24, 0, 327700, 24, 0, 458756, 5, 0, 589845, 8, 0, 655381, 9, 0, 720898, 3, 0, 720905, 24, 0, 720906, 24, 0, 720907, 24, 0, 720908, 24, 0, 720917, 9, 0, 786453, 10, 0 )
 
 [node name="cenário" type="TileMap" parent="."]
 tile_set = SubResource( 26 )
@@ -3214,3 +3214,50 @@ frames = SubResource( 34 )
 frame = 1
 speed_scale = 5.0
 script = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 32.5, 74, 45.5, 74, 45.5, 127, 32.5, 127 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 69.5, 66, 91.5, 66, 91.5, 74, 89.5, 106, 86.5, 111, 73.5, 111, 70.5, 106 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 0.5, 48 )
+polygon = PoolVector2Array( 69.5, 66, 91.5, 66, 91.5, 74, 89.5, 106, 86.5, 111, 73.5, 111, 70.5, 106 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 34.5, 153, 47.5, 153, 47.5, 187, 64.5, 187, 64.5, 206, 31.5, 206, 32.5, 153 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 130.5, 160, 130.5, 198, 136.5, 198, 146.5, 207, 206.5, 207, 215.5, 202, 215.5, 182, 222.5, 182, 222.5, 162, 214.5, 160, 207.5, 160, 207.5, 157, 144.5, 157, 144.5, 160, 130.5, 160 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 225.5, 184, 233.5, 184, 233.5, 177, 237.5, 177, 237.5, 198, 226.5, 198, 225.5, 197 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 284.5, 161, 323.5, 161, 323.5, 198, 284.5, 198 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 346.5, 158, 366.5, 158, 366.5, 207, 345.5, 207, 344.5, 158 )
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 32.5, 48, 47.5, 48, 47.5, 32, 63.5, 32, 63.5, 54, 48.5, 54, 48.5, 70, 31.5, 70, 31.5, 48 )
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 32.5, 48, 47.5, 48, 47.5, 32, 63.5, 32, 63.5, 54, 48.5, 54, 48.5, 70, 31.5, 70, 31.5, 48 )
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 176.5, 48, 254.5, 48, 254.5, 74, 176.5, 74 )
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 304.5, 142, 304.5, 128, 367.5, 128, 367.5, 142 )
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 16.5, 224, 384.5, 224, 383.5, 0, 16.5, 0, 16.5, 218, 21.5, 218, 22.5, 31, 95.5, 32, 95.5, 48, 101.5, 48, 101.5, 31, 114.5, 31, 114.5, 40, 124.5, 40, 124.5, 31, 143.5, 31, 143.5, 43, 352.5, 43, 352.5, 31, 377.5, 31, 378.5, 121, 239.5, 122, 239.5, 128, 378.5, 128, 378.5, 218, 101.5, 218, 101.5, 176, 96.5, 176, 96.5, 218, 16.5, 218 )
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="StaticBody2D"]
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 96.5, 64, 101.5, 64, 101.5, 122, 208.5, 122, 208.5, 128, 101.5, 128, 101.5, 160, 96.5, 160 )
