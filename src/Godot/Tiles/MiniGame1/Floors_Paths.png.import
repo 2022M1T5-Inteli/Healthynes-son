@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/16_Grocery_store_16x16.png-3d07d2076adf6a69a8ffe2fee349244f.stex"
+path="res://.import/Floors_Paths.png-18d81f28bb49df36ad5a2ae5c64a7b18.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tiles/MiniGame1/16_Grocery_store_16x16.png"
-dest_files=[ "res://.import/16_Grocery_store_16x16.png-3d07d2076adf6a69a8ffe2fee349244f.stex" ]
+source_file="res://Tiles/MiniGame1/Floors_Paths.png"
+dest_files=[ "res://.import/Floors_Paths.png-18d81f28bb49df36ad5a2ae5c64a7b18.stex" ]
 
 [params]
 

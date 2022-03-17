@@ -37,7 +37,7 @@ font_data = SubResource( 2 )
 position = Vector2( -16, -1 )
 
 [node name="Enemy" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
-position = Vector2( 5694, 160 )
+position = Vector2( 225, 205 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 106, 93 )
@@ -48,22 +48,22 @@ position = Vector2( 0, -9 )
 [node name="Caminhos" type="Node2D" parent="."]
 
 [node name="caminho" parent="Caminhos" instance=ExtResource( 4 )]
-position = Vector2( 13, 127 )
+position = Vector2( 40, 125 )
 
 [node name="caminho2" parent="Caminhos" instance=ExtResource( 4 )]
-position = Vector2( 259, 18 )
+position = Vector2( 263, 54 )
 
 [node name="caminho3" parent="Caminhos" instance=ExtResource( 4 )]
-position = Vector2( 287, 170 )
+position = Vector2( 233, 197 )
 
 [node name="caminho6" parent="Caminhos" instance=ExtResource( 4 )]
-position = Vector2( 167, 69 )
+position = Vector2( 200, 89 )
 
 [node name="caminho4" parent="Caminhos" instance=ExtResource( 4 )]
-position = Vector2( 26, 26 )
+position = Vector2( 54, 53 )
 
 [node name="caminho5" parent="Caminhos" instance=ExtResource( 4 )]
-position = Vector2( 169, 135 )
+position = Vector2( 245, 145 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_priority = 100
@@ -170,20 +170,23 @@ scale = Vector2( 0.0336914, 0.03125 )
 texture = ExtResource( 9 )
 
 [node name="MenuPontuação2" type="Sprite" parent="."]
-position = Vector2( 38, -55 )
-scale = Vector2( 1.51562, 2.26453 )
+position = Vector2( 42, -55 )
+scale = Vector2( 1.6875, 2.26453 )
 texture = ExtResource( 12 )
 
 [node name="timer_label" type="Label" parent="."]
-margin_left = 9.0
+margin_left = 12.0
 margin_top = 3.0
-margin_right = 68.0
+margin_right = 71.0
 margin_bottom = 18.0
 custom_colors/font_color = Color( 1, 0.772549, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "\"00:00:00:00:00\""
 align = 1
 script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Itens" type="Node2D" parent="."]
 script = ExtResource( 8 )

@@ -12,6 +12,7 @@ var a = ((randi() % 4) + 1 )
 var arrived_caminho: bool = false
 onready var line2d = $Line2D
 onready var los = $LineOfSight
+
 var pode = false
 
 # Pega os nodes de outras cenas para serem usados no código e define o array de sorteamento de caminhos
@@ -33,10 +34,12 @@ func _ready():
 # A visão do inimigo sempre rotacionará em direção ao player e se colidirem, irá gerar o path até o player, caso contrario, irá gerar o path até outro lugar
 func _physics_process(delta):
 	line2d.global_position = Vector2.ZERO
+		
 	if velocity == null:
 		print("oi")
 	
 	if player:
+		colision()
 		los.look_at(player.global_position)
 		check_player_in_detection()
 		
@@ -78,6 +81,7 @@ func generate_path():
 		path = levelNavigation.get_simple_path(global_position, player.global_position, false)
 		line2d.points = path
 
+
 # Se navegação e caminho forem diferente de null desenhar o path até um caminho randômico.
 func common_path():
 	var distance_from_caminho = global_position.distance_to(caminho.global_position)
@@ -95,6 +99,12 @@ func change_path():
 	
 	caminho = tree.get_nodes_in_group("Caminhos")[positionPath[randi() % positionPath.size()]]
 	pode = false
+	
+func colision():
+	var distance_from_player = global_position.distance_to(player.global_position)
+	
+	if distance_from_player < 5:
+		$CollisionShape2D.disabled
 	
 # Mover
 func move():
