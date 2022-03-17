@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://Tiles/Modern_Exteriors_v2.8/Modern_Exteriors_v1.0/Modern_Exteriors_16x16/Modern_Exteriors_Singles_16x16/Modern_Exteriors_Singles_44.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -52,6 +52,8 @@
 [ext_resource path="res://Door.tscn" type="PackedScene" id=50]
 [ext_resource path="res://Tiles/Areia_Blob.png" type="Texture" id=51]
 [ext_resource path="res://Tiles/Mar.png" type="Texture" id=52]
+[ext_resource path="res://Pacman/Som/Efeitos/y2meta.com - Everybody Wants To Rule The World - Tears for Fears 8bit Jazz Version (128 kbps).mp3" type="AudioStream" id=53]
+[ext_resource path="res://World.gd" type="Script" id=54]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Modern_Exteriors_Singles_44.png 0"
@@ -323,6 +325,7 @@ extents = Vector2( 1026.5, 101.5 )
 
 [node name="World" type="Node2D"]
 position = Vector2( 715, 37 )
+script = ExtResource( 54 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -463.0 ]
 }
@@ -447,7 +450,7 @@ __meta__ = {
 position = Vector2( 0, 14 )
 frames = SubResource( 13 )
 animation = "Display"
-frame = 3
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -13085,3 +13088,6 @@ shape = SubResource( 15 )
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Barreira/StaticBody2D"]
 position = Vector2( -1016.5, -754.5 )
 shape = SubResource( 16 )
+
+[node name="EWTRTW" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 53 )
