@@ -230,7 +230,7 @@ __meta__ = {
 }
 
 [node name="Whisky3" type="StaticBody2D" parent="Itens" groups=["Itens"]]
-position = Vector2( 149, 140 )
+position = Vector2( 246, 141 )
 
 [node name="Whisky" type="Sprite" parent="Itens/Whisky3"]
 position = Vector2( 2, 2 )

@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export(int) var SPEED: int = 60
+export(int) var SPEED: int = 40
 var velocity: Vector2 = Vector2.ZERO
 var path: Array = []    # Posições do caminho traçado em generate_path()
 var levelNavigation: Navigation2D = null
@@ -13,10 +13,22 @@ var arrived_caminho: bool = false
 onready var line2d = $Line2D
 onready var los = $LineOfSight
 
+
+onready var animationPlayer = $AnimationPlayer
+onready var animationTree = $AnimationTree
+onready var animationState = animationTree.get("parameters/playback")
+const aceleracao = 500
+const velocidade_Maxima = 80
+const friccao = 500
+# ativar a arvore de animacao quando o jogo for iniciado
+
+	
+
 var pode = false
 
 # Pega os nodes de outras cenas para serem usados no código e define o array de sorteamento de caminhos
 func _ready():
+	animationTree.active = true
 	positionPath.append(0)
 	positionPath.append(1)
 	positionPath.append(2)
@@ -33,6 +45,7 @@ func _ready():
 
 # A visão do inimigo sempre rotacionará em direção ao player e se colidirem, irá gerar o path até o player, caso contrario, irá gerar o path até outro lugar
 func _physics_process(delta):
+
 	line2d.global_position = Vector2.ZERO
 		
 	if velocity == null:
@@ -45,10 +58,10 @@ func _physics_process(delta):
 		
 		if player_spotted:
 			generate_path()
-			navigate()
+			navigate(delta)
 		else:
 			common_path()
-			navigate()
+			navigate(delta)
 			if arrived_caminho and pode:
 				change_path()
 				
@@ -67,10 +80,16 @@ func check_player_in_detection() -> bool:
 	return false
 
 # Define a posição e direção para o próximo ponto do path determinado
-func navigate():   
+func navigate(delta):   
 	if path.size() > 0:
 		velocity = global_position.direction_to(path[1]) * SPEED
-		
+		if velocity:
+			animationTree.set("parameters/Idle/blend_position", velocity)
+			animationTree.set("parameters/Run/blend_position", velocity)
+			animationState.travel("Run")
+			velocity = velocity.move_toward(velocity * velocidade_Maxima, aceleracao * delta)
+	else:
+		animationState.travel("Idle")
 		# Se chegou no ponto desejado, apaga o ponto
 		if global_position == path[0]:
 			path.pop_front()
