@@ -19,19 +19,19 @@ func _process(delta):
 		tempo.time = 99999
 		tempo.player_dead = false
 	
-	if tempo.time <= 40:
+	if tempo.time <= 50:
 		$September.play()
 		$Sprite2.visible =true
 		$Sprite3.visible =true
 		$Sprite4.visible =true
 	
 	
-	elif tempo.time <= 50:
+	elif tempo.time <= 60:
 		$Sprite2.visible =true
 		$Sprite3.visible =true
 		$Sprite4.visible = false
 		
-	elif tempo.time > 60:
+	elif tempo.time > 80:
 		$Sprite2.visible =true
 		$Sprite3.visible = false
 		$Sprite4.visible = false

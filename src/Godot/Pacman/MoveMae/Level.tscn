@@ -36,14 +36,14 @@ font_data = SubResource( 2 )
 [node name="Node2D" parent="LevelNavigation" instance=ExtResource( 1 )]
 position = Vector2( -16, -1 )
 
-[node name="Enemy" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
-position = Vector2( 225, 205 )
-
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 106, 93 )
 
 [node name="Mão" parent="Player" groups=["Player"] instance=ExtResource( 10 )]
 position = Vector2( 0, -9 )
+
+[node name="Enemy" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
+position = Vector2( 225, 205 )
 
 [node name="Caminhos" type="Node2D" parent="."]
 

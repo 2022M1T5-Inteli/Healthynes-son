@@ -20,7 +20,7 @@ func _ready():
 
 #Serve para rodar o codigo de andar, parecido com switch statement em Java Script (vai ser mais usado mais para frente quando o personagem tiver mais animacoes) Ate agora so temos ANDAR, mas quando tiver outras vamos poder fazer a mudanca de animacao igualando state com a proxima animacao (state = Ataque) e adicionando Ataque ao nosso match
 func _process(delta):
-	
+	print(global_position)
 	match state:
 		ANDAR:
 			andar_state(delta)
