@@ -297,14 +297,14 @@ region = Rect2( 224, 0, 32, 48 )
 
 [sub_resource type="SpriteFrames" id=13]
 animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
 "loop": true,
 "name": "Display",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "default",
 "speed": 5.0
 } ]
 
@@ -450,7 +450,7 @@ __meta__ = {
 position = Vector2( 0, 14 )
 frames = SubResource( 13 )
 animation = "Display"
-frame = 2
+frame = 7
 playing = true
 __meta__ = {
 "_edit_lock_": true
