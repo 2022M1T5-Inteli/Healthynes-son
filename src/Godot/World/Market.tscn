@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="TileSet" id=1]
+
+[node name="Market" type="Node2D"]
+
+[node name="Floor" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+format = 1
+
+[node name="Redor" type="TileMap" parent="."]
+format = 1
+
+[node name="Paredes" type="YSort" parent="."]
