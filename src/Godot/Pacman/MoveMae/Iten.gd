@@ -3,6 +3,7 @@ extends Node2D
 var pode = true
 var pode2 = true
 var pode3 = true
+var pode4 = true
 func _process(delta):
 	
 	if tempo.pontos == 500:
@@ -74,3 +75,11 @@ func _process(delta):
 			add_child(vinho5)
 			vinho5.position = Vector2(199,150)
 			pode3 = false
+	if tempo.pontos == 2000:
+		var cenaLixo = load("res://Pacman/Itens/Lixo.tscn")
+		var lixo = cenaLixo.instance()
+		if pode4:
+			add_child(lixo)
+			lixo.position = Vector2(208, 128)
+			pode4 = false
+

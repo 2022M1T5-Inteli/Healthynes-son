@@ -7,15 +7,15 @@ func _ready():
 	$MrSandman.play()
 		
 func _process(delta):
-	if tempo.pontos < 2000:
+	if tempo.pontos < 2100:
 		$September.stop()
-	if tempo.pontos == 2000:
+	if tempo.pontos == 2100:
 		$September.play()
 		$MrSandman.stop()
 		get_tree().paused = true
 		visible = true
 	if tempo.player_dead:
-		tempo.pontos = 2000
+		tempo.pontos = 2100
 		tempo.time = 99999
 		tempo.player_dead = false
 	

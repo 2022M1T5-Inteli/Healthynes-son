@@ -11,4 +11,7 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.is_in_group("Enemy"):
 			tempo.player_dead = true
-		
+	for body in bodies:
+		if body.is_in_group("Lixo"):
+			tempo.pontos += 100
+			
