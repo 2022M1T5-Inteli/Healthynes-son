@@ -15,12 +15,12 @@ _global_script_class_icons={
 [application]
 
 config/name="MED USP"
-run/main_scene="res://World.tscn"
+run/main_scene="res://World/MenuPrincipal.tscn"
 
 [autoload]
 
 vars="*res://World/Mini-games/Pacman.tscn"
-tempo="*res://Pacman/tempo/scripts/timer_label.gd"
+tempo="*res://Pacman/Itens/global.gd"
 
 [display]
 

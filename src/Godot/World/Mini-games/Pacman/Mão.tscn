@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://World/Mão.gd" type="Script" id=1]
+
+[node name="Mão" type="RigidBody2D"]
+position = Vector2( -1, -8 )
+mode = 3
+mass = 0.00102041
+gravity_scale = 0.0
+contacts_reported = 1
+contact_monitor = true
+can_sleep = false
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -8, -12, 8, -12, 8, 10, 8, 14, -8, 14, -8, -12, -10, -14, -10, 16, 10, 16, 10, -14, 0, -14, -10, -14 )

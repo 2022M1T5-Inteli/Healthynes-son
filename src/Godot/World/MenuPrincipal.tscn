@@ -17,7 +17,7 @@ z_index = -2
 
 [node name="Menu-image" type="Sprite" parent="YSort/Area2D"]
 position = Vector2( -1.72273, -7.47352 )
-scale = Vector2( 0.286371, 0.331255 )
+scale = Vector2( 0.343249, 0.343249 )
 z_index = 1
 texture = ExtResource( 1 )
 
@@ -34,9 +34,9 @@ script = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="YSort/Area2D3"]
 margin_left = 139.0
-margin_top = 78.0
+margin_top = 77.0
 margin_right = 437.0
-margin_bottom = 156.0
+margin_bottom = 155.0
 rect_scale = Vector2( 0.314007, 0.314007 )
 icon = ExtResource( 6 )
 flat = true

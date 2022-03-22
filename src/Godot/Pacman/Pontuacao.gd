@@ -16,7 +16,8 @@ func _process(delta):
 		visible = true
 	if tempo.player_dead:
 		tempo.pontos = 2100
-		tempo.time = 99999
+		tempo.time = 999999
+		$tempo.visible = false
 		tempo.player_dead = false
 	
 	if tempo.time <= 50:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Pacman/Mapa/Minigame 1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -15,7 +15,6 @@
 [ext_resource path="res://Pacman/Som/Musica/y2meta.com - Collect Item sound effect (128 kbps).mp3" type="AudioStream" id=13]
 [ext_resource path="res://Pacman/Som/Efeitos/y2meta.com - September - Earth, Wind and Fire 8bit Jazz Version (128 kbps).mp3" type="AudioStream" id=14]
 [ext_resource path="res://Pacman/Som/Efeitos/y2meta.com - Mr. Sandman - The Chordettes 8bit Jazz Version (128 kbps).mp3" type="AudioStream" id=15]
-[ext_resource path="res://Pacman/Itens/Lixo.tscn" type="PackedScene" id=16]
 
 [sub_resource type="DynamicFont" id=3]
 size = 7
@@ -44,7 +43,7 @@ position = Vector2( 106, 93 )
 position = Vector2( 0, -9 )
 
 [node name="Enemy" parent="." groups=["Enemy"] instance=ExtResource( 3 )]
-position = Vector2( 29912, 1976 )
+position = Vector2( 99, 165 )
 
 [node name="Caminhos" type="Node2D" parent="."]
 
@@ -291,8 +290,5 @@ polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="Lixo" parent="." instance=ExtResource( 16 )]
-position = Vector2( 207, 124 )
 
 [connection signal="pressed" from="CanvasLayer/Pontuacao/Button" to="CanvasLayer/Pontuacao" method="_on_Button_pressed"]

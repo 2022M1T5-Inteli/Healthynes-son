@@ -80,12 +80,22 @@ tile_data = PoolIntArray( -196576, 7, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 
 script = ExtResource( 23 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="TileMap/Area2D"]
-position = Vector2( -623.194, -4.57764e-05 )
+position = Vector2( -622, 1 )
 scale = Vector2( 2.6875, 1 )
 build_mode = 1
-polygon = PoolVector2Array( 355, 125, 355, 139, 366, 139, 366, 125 )
+polygon = PoolVector2Array( 354.977, 122, 354.977, 140, 367.628, 140, 367.628, 122 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="TileMap/Area2D"]
+
+[node name="DidYouKnowInterestingFactInstagramPost(12)" type="Sprite" parent="TileMap/Area2D"]
+position = Vector2( 355, 133 )
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 16 )
+
+[node name="DidYouKnowInterestingFactInstagramPost(12)2" type="Sprite" parent="TileMap/Area2D"]
+position = Vector2( 339, 133 )
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 16 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TileMap"]
 
@@ -103,7 +113,7 @@ texture = ExtResource( 3 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2( -0.761906, 13.8462 )
 build_mode = 1
-polygon = PoolVector2Array( -57.9048, 7.38464, -57.9048, -98.7695, 218.667, -98.7695, 220.19, 8.30772 )
+polygon = PoolVector2Array( -57.9048, 8.30772, -57.9048, -98.7695, 218.667, -98.7695, 220.19, 8.30772 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2( 79, 99 )
@@ -131,7 +141,7 @@ texture = ExtResource( 14 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
 position = Vector2( 1, 1 )
 build_mode = 1
-polygon = PoolVector2Array( -30, -12, -29, 69, 333, 70, 334, -11 )
+polygon = PoolVector2Array( -30, -12, -29, 69, 333, 70, 334, -12 )
 
 [node name="ClassroomAndLibrarySingles27" type="Sprite" parent="."]
 position = Vector2( 65, 192 )
@@ -148,11 +158,6 @@ texture = ExtResource( 14 )
 [node name="ClassroomAndLibrarySingles29" type="Sprite" parent="."]
 position = Vector2( 128, 192 )
 texture = ExtResource( 14 )
-
-[node name="DidYouKnowInterestingFactInstagramPost(12)" type="Sprite" parent="ClassroomAndLibrarySingles29"]
-position = Vector2( 227, -59 )
-scale = Vector2( 0.0163194, 0.012963 )
-texture = ExtResource( 16 )
 
 [node name="ClassroomAndLibrarySingles31" type="Sprite" parent="."]
 position = Vector2( 159, 151 )
@@ -196,7 +201,7 @@ texture = ExtResource( 5 )
 
 [node name="ClassroomAndLibrarySingles38" type="Sprite" parent="."]
 position = Vector2( 208, 34 )
-scale = Vector2( 2.4375, 1.60417 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 15 )
 
 [node name="ClassroomAndLibrarySingles39" type="Sprite" parent="."]
@@ -204,39 +209,39 @@ position = Vector2( 34, 69 )
 texture = ExtResource( 17 )
 
 [node name="ClassroomAndLibrarySingles54" type="Sprite" parent="."]
-position = Vector2( 272, 99 )
+position = Vector2( 272, 102 )
 texture = ExtResource( 7 )
 
 [node name="ClassroomAndLibrarySingles49" type="Sprite" parent="."]
-position = Vector2( 196, 110 )
+position = Vector2( 196, 117 )
 texture = ExtResource( 6 )
 
 [node name="ClassroomAndLibrarySingles52" type="Sprite" parent="."]
-position = Vector2( 244, 110 )
+position = Vector2( 244, 117 )
 texture = ExtResource( 12 )
 
 [node name="ClassroomAndLibrarySingles55" type="Sprite" parent="."]
-position = Vector2( 345, 99 )
-scale = Vector2( 1.4375, 1.39583 )
+position = Vector2( 346, 99 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 13 )
 
 [node name="ClassroomAndLibrarySingles56" type="Sprite" parent="."]
-position = Vector2( 306, 100 )
+position = Vector2( 306, 102 )
 texture = ExtResource( 7 )
 
 [node name="Roger" type="Sprite" parent="."]
-position = Vector2( 220, 105 )
+position = Vector2( 220, 112 )
 scale = Vector2( 0.238385, 0.201993 )
 texture = ExtResource( 11 )
 
 [node name="Poster" type="Sprite" parent="."]
 position = Vector2( 297, 53 )
-scale = Vector2( 2.20588, 2.36792 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 18 )
 
 [node name="Window" type="Sprite" parent="."]
 position = Vector2( 124.594, 60.3125 )
-scale = Vector2( 2.02802, 2.32065 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 19 )
 
 [node name="Player" parent="." instance=ExtResource( 22 )]
@@ -250,10 +255,12 @@ position = Vector2( 220, 105 )
 scale = Vector2( 0.238385, 0.201993 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5"]
+position = Vector2( 0, 34.6547 )
 build_mode = 1
 polygon = PoolVector2Array( -41.9489, 84.1614, 37.754, 84.1614, 37.754, -84.1614, -33.5591, -89.1121 )
 
-[node name="DidYouKnowInterestingFactInstagramPost(12)" type="Sprite" parent="."]
-position = Vector2( 335, 133.375 )
-scale = Vector2( 0.0162037, 0.0136574 )
-texture = ExtResource( 16 )
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D6"]
+position = Vector2( 7, -1 )
+polygon = PoolVector2Array( -5, 142, -25, 142, -25, 124, -5, 124, -5, 106, -35, 106, -35, 154, -5, 154 )
