@@ -8,7 +8,7 @@ func _process(delta):
 	
 	stopTimer()	
 	if(tempo.timer_on):
-		tempo.time += delta
+		tempo.time += delta/2
 		
 	var mils = fmod(tempo.time,1)*1000
 	var secs = fmod(tempo.time,60)
