@@ -1,11 +1,11 @@
 extends Node2D
-
+# pode é o nosso limitador par ele nao ficar spawnando a cada frame 
 var pode = true
 var pode2 = true
 var pode3 = true
 var pode4 = true
 func _process(delta):
-	
+	#quando o player terminar de pegar os 5 itens e vai spawnar masi 5 
 	if tempo.pontos == 500:
 		var cena =load("res://Pacman/Itens/Iten1.tscn")
 		var iten1 = cena.instance()
@@ -29,6 +29,7 @@ func _process(delta):
 			add_child(iten5)
 			iten5.position = Vector2(299,40)
 			pode = false
+	#quando o player terminar de pegar os 5 itens e vai spawnar masi 5 
 	if tempo.pontos == 1000:
 		var cenaCola1 = load("res://Pacman/Itens/Cola.tscn")
 		var cola1 = cenaCola1.instance()
@@ -52,6 +53,7 @@ func _process(delta):
 			add_child(cola5)
 			cola5.position = Vector2(199,200)
 			pode2 = false
+	#quando o player terminar de pegar os 5 itens e vai spawnar masi 5 
 	if tempo.pontos == 1500:
 		var cenaVinho1 = load("res://Pacman/Itens/Vinho.tscn")
 		var vinho1 = cenaVinho1.instance()
@@ -75,6 +77,7 @@ func _process(delta):
 			add_child(vinho5)
 			vinho5.position = Vector2(199,150)
 			pode3 = false
+	#quando o player terminar de pegar os 5 itens e vai spawnar o lixo para terminar a fase 
 	if tempo.pontos == 2000:
 		var cenaLixo = load("res://Pacman/Itens/Lixo.tscn")
 		var lixo = cenaLixo.instance()

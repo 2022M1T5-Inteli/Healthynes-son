@@ -1,5 +1,5 @@
 extends Area2D
-
+#mesma coisa que o Carro.gd so que para a esquerda
 onready var animationSprite = $AnimatedSprite
 onready var animations = []
 onready var azul = "DireitaAzul"

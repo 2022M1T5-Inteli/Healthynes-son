@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Item.mp3-b2ab6ae10efc07bbabd6ab7e73f5b7dc.mp3str"
+
+[deps]
+
+source_file="res://Som/SomMini-Games/PacBadIce/Efeitos/Item.mp3"
+dest_files=[ "res://.import/Item.mp3-b2ab6ae10efc07bbabd6ab7e73f5b7dc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

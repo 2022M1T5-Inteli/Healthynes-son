@@ -620,7 +620,6 @@ polygon = PoolVector2Array( 280.669, 233.93, 271.864, 233.93, 271.864, 207.648, 
 
 [node name="ParedeQuarto1" type="YSort" parent="."]
 position = Vector2( 185.849, 115.237 )
-scale = Vector2( 1, 1 )
 
 [node name="Parede-sala1" type="Sprite" parent="ParedeQuarto1"]
 position = Vector2( -68.6802, 41.445 )

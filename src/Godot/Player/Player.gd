@@ -25,7 +25,6 @@ func _process(delta):
 		ANDAR:
 			andar_state(delta)
 	
-
 # MOVIMENTACAO 
 func andar_state(delta):
 	var input_vector = Vector2.ZERO
@@ -42,6 +41,6 @@ func andar_state(delta):
 		animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, friccao * delta)
 	
-	move_and_slide(velocity) #COLLISION
+	move_and_slide(velocity) #COLISAO
 
 

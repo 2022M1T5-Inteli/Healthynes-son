@@ -1,4 +1,4 @@
 extends Node2D
-
-var pontos = 0
-var time = 0
+#variaveis globais
+#var pontos = 0
+#var time = 0
