@@ -52,7 +52,6 @@ func _physics_process(delta):
 		print("oi")
 	
 	if player:
-		colision()
 		los.look_at(player.global_position)
 		check_player_in_detection()
 		
@@ -96,8 +95,13 @@ func navigate(delta):
 
 # Se navegação e player forem diferente de null (definidos no _ready) desenhar o path até o player.
 func generate_path():
+	var distance_from_player = global_position.distance_to(player.global_position)
+	print(distance_from_player)
+	
 	if levelNavigation != null and player != null:
 		path = levelNavigation.get_simple_path(global_position, player.global_position, false)
+		if distance_from_player <= 3:
+			tempo.player_dead = true
 #		line2d.points = path
 
 
@@ -118,12 +122,6 @@ func change_path():
 	
 	caminho = tree.get_nodes_in_group("Caminhos")[positionPath[randi() % positionPath.size()]]
 	pode = false
-	
-func colision():
-	var distance_from_player = global_position.distance_to(player.global_position)
-	
-	if distance_from_player < 5:
-		$CollisionShape2D.disabled
 	
 # Mover
 func move():
