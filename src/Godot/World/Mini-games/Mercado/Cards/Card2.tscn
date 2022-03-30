@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://World/Mini-games/Mercado/Cards/Card2.gd" type="Script" id=1]
+[ext_resource path="res://Tiles/Card - Task3/button.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/Card - Task3/Card2Task3.png" type="Texture" id=3]
+
+[sub_resource type="BitmapFont" id=1]
+
+[node name="Card2" type="Area2D"]
+position = Vector2( 158, 87 )
+scale = Vector2( 1.03014, 1.03975 )
+script = ExtResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 0, 0.961761 )
+scale = Vector2( 0.160559, 0.160559 )
+texture = ExtResource( 3 )
+
+[node name="Button2" type="Button" parent="Sprite2"]
+margin_left = 288.008
+margin_top = 378.482
+margin_right = 500.008
+margin_bottom = 513.482
+rect_scale = Vector2( 1.10302, 1.01018 )
+icon = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LinkButton" type="LinkButton" parent="Sprite2"]
+margin_left = -405.0
+margin_top = -37.0
+margin_right = -258.0
+margin_bottom = -10.0
+rect_scale = Vector2( 5.45451, 8.58269 )
+custom_fonts/font = SubResource( 1 )
+text = "Bedida alcoólicas INCA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Sprite2/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Sprite2/LinkButton" to="." method="_on_LinkButton_pressed"]

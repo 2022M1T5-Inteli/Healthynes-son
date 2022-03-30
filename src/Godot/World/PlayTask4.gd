@@ -7,4 +7,4 @@ func _physics_process(delta):
 	if bodies:
 		for body in bodies:
 			if body.name == "Player":
-				get_tree().change_scene("res://World/Mini-games/Mercado/mercadoTäsk.tscn")
+				get_tree().change_scene("res://World/MenuTask3.tscn")
