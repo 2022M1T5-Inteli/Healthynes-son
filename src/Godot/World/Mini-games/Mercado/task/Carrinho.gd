@@ -12,11 +12,6 @@ func get_input():
 		input.x += 1
 	if Input.is_action_pressed("ui_left"):
 		input.x -= 1
-	if Input.is_action_pressed("ui_down"):
-		input.y += 1
-	if Input.is_action_pressed("ui_up"):
-		input.y -= 1
-		
 	return input
 
 func _physics_process(delta):

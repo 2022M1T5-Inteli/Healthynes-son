@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://Tiles/House/floor1.png" type="Texture" id=1]
 [ext_resource path="res://Tiles/House/wall1.png" type="Texture" id=2]
@@ -69,6 +69,7 @@
 [ext_resource path="res://Tiles/House/kitchen_items.png" type="Texture" id=67]
 [ext_resource path="res://Tiles/House/estante3.png" type="Texture" id=68]
 [ext_resource path="res://World/VoltarCasa.gd" type="Script" id=69]
+[ext_resource path="res://World/seta.png" type="Texture" id=70]
 
 [sub_resource type="TileSet" id=2]
 0/name = "green.png 0"
@@ -541,17 +542,6 @@ position = Vector2( 147.137, -84.6842 )
 scale = Vector2( 2.98438, 4.43478 )
 texture = ExtResource( 58 )
 
-[node name="Player" parent="." instance=ExtResource( 22 )]
-position = Vector2( 45.7867, 183.975 )
-scale = Vector2( 1.22451, 1.36293 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
-zoom = Vector2( 0.5, 0.5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="ContornoCasa" type="YSort" parent="."]
 
 [node name="BordaParede1" type="StaticBody2D" parent="ContornoCasa"]
@@ -617,6 +607,12 @@ polygon = PoolVector2Array( 9, 299, 2, 298, 2, 154, 8, 154 )
 position = Vector2( 76, 39 )
 build_mode = 1
 polygon = PoolVector2Array( 280.669, 233.93, 271.864, 233.93, 271.864, 207.648, 271.864, 171.257, 282.43, 171.257, 280.669, 219.778 )
+
+[node name="Seta" type="Sprite" parent="."]
+position = Vector2( 113.847, 80.7887 )
+rotation = -1.57745
+scale = Vector2( 0.0206429, 0.0211256 )
+texture = ExtResource( 70 )
 
 [node name="ParedeQuarto1" type="YSort" parent="."]
 position = Vector2( 185.849, 115.237 )
@@ -1004,6 +1000,7 @@ build_mode = 1
 polygon = PoolVector2Array( 481, 27, 494, 38, 494, 58, 483, 67, 469, 57, 468, 48, 478, 40, 478, 29 )
 
 [node name="Tapete" type="StaticBody2D" parent="Quarto2"]
+visible = false
 position = Vector2( 12.5812, 1.9566 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Quarto2/Tapete"]
@@ -1013,6 +1010,7 @@ scale = Vector2( 1.875, 1.475 )
 [node name="Sprite" type="Sprite" parent="Quarto2/Tapete"]
 position = Vector2( 529.815, 28.9302 )
 scale = Vector2( 1.875, 1.475 )
+z_index = -2
 texture = ExtResource( 52 )
 
 [node name="Decoration" type="StaticBody2D" parent="Quarto2"]
@@ -1230,3 +1228,14 @@ texture = ExtResource( 48 )
 position = Vector2( 147.137, -84.6842 )
 scale = Vector2( 2.98438, 4.43478 )
 texture = ExtResource( 58 )
+
+[node name="Player" parent="." instance=ExtResource( 22 )]
+position = Vector2( 45.7867, 183.975 )
+scale = Vector2( 1.22451, 1.36293 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_lock_": true
+}

@@ -15,8 +15,11 @@ func _physics_process(_delta):
 			if body.name == "Player":
 				$Card1.visible = true
 				yield(get_tree().create_timer(7.0), "timeout")
-				$Card1.visible = true
+				timing = false
+				$Card1.visible = false
 				
+				if !$Card1.visible: 
+					$Card2.visible
 				
 				
 				
