@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://World/Mini-games/Mercado/task/AlimentosRuins.gd" type="Script" id=1]
+[ext_resource path="res://World/Mini-games/Mercado/task/Chocolate.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5, 7 )
+
+[node name="AlimentosRuins" type="KinematicBody2D" groups=["AlimentosRuins"]]
+script = ExtResource( 1 )
+
+[node name="Chocolate" type="Sprite" parent="."]
+position = Vector2( 212.673, 23.6029 )
+scale = Vector2( 0.195037, 0.11138 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 201, 22 )
+shape = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 201, 21 )
+scale = Vector2( 0.475, 0.725 )
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
