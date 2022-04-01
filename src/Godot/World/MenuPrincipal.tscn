@@ -41,6 +41,9 @@ margin_bottom = 155.0
 rect_scale = Vector2( 0.314007, 0.314007 )
 icon = ExtResource( 6 )
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button2" type="Button" parent="YSort/Area2D4"]
 margin_left = 116.0
