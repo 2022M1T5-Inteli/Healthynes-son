@@ -362,11 +362,14 @@ position = Vector2( 353, 237 )
 texture = ExtResource( 13 )
 
 [node name="Cadeira7" type="StaticBody2D" parent="Sala3"]
+position = Vector2( 393, 221 )
 
 [node name="Sprite" type="Sprite" parent="Sala3/Cadeira7"]
-position = Vector2( 393, 230 )
 z_index = 1
 texture = ExtResource( 22 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sala3/Cadeira7"]
+polygon = PoolVector2Array( -8, -2, -8, 11, 7, 11, 7, -2 )
 
 [node name="Cadeira8" type="StaticBody2D" parent="Sala3"]
 
