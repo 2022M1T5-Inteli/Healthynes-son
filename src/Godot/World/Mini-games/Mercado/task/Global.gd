@@ -13,7 +13,6 @@ var salgadinho = preload("Salgadinho.tscn")
 func _ready():
 	pass
 
-
 func _on_SpawnTimer_timeout():
 
 	var maca_instance = maca.instance()
