@@ -8,11 +8,14 @@ func _physics_process(delta):
 	yield(get_tree().create_timer(20.0), "timeout")
 	timing = false
 	$Sprite.visible = true 
+	get_tree().paused = true
 	 
 
 func _on_Button2_pressed():
 	get_tree().change_scene("res://World/Market.tscn")
-
+	
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://World/Mini-games/Mercado/mercadoTäsk.tscn")
+	get_tree().paused = false
+	Global.pontos = 0
