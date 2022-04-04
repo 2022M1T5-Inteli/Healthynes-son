@@ -35,17 +35,7 @@
 [ext_resource path="res://Tiles/Office/cigarro.png" type="Texture" id=33]
 [ext_resource path="res://World/Cigarros.gd" type="Script" id=34]
 [ext_resource path="res://World/seta.png" type="Texture" id=35]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 [ext_resource path="res://World/Work.gd" type="Script" id=36]
-=======
->>>>>>> d79552b5508e418e07d2f2dd6376122591f12f23
->>>>>>> Stashed changes
-=======
-[ext_resource path="res://World/Work.gd" type="Script" id=36]
->>>>>>> Stashed changes
 
 [sub_resource type="TileSet" id=1]
 0/name = "green.png 0"
@@ -68,17 +58,7 @@ extents = Vector2( 11, 18 )
 
 [node name="Work" type="Node2D"]
 position = Vector2( -313, -128 )
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 script = ExtResource( 36 )
-=======
->>>>>>> d79552b5508e418e07d2f2dd6376122591f12f23
->>>>>>> Stashed changes
-=======
-script = ExtResource( 36 )
->>>>>>> Stashed changes
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 500, 239 )
