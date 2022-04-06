@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://World/Mini-games/Mercado/task/Carrinho.gd" type="Script" id=1]
-[ext_resource path="res://Tiles/Market/carrinho.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/Market/Grocery_Store_Singles_32x32_3.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14.5, 14.5 )
@@ -11,8 +11,8 @@ position = Vector2( -3, 9 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 186, 184 )
-scale = Vector2( 0.123654, 0.12701 )
+position = Vector2( 185, 169 )
+scale = Vector2( 1.47257, 1.09282 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

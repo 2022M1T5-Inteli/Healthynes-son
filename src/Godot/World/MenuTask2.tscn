@@ -6,9 +6,10 @@
 [ext_resource path="res://Tiles/backButton.png" type="Texture" id=4]
 [ext_resource path="res://Tiles/backButtonHover.png" type="Texture" id=5]
 [ext_resource path="res://World/PlayTask2.gd" type="Script" id=6]
-[ext_resource path="res://Tiles/backgroundMenuTask2.png" type="Texture" id=8]
+[ext_resource path="res://Tiles/Card - Task2/backgroundTask2.png" type="Texture" id=7]
 
 [node name="Node2D" type="Node2D"]
+scale = Vector2( 1.13156, 1.20381 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource( 6 )
@@ -23,11 +24,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -3.47653e-06, 1.18832e-06 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( 162.314, 93.392 )
+scale = Vector2( -0.251572, 0.274273 )
+z_index = -1
+texture = ExtResource( 7 )
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 125.0
-margin_top = 42.0
+margin_top = 54.0
 margin_right = 188.0
-margin_bottom = 146.0
+margin_bottom = 158.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -63,15 +73,6 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Area2D" type="Area2D" parent="VBoxContainer"]
-position = Vector2( -125, -42 )
-
-[node name="Sprite" type="Sprite" parent="VBoxContainer/Area2D"]
-position = Vector2( 163, 93 )
-scale = Vector2( -0.250499, 0.273103 )
-z_index = -1
-texture = ExtResource( 8 )
 
 [connection signal="pressed" from="VBoxContainer/Jogar" to="CanvasLayer" method="_on_Jogar_pressed"]
 [connection signal="pressed" from="VBoxContainer/Voltar" to="CanvasLayer" method="_on_Voltar_pressed"]

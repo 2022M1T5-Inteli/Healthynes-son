@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 var speed = 400
-var jump = -100 # Negativo pois o Y é inverso
-var gravity = 250
+var jump = -110 # Negativo pois o Y é inverso
+var gravity = 270
 var velocity = Vector2()
 
 # Movimento x sempre será 0, e a cada frame verifica se o pedro esta no chão e qual tecla foi pressionada
