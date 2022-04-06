@@ -23,7 +23,7 @@
 [ext_resource path="res://World/Mini-games/Mercado/mercadoTäsk.gd" type="Script" id=21]
 [ext_resource path="res://Tiles/restartButton.png" type="Texture" id=22]
 [ext_resource path="res://Tiles/exitButton.png" type="Texture" id=23]
-[ext_resource path="res://World/Mini-games/Mercado/TextureProgressMercado.gd" type="Script" id=24]
+[ext_resource path="res://World/Mini-games/Mercado/Scripts/TextureProgressMercado.gd" type="Script" id=24]
 [ext_resource path="res://World/Mini-games/Mercado/pontuacaoBackground.png" type="Texture" id=25]
 [ext_resource path="res://World/Mini-games/Mercado/pontuacao.png" type="Texture" id=26]
 
