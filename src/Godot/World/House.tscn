@@ -739,22 +739,6 @@ scale = Vector2( 1.24983, 1.1543 )
 texture = ExtResource( 17 )
 hframes = 3
 
-[node name="Cadeira1" type="StaticBody2D" parent="Cozinha"]
-position = Vector2( -6.10313, -8.08683 )
-
-[node name="Sprite" type="Sprite" parent="Cozinha/Cadeira1"]
-position = Vector2( 138, 34 )
-scale = Vector2( 1.47039, 1.09082 )
-texture = ExtResource( 18 )
-hframes = 2
-frame = 1
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cozinha/Cadeira1"]
-position = Vector2( 139, 33 )
-scale = Vector2( 1.47039, 1.09082 )
-build_mode = 1
-polygon = PoolVector2Array( 2.04028, -5.50045, 6.12083, -5.50045, 5.44073, 18.3348, -0.680094, 19.2516, -6.80092, 18.3348, -6.80092, -2.75023, 1.36018, -2.75023 )
-
 [node name="Geladeira" type="StaticBody2D" parent="Cozinha"]
 position = Vector2( 1.17993, -2.08683 )
 scale = Vector2( 0.993031, 1.11285 )
@@ -773,17 +757,32 @@ polygon = PoolVector2Array( -11.8489, 18.8378, 4.65492, 19.3208, 4.65492, 6.7622
 [node name="Cadeira2" type="StaticBody2D" parent="Cozinha"]
 position = Vector2( 1.17993, -2.08683 )
 
+[node name="Sprite" type="Sprite" parent="Cozinha/Cadeira2"]
+position = Vector2( 35, 35 )
+scale = Vector2( 1.34077, 1.09375 )
+texture = ExtResource( 18 )
+hframes = 2
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cozinha/Cadeira2"]
 position = Vector2( 33, 35 )
 scale = Vector2( 1.34077, 1.09375 )
 build_mode = 1
 polygon = PoolVector2Array( -6.71256, -12.8, -6.71256, 12.8, 5.96672, 12.8, 5.96672, -0.914286, -3.7292, -0.914286, -3.7292, -12.8 )
 
-[node name="Sprite" type="Sprite" parent="Cozinha/Cadeira2"]
+[node name="Cadeira3" type="StaticBody2D" parent="Cozinha"]
+position = Vector2( 0.940925, 14.1519 )
+
+[node name="Sprite" type="Sprite" parent="Cozinha/Cadeira3"]
 position = Vector2( 35, 35 )
 scale = Vector2( 1.34077, 1.09375 )
 texture = ExtResource( 18 )
 hframes = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cozinha/Cadeira3"]
+position = Vector2( 33, 35 )
+scale = Vector2( 1.34077, 1.09375 )
+build_mode = 1
+polygon = PoolVector2Array( -6.71256, -12.8, -6.71256, 12.8, 5.96672, 12.8, 5.96672, -0.914286, -3.7292, -0.914286, -3.7292, -12.8 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Cozinha"]
 position = Vector2( 1.17993, -2.08683 )

@@ -11,7 +11,7 @@ func _physics_process(delta):
 				$AnimationPlayer.play("idle")
 				yield(get_tree().create_timer(1.0), "timeout")
 				timing = false
-				get_tree().change_scene("res://World/House.tscn")
+				get_tree().change_scene("res://World/Espacos/Casa/House2.tscn")
 							
 				if body.name != "Player":
 					 $AnimationPlayer.play("closed_door")

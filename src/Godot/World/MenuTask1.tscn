@@ -7,7 +7,7 @@
 [ext_resource path="res://Tiles/backButtonHover.png" type="Texture" id=5]
 [ext_resource path="res://Tiles/playButtonHover.png" type="Texture" id=6]
 [ext_resource path="res://Pacman/Cards/Card1.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Tiles/backgroundMenuTask1.png" type="Texture" id=8]
+[ext_resource path="res://Tiles/Card - Task1/FundoCard.png" type="Texture" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -74,17 +74,19 @@ collision_layer = 3
 position = Vector2( 0, -13.1664 )
 
 [node name="Card1" parent="CanvasLayer/Cards/Card" instance=ExtResource( 7 )]
-position = Vector2( 24, 20.256 )
+position = Vector2( 25, 25 )
 scale = Vector2( 1.17783, 1.18169 )
 
 [node name="Area2D" type="Area2D" parent="CanvasLayer"]
-position = Vector2( 160, 98 )
+position = Vector2( 287, 145 )
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer/Area2D"]
-position = Vector2( 23.2837, 13.3406 )
-scale = Vector2( -0.285317, 0.331096 )
+scale = Vector2( 0.3, 0.3 )
 z_index = -1
 texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="pressed" from="CanvasLayer/NinePatchRect/VBoxContainer/Jogar" to="CanvasLayer" method="_on_Jogar_pressed"]
 [connection signal="pressed" from="CanvasLayer/NinePatchRect/VBoxContainer/Voltar" to="CanvasLayer" method="_on_Voltar_pressed"]
