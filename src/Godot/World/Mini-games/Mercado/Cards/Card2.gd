@@ -5,4 +5,3 @@ func _on_LinkButton_pressed():
 
 func _on_Button2_pressed():
 	$Sprite2.visible = false
-	get_tree().change_scene("res://World/Mini-games/Mercado/Cards/Card3.tscn")

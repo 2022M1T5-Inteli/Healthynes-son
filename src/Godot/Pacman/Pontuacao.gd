@@ -59,8 +59,3 @@ func _on_Button_pressed(): # sistema de reiniciar mini game
 
 
 
-
-
-func _on_Button2_pressed():
-	get_tree().change_scene("res://World/Espacos/Casa/House2.tscn")
-	get_tree().paused = false
