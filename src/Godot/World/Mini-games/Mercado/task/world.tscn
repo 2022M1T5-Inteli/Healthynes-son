@@ -58,7 +58,7 @@ position = Vector2( 12, -75 )
 position = Vector2( 75, -75 )
 
 [node name="Position2D3" type="Position2D" parent="." groups=["Spawn"]]
-position = Vector2( 115, -76 )
+position = Vector2( 111, -75 )
 
 [node name="Position2D4" type="Position2D" parent="." groups=["Spawn"]]
 position = Vector2( 148, -75 )

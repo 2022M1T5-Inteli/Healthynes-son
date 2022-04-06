@@ -5,7 +5,7 @@ func _input(event):
 	
 func _ready():
 	$MrSandman.play() #musica
-	
+		
 func _process(delta):# sistema de estrelas e musicas
 	if tempo.pontos < 2100:
 		$September.stop()
