@@ -12,8 +12,7 @@ var salgadinho = preload("Salgadinho.tscn")
 
 func _ready():
 	pass
-
-
+	 
 func _on_SpawnTimer_timeout():
 
 	var maca_instance = maca.instance()
@@ -73,3 +72,9 @@ func _on_SpawnTimer8_timeout():
 	$Spawn6.position = position
 	$Spawn7.position = position
 	$Spawn8.position = position
+	
+func _on_Area_body_entered(body):
+		if $TextureProgress.is_in_group("AlimentosSaudaveis") and !$carrinho/mao2/CollisionPolygon2D: 
+			if (body.live > 10 ) : 
+				body. life -= 10 
+		pass
