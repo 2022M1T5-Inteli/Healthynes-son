@@ -50,7 +50,7 @@
 [ext_resource path="res://Tiles/House/Basement_Singles_165.png" type="Texture" id=48]
 [ext_resource path="res://Tiles/CigarroAnimated.png" type="Texture" id=49]
 [ext_resource path="res://Tiles/HUD.png" type="Texture" id=50]
-[ext_resource path="res://World/Pacman/Itens/Lixo.tscn" type="PackedScene" id=51]
+[ext_resource path="res://Pacman/Itens/Lixo.tscn" type="PackedScene" id=51]
 
 [sub_resource type="AtlasTexture" id=43]
 atlas = ExtResource( 49 )
@@ -1259,6 +1259,7 @@ texture = ExtResource( 50 )
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Pedro"]
 position = Vector2( 0, -44 )
 frames = SubResource( 49 )
+frame = 2
 playing = true
 
 [node name="Node2Db" type="Node2D" parent="."]
