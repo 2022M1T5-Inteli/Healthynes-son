@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://Tiles/Modern_Exteriors_v2.8/Modern_Exteriors_v1.0/Modern_Exteriors_16x16/Modern_Exteriors_Singles_16x16/Modern_Exteriors_Singles_44.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -52,11 +52,12 @@
 [ext_resource path="res://Door.tscn" type="PackedScene" id=50]
 [ext_resource path="res://Tiles/Areia_Blob.png" type="Texture" id=51]
 [ext_resource path="res://Tiles/Mar.png" type="Texture" id=52]
-[ext_resource path="res://Pacman/Som/Efeitos/y2meta.com - Everybody Wants To Rule The World - Tears for Fears 8bit Jazz Version (128 kbps).mp3" type="AudioStream" id=53]
+[ext_resource path="res://World/Pacman/Som/Efeitos/y2meta.com - Everybody Wants To Rule The World - Tears for Fears 8bit Jazz Version (128 kbps).mp3" type="AudioStream" id=53]
 [ext_resource path="res://World.gd" type="Script" id=54]
-[ext_resource path="res://Pacman/Mapa/pixel.hospital (1).png" type="Texture" id=55]
+[ext_resource path="res://World/Espacos/Hospital/Sprites/Hospital.png" type="Texture" id=55]
 [ext_resource path="res://World/Door3.tscn" type="PackedScene" id=56]
 [ext_resource path="res://Tiles/setaRed.png" type="Texture" id=57]
+[ext_resource path="res://World/Portas/Door4.tscn" type="PackedScene" id=58]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Modern_Exteriors_Singles_44.png 0"
@@ -401,11 +402,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Pixelhospital(1)" type="Sprite" parent="Mapa"]
-position = Vector2( 401, -646 )
-scale = Vector2( 0.066927, 0.0841146 )
-texture = ExtResource( 55 )
-
 [node name="Enfeites" type="YSort" parent="Mapa"]
 position = Vector2( 433, -212 )
 
@@ -488,7 +484,7 @@ __meta__ = {
 position = Vector2( 0, 14 )
 frames = SubResource( 13 )
 animation = "Display"
-frame = 5
+frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -14528,6 +14524,16 @@ offset = Vector2( -100, 100 )
 position = Vector2( 29, 37.5 )
 shape = SubResource( 4 )
 
+[node name="Hospital" type="StaticBody2D" parent="Mapa/Predios"]
+position = Vector2( 398, -582 )
+
+[node name="Hospital" type="Sprite" parent="Mapa/Predios/Hospital"]
+position = Vector2( 0, -67 )
+texture = ExtResource( 55 )
+
+[node name="Door4" parent="Mapa/Predios/Hospital" instance=ExtResource( 58 )]
+position = Vector2( 0, 10 )
+
 [node name="Mar" type="StaticBody2D" parent="Mapa"]
 position = Vector2( 195, 449 )
 
@@ -14540,6 +14546,7 @@ position = Vector2( 1228, -263 )
 polygon = PoolVector2Array( -2000, 308, -1884, 285, -1848, 285, -1794, 291, -1691, 286, -1608, 298, -1510, 296, -1409, 300, -1296, 277, -1209, 283, -1027, 294, -988, 300, -913, 293, -833, 286, -791, 290, -741, 300, -659, 300, -592, 308, -534, 313, -438, 315, -377, 319, -307, 311, -215, 284, -176, 284, -66, 308, -5, 311, -17, 531, -2001, 527 )
 
 [node name="Barreira" type="YSort" parent="."]
+visible = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Barreira"]
 position = Vector2( 1417, 189 )

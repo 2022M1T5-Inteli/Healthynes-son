@@ -1,0 +1,133 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://World/Mini-games/Mercado2/Scenes/Carrinho.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Mini-games/Mercado2/Scenes/spawn.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Mini-games/Mercado2/Scenes/Spawn2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Mini-games/Mercado2/Scenes/mao.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/Mini-games/Mercado2/Scenes/spawn4.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/Mini-games/Mercado2/Scenes/Spawn5.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World/Mini-games/Mercado2/Scenes/Spawn6.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World/Mini-games/Mercado2/Scenes/Spawn3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World/Mini-games/Mercado2/Scenes/Spawn8.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World/Mini-games/Mercado2/Scenes/Spawn7.tscn" type="PackedScene" id=10]
+[ext_resource path="res://World/Mini-games/Mercado2/Scripts/Label.gd" type="Script" id=12]
+[ext_resource path="res://Tiles/backgroundWhite.png" type="Texture" id=13]
+[ext_resource path="res://World/Mini-games/Mercado2/Scripts/Global.gd" type="Script" id=15]
+
+[node name="world" type="Node2D"]
+script = ExtResource( 15 )
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 1.48
+autostart = true
+
+[node name="SpawnTimer2" type="Timer" parent="."]
+wait_time = 2.5
+autostart = true
+
+[node name="SpawnTimer3" type="Timer" parent="."]
+wait_time = 3.22
+autostart = true
+
+[node name="SpawnTimer4" type="Timer" parent="."]
+wait_time = 3.96
+autostart = true
+
+[node name="SpawnTimer5" type="Timer" parent="."]
+wait_time = 2.87
+autostart = true
+
+[node name="SpawnTimer6" type="Timer" parent="."]
+wait_time = 3.33
+autostart = true
+
+[node name="SpawnTimer7" type="Timer" parent="."]
+wait_time = 5.27
+autostart = true
+
+[node name="SpawnTimer8" type="Timer" parent="."]
+wait_time = 2.31
+autostart = true
+
+[node name="Position2D0" type="Position2D" parent="." groups=["Spawn"]]
+position = Vector2( 42, -75 )
+
+[node name="Position2D1" type="Position2D" parent="." groups=["Spawn"]]
+position = Vector2( 12, -75 )
+
+[node name="Position2D2" type="Position2D" parent="." groups=["Spawn"]]
+position = Vector2( 75, -75 )
+
+[node name="Position2D3" type="Position2D" parent="." groups=["Spawn"]]
+position = Vector2( 111, -75 )
+
+[node name="Position2D4" type="Position2D" parent="." groups=["Spawn"]]
+position = Vector2( 148, -75 )
+
+[node name="Position2D5" type="Position2D" parent="." groups=["Spawn"]]
+position = Vector2( 182, -75 )
+
+[node name="Position2D6" type="Position2D" parent="." groups=["Spawn"]]
+position = Vector2( 220.2, -75 )
+
+[node name="Position2D7" type="Position2D" parent="." groups=["Spawn"]]
+position = Vector2( 256.9, -75 )
+
+[node name="Position2D8" type="Position2D" parent="." groups=["Spawn"]]
+position = Vector2( 293.6, -75 )
+
+[node name="Position2D9" type="Position2D" parent="." groups=["Spawn"]]
+position = Vector2( 330.3, -75 )
+
+[node name="Position2D10" type="Position2D" parent="." groups=["Spawn"]]
+position = Vector2( 360, -75 )
+
+[node name="carrinho" parent="." instance=ExtResource( 1 )]
+position = Vector2( -11, 7 )
+
+[node name="mao2" parent="carrinho" instance=ExtResource( 4 )]
+position = Vector2( 187, 176 )
+
+[node name="Spawn" parent="." instance=ExtResource( 2 )]
+
+[node name="Spawn2" parent="." instance=ExtResource( 3 )]
+
+[node name="Spawn3" parent="." instance=ExtResource( 8 )]
+
+[node name="Spawn4" parent="." instance=ExtResource( 5 )]
+
+[node name="Spawn5" parent="." instance=ExtResource( 6 )]
+
+[node name="Spawn6" parent="." instance=ExtResource( 7 )]
+
+[node name="Spawn7" parent="." instance=ExtResource( 10 )]
+
+[node name="Spawn8" parent="." instance=ExtResource( 9 )]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 65, 30 )
+scale = Vector2( 0.262578, 0.328767 )
+texture = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 11.0
+margin_right = 121.0
+margin_bottom = 54.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.0352941, 0.380392, 0.976471, 1 )
+align = 1
+valign = 1
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
+[connection signal="timeout" from="SpawnTimer2" to="." method="_on_SpawnTimer2_timeout"]
+[connection signal="timeout" from="SpawnTimer3" to="." method="_on_SpawnTimer3_timeout"]
+[connection signal="timeout" from="SpawnTimer4" to="." method="_on_SpawnTimer4_timeout"]
+[connection signal="timeout" from="SpawnTimer5" to="." method="_on_SpawnTimer5_timeout"]
+[connection signal="timeout" from="SpawnTimer6" to="." method="_on_SpawnTimer6_timeout"]
+[connection signal="timeout" from="SpawnTimer7" to="." method="_on_SpawnTimer7_timeout"]
+[connection signal="timeout" from="SpawnTimer8" to="." method="_on_SpawnTimer8_timeout"]

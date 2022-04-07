@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/y2meta.com - Everybody Wants To Rule The World - Tears for Fears 8bit Jazz Version (128 kbps).mp3-23f602aa67e59f1162ea0b33941dda7c.mp3str"
+
+[deps]
+
+source_file="res://World/Pacman/Som/Efeitos/y2meta.com - Everybody Wants To Rule The World - Tears for Fears 8bit Jazz Version (128 kbps).mp3"
+dest_files=[ "res://.import/y2meta.com - Everybody Wants To Rule The World - Tears for Fears 8bit Jazz Version (128 kbps).mp3-23f602aa67e59f1162ea0b33941dda7c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

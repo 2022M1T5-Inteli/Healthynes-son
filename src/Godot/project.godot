@@ -20,8 +20,8 @@ run/main_scene="res://World/MenuPrincipal.tscn"
 [autoload]
 
 vars="*res://World/Mini-games/Pacman.tscn"
-tempo="*res://Pacman/Itens/global.gd"
-Global="*res://World/Mini-games/Mercado/task/Global.gd"
+tempo="*res://World/Pacman/Itens/global.gd"
+Global="*res://World/Mini-games/Mercado2/Scripts/Global.gd"
 
 [display]
 

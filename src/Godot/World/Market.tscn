@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://Tiles/House/floor2-5.png" type="Texture" id=1]
 [ext_resource path="res://Tiles/House/floor2-1.png" type="Texture" id=2]
@@ -74,6 +74,7 @@
 [ext_resource path="res://Tiles/House/green.png" type="Texture" id=72]
 [ext_resource path="res://World/PlayTask4.gd" type="Script" id=73]
 [ext_resource path="res://World/VoltarMercado.gd" type="Script" id=74]
+[ext_resource path="res://World/Market.gd" type="Script" id=75]
 
 [sub_resource type="TileSet" id=2]
 0/name = "green.png 0"
@@ -206,6 +207,7 @@
 7/z_index = 0
 
 [node name="Market" type="Node2D"]
+script = ExtResource( 75 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 320.0 ]
 }
@@ -275,675 +277,677 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Carrinhos" type="StaticBody2D" parent="."]
+[node name="Cenário" type="YSort" parent="."]
 
-[node name="Cars" type="Sprite" parent="Carrinhos"]
+[node name="Carrinhos" type="StaticBody2D" parent="Cenário"]
+
+[node name="Cars" type="Sprite" parent="Cenário/Carrinhos"]
 position = Vector2( 479, 236 )
 texture = ExtResource( 9 )
 
-[node name="Cars4" type="Sprite" parent="Carrinhos"]
+[node name="Cars4" type="Sprite" parent="Cenário/Carrinhos"]
 position = Vector2( 478, 212 )
 texture = ExtResource( 9 )
 
-[node name="Cars2" type="Sprite" parent="Carrinhos"]
+[node name="Cars2" type="Sprite" parent="Cenário/Carrinhos"]
 position = Vector2( 481, 261 )
 texture = ExtResource( 9 )
 
-[node name="Cars3" type="Sprite" parent="Carrinhos"]
+[node name="Cars3" type="Sprite" parent="Cenário/Carrinhos"]
 position = Vector2( 481, 285 )
 texture = ExtResource( 9 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Carrinhos"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Carrinhos"]
 build_mode = 1
 polygon = PoolVector2Array( 453, 202, 455, 297, 507, 296, 504, 204 )
 
-[node name="Caixas" type="YSort" parent="."]
+[node name="Caixas" type="YSort" parent="Cenário"]
 
-[node name="Caixa1" type="StaticBody2D" parent="Caixas"]
+[node name="Caixa1" type="StaticBody2D" parent="Cenário/Caixas"]
 
-[node name="Caixa1" type="Sprite" parent="Caixas/Caixa1"]
+[node name="Caixa1" type="Sprite" parent="Cenário/Caixas/Caixa1"]
 position = Vector2( 373, 296 )
 texture = ExtResource( 16 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Caixas/Caixa1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Caixas/Caixa1"]
 position = Vector2( 373, 296 )
 build_mode = 1
 polygon = PoolVector2Array( -17, -25, -16, 24, 14, 24, 14, 8, 17, 8, 17, -16, 0, -16, 0, -25 )
 
-[node name="Caixa2" type="StaticBody2D" parent="Caixas"]
+[node name="Caixa2" type="StaticBody2D" parent="Cenário/Caixas"]
 
-[node name="Caixa2" type="Sprite" parent="Caixas/Caixa2"]
+[node name="Caixa2" type="Sprite" parent="Cenário/Caixas/Caixa2"]
 position = Vector2( 290, 297 )
 texture = ExtResource( 13 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Caixas/Caixa2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Caixas/Caixa2"]
 position = Vector2( 290, 297 )
 build_mode = 1
 polygon = PoolVector2Array( -17, -25, -16, 24, 14, 24, 14, 8, 17, 8, 17, -16, 0, -16, 0, -25 )
 
-[node name="Caixa3" type="StaticBody2D" parent="Caixas"]
+[node name="Caixa3" type="StaticBody2D" parent="Cenário/Caixas"]
 
-[node name="Caixa3" type="Sprite" parent="Caixas/Caixa3"]
+[node name="Caixa3" type="Sprite" parent="Cenário/Caixas/Caixa3"]
 position = Vector2( -100, -14 )
 texture = ExtResource( 17 )
 offset = Vector2( 314, 311 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Caixas/Caixa3"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Caixas/Caixa3"]
 position = Vector2( 215, 293 )
 build_mode = 1
 polygon = PoolVector2Array( -16, -11, -16, 27, 16, 27, 16, 10, 16, -1, 16, -22, 0, -22, 0, -11 )
 
-[node name="Caixa4" type="StaticBody2D" parent="Caixas"]
+[node name="Caixa4" type="StaticBody2D" parent="Cenário/Caixas"]
 
-[node name="Caixa4" type="Sprite" parent="Caixas/Caixa4"]
+[node name="Caixa4" type="Sprite" parent="Cenário/Caixas/Caixa4"]
 position = Vector2( 152, 297 )
 texture = ExtResource( 12 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Caixas/Caixa4"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Caixas/Caixa4"]
 position = Vector2( 150, 293 )
 build_mode = 1
 polygon = PoolVector2Array( -16, -11, -16, 27, 18, 27, 18, 11, 18, -1, 18, -12, 2, -12, 2, -22, -16, -22 )
 
-[node name="Caixa5" type="StaticBody2D" parent="Caixas"]
+[node name="Caixa5" type="StaticBody2D" parent="Cenário/Caixas"]
 
-[node name="Caixa5" type="Sprite" parent="Caixas/Caixa5"]
+[node name="Caixa5" type="Sprite" parent="Cenário/Caixas/Caixa5"]
 position = Vector2( 71, 297 )
 texture = ExtResource( 14 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Caixas/Caixa5"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Caixas/Caixa5"]
 position = Vector2( 72, 292 )
 build_mode = 1
 polygon = PoolVector2Array( -16, -11, -16, 27, 18, 27, 18, 11, 18, -1, 18, -12, 18, -22, -2, -22, -2, -11 )
 
-[node name="Caixa6" type="StaticBody2D" parent="Caixas"]
+[node name="Caixa6" type="StaticBody2D" parent="Cenário/Caixas"]
 
-[node name="Caixa6" type="Sprite" parent="Caixas/Caixa6"]
+[node name="Caixa6" type="Sprite" parent="Cenário/Caixas/Caixa6"]
 position = Vector2( 1, 295 )
 texture = ExtResource( 11 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Caixas/Caixa6"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Caixas/Caixa6"]
 position = Vector2( -5, 295 )
 build_mode = 1
 polygon = PoolVector2Array( -13, 27, 19, 27, 19, 9, 22, 9, 22, -16, 6, -16, 6, -24, -13, -24 )
 
-[node name="PrateleirasHorizontais" type="YSort" parent="."]
+[node name="PrateleirasHorizontais" type="YSort" parent="Cenário"]
 scale = Vector2( 0.964694, 0.966232 )
 
-[node name="Prateleira1" type="StaticBody2D" parent="PrateleirasHorizontais"]
+[node name="Prateleira1" type="StaticBody2D" parent="Cenário/PrateleirasHorizontais"]
 
-[node name="Prateleira1" type="Sprite" parent="PrateleirasHorizontais/Prateleira1"]
+[node name="Prateleira1" type="Sprite" parent="Cenário/PrateleirasHorizontais/Prateleira1"]
 position = Vector2( 109.879, -14.4893 )
 scale = Vector2( 1.64982, 1.54464 )
 texture = ExtResource( 20 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PrateleirasHorizontais/Prateleira1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/PrateleirasHorizontais/Prateleira1"]
 build_mode = 1
 polygon = PoolVector2Array( 81.8913, -16.5592, 80.8547, 9.31453, 212.503, 8.27958, 212.503, -17.5941 )
 
-[node name="Prateleira2" type="StaticBody2D" parent="PrateleirasHorizontais"]
+[node name="Prateleira2" type="StaticBody2D" parent="Cenário/PrateleirasHorizontais"]
 
-[node name="Prateleira2" type="Sprite" parent="PrateleirasHorizontais/Prateleira2"]
+[node name="Prateleira2" type="Sprite" parent="Cenário/PrateleirasHorizontais/Prateleira2"]
 position = Vector2( 137.683, -14.6546 )
 scale = Vector2( 1.76081, 1.55931 )
 texture = ExtResource( 21 )
 
-[node name="Prateleira3" type="StaticBody2D" parent="PrateleirasHorizontais"]
+[node name="Prateleira3" type="StaticBody2D" parent="Cenário/PrateleirasHorizontais"]
 
-[node name="Prateleira3" type="Sprite" parent="PrateleirasHorizontais/Prateleira3"]
+[node name="Prateleira3" type="Sprite" parent="Cenário/PrateleirasHorizontais/Prateleira3"]
 position = Vector2( 160.309, -14.7651 )
 scale = Vector2( 1.44804, 1.56392 )
 texture = ExtResource( 19 )
 
-[node name="Prateleira4" type="StaticBody2D" parent="PrateleirasHorizontais"]
+[node name="Prateleira4" type="StaticBody2D" parent="Cenário/PrateleirasHorizontais"]
 
-[node name="Prateleira4" type="Sprite" parent="PrateleirasHorizontais/Prateleira4"]
+[node name="Prateleira4" type="Sprite" parent="Cenário/PrateleirasHorizontais/Prateleira4"]
 position = Vector2( 185.317, -14.748 )
 scale = Vector2( 1.56952, 1.5632 )
 texture = ExtResource( 18 )
 
-[node name="Prateleira5" type="StaticBody2D" parent="PrateleirasHorizontais"]
+[node name="Prateleira5" type="StaticBody2D" parent="Cenário/PrateleirasHorizontais"]
 
-[node name="Prateleira5" type="Sprite" parent="PrateleirasHorizontais/Prateleira5"]
+[node name="Prateleira5" type="Sprite" parent="Cenário/PrateleirasHorizontais/Prateleira5"]
 position = Vector2( 209.393, -14.4893 )
 scale = Vector2( 1.57185, 1.55242 )
 texture = ExtResource( 22 )
 
-[node name="PrateleirasVerticais" type="YSort" parent="."]
+[node name="PrateleirasVerticais" type="YSort" parent="Cenário"]
 
-[node name="Prateleira1" type="StaticBody2D" parent="PrateleirasVerticais"]
+[node name="Prateleira1" type="StaticBody2D" parent="Cenário/PrateleirasVerticais"]
 
-[node name="Prateleira1" type="Sprite" parent="PrateleirasVerticais/Prateleira1"]
+[node name="Prateleira1" type="Sprite" parent="Cenário/PrateleirasVerticais/Prateleira1"]
 position = Vector2( 85, 87 )
 scale = Vector2( 1.65625, 1.41667 )
 texture = ExtResource( 39 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PrateleirasVerticais/Prateleira1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/PrateleirasVerticais/Prateleira1"]
 position = Vector2( 94, 87 )
 scale = Vector2( 1.65625, 1.41667 )
 build_mode = 1
 polygon = PoolVector2Array( -16, -11, -16.3019, 23.2941, 5.43396, 23.9999, 5.43396, 19.0588, 4.83019, -8.47057, 6.03773, -12, 6.03773, -21.8823, -4.22642, -21.8823, -16, -22 )
 
-[node name="Prateleira2" type="StaticBody2D" parent="PrateleirasVerticais"]
+[node name="Prateleira2" type="StaticBody2D" parent="Cenário/PrateleirasVerticais"]
 
-[node name="Prateleira2" type="Sprite" parent="PrateleirasVerticais/Prateleira2"]
+[node name="Prateleira2" type="Sprite" parent="Cenário/PrateleirasVerticais/Prateleira2"]
 position = Vector2( 86, 142 )
 scale = Vector2( 1.5, 1.45833 )
 texture = ExtResource( 40 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PrateleirasVerticais/Prateleira2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/PrateleirasVerticais/Prateleira2"]
 position = Vector2( 94, 143 )
 scale = Vector2( 1.65625, 1.41667 )
 build_mode = 1
 polygon = PoolVector2Array( -16, -11, -16.3019, 23.2941, 5.43396, 23.9999, 5.43396, 19.0588, 4.83019, -8.47057, 6.03773, -12, 6.03773, -21.8823, -4.22642, -21.8823, -16, -22 )
 
-[node name="Prateleira3" type="StaticBody2D" parent="PrateleirasVerticais"]
+[node name="Prateleira3" type="StaticBody2D" parent="Cenário/PrateleirasVerticais"]
 
-[node name="Prateleira3" type="Sprite" parent="PrateleirasVerticais/Prateleira3"]
+[node name="Prateleira3" type="Sprite" parent="Cenário/PrateleirasVerticais/Prateleira3"]
 position = Vector2( 86, 204 )
 scale = Vector2( 1.65625, 1.52083 )
 texture = ExtResource( 37 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PrateleirasVerticais/Prateleira3"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/PrateleirasVerticais/Prateleira3"]
 position = Vector2( 94, 204 )
 scale = Vector2( 1.65625, 1.41667 )
 build_mode = 1
 polygon = PoolVector2Array( -16, -11, -16.3019, 23.2941, 5.43396, 23.9999, 5.43396, 19.0588, 6.03773, -14.1176, 7.84906, -14.8235, 7.84906, -24.7058, -4.83019, -24.7058, -15.6981, -24.7058 )
 
-[node name="Prateleira4" type="StaticBody2D" parent="PrateleirasVerticais"]
+[node name="Prateleira4" type="StaticBody2D" parent="Cenário/PrateleirasVerticais"]
 
-[node name="Prateleira4" type="Sprite" parent="PrateleirasVerticais/Prateleira4"]
+[node name="Prateleira4" type="Sprite" parent="Cenário/PrateleirasVerticais/Prateleira4"]
 position = Vector2( 228, 80 )
 scale = Vector2( 1.65625, 1.54167 )
 texture = ExtResource( 39 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PrateleirasVerticais/Prateleira4"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/PrateleirasVerticais/Prateleira4"]
 position = Vector2( 236, 76 )
 scale = Vector2( 1.65625, 1.41667 )
 build_mode = 1
 polygon = PoolVector2Array( -16, -11, -16.3019, 23.2941, 5.43396, 23.9999, 5.43396, 19.0588, 6.03773, -14.1176, 7.84906, -14.8235, 7.84906, -24.7058, -4.83019, -24.7058, -15.6981, -24.7058 )
 
-[node name="Prateleira5" type="StaticBody2D" parent="PrateleirasVerticais"]
+[node name="Prateleira5" type="StaticBody2D" parent="Cenário/PrateleirasVerticais"]
 
-[node name="Prateleira5" type="Sprite" parent="PrateleirasVerticais/Prateleira5"]
+[node name="Prateleira5" type="Sprite" parent="Cenário/PrateleirasVerticais/Prateleira5"]
 position = Vector2( 228, 144 )
 scale = Vector2( 1.5, 1.45833 )
 texture = ExtResource( 40 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PrateleirasVerticais/Prateleira5"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/PrateleirasVerticais/Prateleira5"]
 position = Vector2( 236, 142 )
 scale = Vector2( 1.65625, 1.41667 )
 build_mode = 1
 polygon = PoolVector2Array( -16, -11, -16.3019, 23.2941, 5.43396, 23.9999, 5.43396, 19.0588, 6.03773, -14.1176, 7.84906, -14.8235, 7.84906, -24.7058, -4.83019, -24.7058, -15.6981, -24.7058 )
 
-[node name="Prateleira6" type="StaticBody2D" parent="PrateleirasVerticais"]
+[node name="Prateleira6" type="StaticBody2D" parent="Cenário/PrateleirasVerticais"]
 
-[node name="Prateleira6" type="Sprite" parent="PrateleirasVerticais/Prateleira6"]
+[node name="Prateleira6" type="Sprite" parent="Cenário/PrateleirasVerticais/Prateleira6"]
 position = Vector2( 228, 207 )
 scale = Vector2( 1.48438, 1.45833 )
 texture = ExtResource( 38 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PrateleirasVerticais/Prateleira6"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/PrateleirasVerticais/Prateleira6"]
 position = Vector2( 237, 209 )
 scale = Vector2( 1.65625, 1.41667 )
 build_mode = 1
 polygon = PoolVector2Array( -16, -11, -16.3019, 23.2941, 5.43396, 23.9999, 5.43396, 19.0588, 6.03773, -14.1176, 7.84906, -14.8235, 7.84906, -24.7058, -4.83019, -24.7058, -15.6981, -24.7058 )
 
-[node name="Freezers" type="YSort" parent="."]
+[node name="Freezers" type="YSort" parent="Cenário"]
 
-[node name="Freezers1" type="YSort" parent="Freezers"]
+[node name="Freezers1" type="YSort" parent="Cenário/Freezers"]
 
-[node name="Freezer1" type="StaticBody2D" parent="Freezers/Freezers1"]
+[node name="Freezer1" type="StaticBody2D" parent="Cenário/Freezers/Freezers1"]
 
-[node name="GroceryStoreSingles150" type="Sprite" parent="Freezers/Freezers1/Freezer1"]
+[node name="GroceryStoreSingles150" type="Sprite" parent="Cenário/Freezers/Freezers1/Freezer1"]
 position = Vector2( -27.9999, -7 )
 scale = Vector2( 1.46875, 1.29167 )
 texture = ExtResource( 26 )
 
-[node name="GroceryStoreSingles151" type="Sprite" parent="Freezers/Freezers1/Freezer1"]
+[node name="GroceryStoreSingles151" type="Sprite" parent="Cenário/Freezers/Freezers1/Freezer1"]
 position = Vector2( 20, -7 )
 scale = Vector2( 1.46875, 1.29167 )
 texture = ExtResource( 26 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Freezers/Freezers1/Freezer1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Freezers/Freezers1/Freezer1"]
 build_mode = 1
 polygon = PoolVector2Array( -51, -2, -51, 14, 43, 14, 42, -3 )
 
-[node name="Freezers2" type="YSort" parent="Freezers"]
+[node name="Freezers2" type="YSort" parent="Cenário/Freezers"]
 
-[node name="Freezers2" type="StaticBody2D" parent="Freezers/Freezers2"]
+[node name="Freezers2" type="StaticBody2D" parent="Cenário/Freezers/Freezers2"]
 
-[node name="GroceryStoreSingles149" type="Sprite" parent="Freezers/Freezers2/Freezers2"]
+[node name="GroceryStoreSingles149" type="Sprite" parent="Cenário/Freezers/Freezers2/Freezers2"]
 position = Vector2( 372, -12 )
 scale = Vector2( 1.48437, 1.27083 )
 texture = ExtResource( 27 )
 
-[node name="GroceryStoreSingles148" type="Sprite" parent="Freezers/Freezers2/Freezers2"]
+[node name="GroceryStoreSingles148" type="Sprite" parent="Cenário/Freezers/Freezers2/Freezers2"]
 position = Vector2( 326, -12 )
 scale = Vector2( 1.46875, 1.29167 )
 texture = ExtResource( 26 )
 
-[node name="GroceryStoreSingles147" type="Sprite" parent="Freezers/Freezers2/Freezers2"]
+[node name="GroceryStoreSingles147" type="Sprite" parent="Cenário/Freezers/Freezers2/Freezers2"]
 position = Vector2( 279, -12 )
 scale = Vector2( 1.46875, 1.29167 )
 texture = ExtResource( 28 )
 
-[node name="GroceryStoreSingles67" type="Sprite" parent="Freezers/Freezers2/Freezers2"]
+[node name="GroceryStoreSingles67" type="Sprite" parent="Cenário/Freezers/Freezers2/Freezers2"]
 position = Vector2( 241, -10 )
 texture = ExtResource( 47 )
 
-[node name="GroceryStoreSingles68" type="Sprite" parent="Freezers/Freezers2/Freezers2"]
+[node name="GroceryStoreSingles68" type="Sprite" parent="Cenário/Freezers/Freezers2/Freezers2"]
 position = Vector2( 215, -10 )
 texture = ExtResource( 57 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Freezers/Freezers2/Freezers2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Freezers/Freezers2/Freezers2"]
 polygon = PoolVector2Array( 203, -8, 203, 8, 394, 9, 395, -7, 256, -8, 228, -8 )
 
-[node name="Padaria" type="YSort" parent="."]
+[node name="Padaria" type="YSort" parent="Cenário"]
 
-[node name="Forno1" type="StaticBody2D" parent="Padaria"]
+[node name="Forno1" type="StaticBody2D" parent="Cenário/Padaria"]
 
-[node name="GroceryStoreSingles252" type="Sprite" parent="Padaria/Forno1"]
+[node name="GroceryStoreSingles252" type="Sprite" parent="Cenário/Padaria/Forno1"]
 position = Vector2( 469, -19 )
 scale = Vector2( 1.375, 1.22917 )
 texture = ExtResource( 23 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Padaria/Forno1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Padaria/Forno1"]
 build_mode = 1
 polygon = PoolVector2Array( 447, -11, 446, 11, 470, 10, 469, -11 )
 
-[node name="Forno2" type="StaticBody2D" parent="Padaria"]
+[node name="Forno2" type="StaticBody2D" parent="Cenário/Padaria"]
 
-[node name="GroceryStoreSingles259" type="Sprite" parent="Padaria/Forno2"]
+[node name="GroceryStoreSingles259" type="Sprite" parent="Cenário/Padaria/Forno2"]
 position = Vector2( 418.5, -21 )
 scale = Vector2( 1.40625, 1.25 )
 texture = ExtResource( 24 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Padaria/Forno2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Padaria/Forno2"]
 build_mode = 1
 polygon = PoolVector2Array( 397, -11, 397, 8, 438, 8, 438, -11 )
 
-[node name="Forno3" type="StaticBody2D" parent="Padaria"]
+[node name="Forno3" type="StaticBody2D" parent="Cenário/Padaria"]
 
-[node name="GroceryStoreSingles250" type="Sprite" parent="Padaria/Forno3"]
+[node name="GroceryStoreSingles250" type="Sprite" parent="Cenário/Padaria/Forno3"]
 position = Vector2( 494, -16 )
 scale = Vector2( 1.28125, 1.16667 )
 texture = ExtResource( 25 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Padaria/Forno3"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Padaria/Forno3"]
 build_mode = 1
 polygon = PoolVector2Array( 479, -8, 478, 10, 512, 10, 511, -8 )
 
-[node name="Carrinhos2" type="YSort" parent="."]
+[node name="Carrinhos2" type="YSort" parent="Cenário"]
 
-[node name="Carrinho1" type="StaticBody2D" parent="Carrinhos2"]
+[node name="Carrinho1" type="StaticBody2D" parent="Cenário/Carrinhos2"]
 
-[node name="GroceryStoreSingles29" type="Sprite" parent="Carrinhos2/Carrinho1"]
+[node name="GroceryStoreSingles29" type="Sprite" parent="Cenário/Carrinhos2/Carrinho1"]
 position = Vector2( 54, 195 )
 texture = ExtResource( 51 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Carrinhos2/Carrinho1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Carrinhos2/Carrinho1"]
 build_mode = 1
 polygon = PoolVector2Array( 47, 193, 47, 219, 62, 219, 62, 193 )
 
-[node name="Carrinho2" type="StaticBody2D" parent="Carrinhos2"]
+[node name="Carrinho2" type="StaticBody2D" parent="Cenário/Carrinhos2"]
 
-[node name="GroceryStoreSingles28" type="Sprite" parent="Carrinhos2/Carrinho2"]
+[node name="GroceryStoreSingles28" type="Sprite" parent="Cenário/Carrinhos2/Carrinho2"]
 position = Vector2( 120, 75 )
 texture = ExtResource( 46 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Carrinhos2/Carrinho2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Carrinhos2/Carrinho2"]
 position = Vector2( 66, -121 )
 build_mode = 1
 polygon = PoolVector2Array( 47, 193, 47, 219, 62, 219, 62, 193 )
 
-[node name="Carrinho3" type="StaticBody2D" parent="Carrinhos2"]
+[node name="Carrinho3" type="StaticBody2D" parent="Cenário/Carrinhos2"]
 
-[node name="GroceryStoreSingles30" type="Sprite" parent="Carrinhos2/Carrinho3"]
+[node name="GroceryStoreSingles30" type="Sprite" parent="Cenário/Carrinhos2/Carrinho3"]
 position = Vector2( 255, 120 )
 texture = ExtResource( 53 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Carrinhos2/Carrinho3"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Carrinhos2/Carrinho3"]
 position = Vector2( 201, -76 )
 build_mode = 1
 polygon = PoolVector2Array( 47, 193, 47, 219, 62, 219, 62, 193 )
 
-[node name="Carrinho4" type="StaticBody2D" parent="Carrinhos2"]
+[node name="Carrinho4" type="StaticBody2D" parent="Cenário/Carrinhos2"]
 
-[node name="GroceryStoreSingles31" type="Sprite" parent="Carrinhos2/Carrinho4"]
+[node name="GroceryStoreSingles31" type="Sprite" parent="Cenário/Carrinhos2/Carrinho4"]
 position = Vector2( 342, 169 )
 texture = ExtResource( 54 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Carrinhos2/Carrinho4"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Carrinhos2/Carrinho4"]
 position = Vector2( 288, -27 )
 build_mode = 1
 polygon = PoolVector2Array( 47, 193, 47, 219, 62, 219, 62, 193 )
 
-[node name="Carrinho5" type="Area2D" parent="Carrinhos2"]
+[node name="Carrinho5" type="Area2D" parent="Cenário/Carrinhos2"]
 position = Vector2( 41, 55 )
 scale = Vector2( 0.0805367, 0.0831225 )
 script = ExtResource( 73 )
 
-[node name="Seta" type="Sprite" parent="Carrinhos2/Carrinho5"]
+[node name="Seta" type="Sprite" parent="Cenário/Carrinhos2/Carrinho5"]
 position = Vector2( 2763.85, 1671.79 )
 rotation = 1.57126
 scale = Vector2( 0.232091, 0.238893 )
 texture = ExtResource( 52 )
 
-[node name="GroceryStoreSingles31" type="Sprite" parent="Carrinhos2/Carrinho5"]
+[node name="GroceryStoreSingles31" type="Sprite" parent="Cenário/Carrinhos2/Carrinho5"]
 position = Vector2( 2756.51, 1900.81 )
 scale = Vector2( 11.5747, 11.4386 )
 texture = ExtResource( 54 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Carrinhos2/Carrinho5"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Carrinhos2/Carrinho5"]
 position = Vector2( 2619.92, 1744.41 )
 build_mode = 1
 polygon = PoolVector2Array( 49.6675, 120.304, 50.4171, 388.548, 224.251, 400.578, 235.918, 120.304 )
 
-[node name="PrateleirasFrutas" type="YSort" parent="."]
+[node name="PrateleirasFrutas" type="YSort" parent="Cenário"]
 
-[node name="Prateleira1" type="YSort" parent="PrateleirasFrutas"]
+[node name="Prateleira1" type="YSort" parent="Cenário/PrateleirasFrutas"]
 
-[node name="Prateleira1" type="StaticBody2D" parent="PrateleirasFrutas/Prateleira1"]
+[node name="Prateleira1" type="StaticBody2D" parent="Cenário/PrateleirasFrutas/Prateleira1"]
 
-[node name="GroceryStoreSingles406" type="Sprite" parent="PrateleirasFrutas/Prateleira1/Prateleira1"]
+[node name="GroceryStoreSingles406" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira1/Prateleira1"]
 position = Vector2( 369, 62 )
 texture = ExtResource( 45 )
 
-[node name="GroceryStoreSingles409" type="Sprite" parent="PrateleirasFrutas/Prateleira1/Prateleira1"]
+[node name="GroceryStoreSingles409" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira1/Prateleira1"]
 position = Vector2( 400, 62 )
 texture = ExtResource( 48 )
 
-[node name="GroceryStoreSingles410" type="Sprite" parent="PrateleirasFrutas/Prateleira1/Prateleira1"]
+[node name="GroceryStoreSingles410" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira1/Prateleira1"]
 position = Vector2( 415, 62 )
 texture = ExtResource( 48 )
 
-[node name="GroceryStoreSingles408" type="Sprite" parent="PrateleirasFrutas/Prateleira1/Prateleira1"]
+[node name="GroceryStoreSingles408" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira1/Prateleira1"]
 position = Vector2( 430, 62 )
 texture = ExtResource( 55 )
 
-[node name="PrateleiraX" type="Sprite" parent="PrateleirasFrutas/Prateleira1/Prateleira1"]
+[node name="PrateleiraX" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira1/Prateleira1"]
 position = Vector2( 385, 62 )
 texture = ExtResource( 48 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PrateleirasFrutas/Prateleira1/Prateleira1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/PrateleirasFrutas/Prateleira1/Prateleira1"]
 build_mode = 1
 polygon = PoolVector2Array( 352, 57, 353, 85, 432, 84, 432, 57 )
 
-[node name="Prateleira2" type="YSort" parent="PrateleirasFrutas"]
+[node name="Prateleira2" type="YSort" parent="Cenário/PrateleirasFrutas"]
 
-[node name="Prateleira2" type="StaticBody2D" parent="PrateleirasFrutas/Prateleira2"]
+[node name="Prateleira2" type="StaticBody2D" parent="Cenário/PrateleirasFrutas/Prateleira2"]
 
-[node name="GroceryStoreSingles403" type="Sprite" parent="PrateleirasFrutas/Prateleira2/Prateleira2"]
+[node name="GroceryStoreSingles403" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira2/Prateleira2"]
 position = Vector2( 369, 104 )
 texture = ExtResource( 49 )
 
-[node name="GroceryStoreSingles404" type="Sprite" parent="PrateleirasFrutas/Prateleira2/Prateleira2"]
+[node name="GroceryStoreSingles404" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira2/Prateleira2"]
 position = Vector2( 385, 104 )
 texture = ExtResource( 50 )
 
-[node name="GroceryStoreSingles405" type="Sprite" parent="PrateleirasFrutas/Prateleira2/Prateleira2"]
+[node name="GroceryStoreSingles405" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira2/Prateleira2"]
 position = Vector2( 401, 104 )
 texture = ExtResource( 50 )
 
-[node name="GroceryStoreSingles411" type="Sprite" parent="PrateleirasFrutas/Prateleira2/Prateleira2"]
+[node name="GroceryStoreSingles411" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira2/Prateleira2"]
 position = Vector2( 417, 104 )
 texture = ExtResource( 50 )
 
-[node name="GroceryStoreSingles412" type="Sprite" parent="PrateleirasFrutas/Prateleira2/Prateleira2"]
+[node name="GroceryStoreSingles412" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira2/Prateleira2"]
 position = Vector2( 433, 104 )
 texture = ExtResource( 60 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PrateleirasFrutas/Prateleira2/Prateleira2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/PrateleirasFrutas/Prateleira2/Prateleira2"]
 polygon = PoolVector2Array( 355, 96, 352, 127, 434, 127, 435, 98 )
 
-[node name="Prateleira3" type="YSort" parent="PrateleirasFrutas"]
+[node name="Prateleira3" type="YSort" parent="Cenário/PrateleirasFrutas"]
 
-[node name="Prateleira3" type="StaticBody2D" parent="PrateleirasFrutas/Prateleira3"]
+[node name="Prateleira3" type="StaticBody2D" parent="Cenário/PrateleirasFrutas/Prateleira3"]
 
-[node name="GroceryStoreSingles413" type="Sprite" parent="PrateleirasFrutas/Prateleira3/Prateleira3"]
+[node name="GroceryStoreSingles413" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira3/Prateleira3"]
 position = Vector2( 371, 194 )
 texture = ExtResource( 49 )
 
-[node name="GroceryStoreSingles414" type="Sprite" parent="PrateleirasFrutas/Prateleira3/Prateleira3"]
+[node name="GroceryStoreSingles414" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira3/Prateleira3"]
 position = Vector2( 387, 194 )
 texture = ExtResource( 50 )
 
-[node name="GroceryStoreSingles415" type="Sprite" parent="PrateleirasFrutas/Prateleira3/Prateleira3"]
+[node name="GroceryStoreSingles415" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira3/Prateleira3"]
 position = Vector2( 403, 194 )
 texture = ExtResource( 50 )
 
-[node name="GroceryStoreSingles416" type="Sprite" parent="PrateleirasFrutas/Prateleira3/Prateleira3"]
+[node name="GroceryStoreSingles416" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira3/Prateleira3"]
 position = Vector2( 419, 194 )
 texture = ExtResource( 50 )
 
-[node name="GroceryStoreSingles417" type="Sprite" parent="PrateleirasFrutas/Prateleira3/Prateleira3"]
+[node name="GroceryStoreSingles417" type="Sprite" parent="Cenário/PrateleirasFrutas/Prateleira3/Prateleira3"]
 position = Vector2( 435, 194 )
 texture = ExtResource( 60 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PrateleirasFrutas/Prateleira3/Prateleira3"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/PrateleirasFrutas/Prateleira3/Prateleira3"]
 polygon = PoolVector2Array( 354, 186, 354, 218, 436, 218, 437, 186 )
 
-[node name="Caixa1" type="YSort" parent="PrateleirasFrutas"]
+[node name="Caixa1" type="YSort" parent="Cenário/PrateleirasFrutas"]
 
-[node name="Caixa1" type="StaticBody2D" parent="PrateleirasFrutas/Caixa1"]
+[node name="Caixa1" type="StaticBody2D" parent="Cenário/PrateleirasFrutas/Caixa1"]
 
-[node name="GroceryStoreSingles398" type="Sprite" parent="PrateleirasFrutas/Caixa1/Caixa1"]
+[node name="GroceryStoreSingles398" type="Sprite" parent="Cenário/PrateleirasFrutas/Caixa1/Caixa1"]
 position = Vector2( 370, 150 )
 texture = ExtResource( 61 )
 
-[node name="GroceryStoreSingles401" type="Sprite" parent="PrateleirasFrutas/Caixa1/Caixa1"]
+[node name="GroceryStoreSingles401" type="Sprite" parent="Cenário/PrateleirasFrutas/Caixa1/Caixa1"]
 position = Vector2( 370, 158 )
 texture = ExtResource( 61 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PrateleirasFrutas/Caixa1/Caixa1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/PrateleirasFrutas/Caixa1/Caixa1"]
 build_mode = 1
 polygon = PoolVector2Array( 353, 141, 352, 174, 370, 174, 370, 142 )
 
-[node name="Caixa2" type="YSort" parent="PrateleirasFrutas"]
+[node name="Caixa2" type="YSort" parent="Cenário/PrateleirasFrutas"]
 
-[node name="Caixa2" type="StaticBody2D" parent="PrateleirasFrutas/Caixa2"]
+[node name="Caixa2" type="StaticBody2D" parent="Cenário/PrateleirasFrutas/Caixa2"]
 
-[node name="GroceryStoreSingles399" type="Sprite" parent="PrateleirasFrutas/Caixa2/Caixa2"]
+[node name="GroceryStoreSingles399" type="Sprite" parent="Cenário/PrateleirasFrutas/Caixa2/Caixa2"]
 position = Vector2( 393, 151 )
 texture = ExtResource( 59 )
 
-[node name="GroceryStoreSingles402" type="Sprite" parent="PrateleirasFrutas/Caixa2/Caixa2"]
+[node name="GroceryStoreSingles402" type="Sprite" parent="Cenário/PrateleirasFrutas/Caixa2/Caixa2"]
 position = Vector2( 393, 159 )
 texture = ExtResource( 59 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PrateleirasFrutas/Caixa2/Caixa2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/PrateleirasFrutas/Caixa2/Caixa2"]
 build_mode = 1
 polygon = PoolVector2Array( 377, 143, 376, 174, 395, 174, 395, 144 )
 
-[node name="Caixa3" type="YSort" parent="PrateleirasFrutas"]
+[node name="Caixa3" type="YSort" parent="Cenário/PrateleirasFrutas"]
 
-[node name="Caixa3" type="StaticBody2D" parent="PrateleirasFrutas/Caixa3"]
+[node name="Caixa3" type="StaticBody2D" parent="Cenário/PrateleirasFrutas/Caixa3"]
 
-[node name="GroceryStoreSingles400" type="Sprite" parent="PrateleirasFrutas/Caixa3/Caixa3"]
+[node name="GroceryStoreSingles400" type="Sprite" parent="Cenário/PrateleirasFrutas/Caixa3/Caixa3"]
 position = Vector2( 435, 151 )
 texture = ExtResource( 58 )
 
-[node name="GroceryStoreSingles429" type="Sprite" parent="PrateleirasFrutas/Caixa3/Caixa3"]
+[node name="GroceryStoreSingles429" type="Sprite" parent="Cenário/PrateleirasFrutas/Caixa3/Caixa3"]
 position = Vector2( 435, 160 )
 texture = ExtResource( 58 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PrateleirasFrutas/Caixa3/Caixa3"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/PrateleirasFrutas/Caixa3/Caixa3"]
 polygon = PoolVector2Array( 417, 139, 417, 176, 436, 176, 436, 139 )
 
-[node name="Carnes" type="YSort" parent="."]
+[node name="Carnes" type="YSort" parent="Cenário"]
 
-[node name="GroceryStoreSingles309" type="Sprite" parent="Carnes"]
+[node name="GroceryStoreSingles309" type="Sprite" parent="Cenário/Carnes"]
 position = Vector2( -35, -59 )
 scale = Vector2( 1.3125, 1.35417 )
 texture = ExtResource( 35 )
 
-[node name="GroceryStoreSingles310" type="Sprite" parent="Carnes"]
+[node name="GroceryStoreSingles310" type="Sprite" parent="Cenário/Carnes"]
 position = Vector2( 6, -58.5 )
 scale = Vector2( 1.375, 1.1875 )
 texture = ExtResource( 34 )
 
-[node name="GroceryStoreSingles316" type="Sprite" parent="Carnes"]
+[node name="GroceryStoreSingles316" type="Sprite" parent="Cenário/Carnes"]
 position = Vector2( 33, -44 )
 texture = ExtResource( 36 )
 
-[node name="GroceryStoreSingles315" type="Sprite" parent="Carnes"]
+[node name="GroceryStoreSingles315" type="Sprite" parent="Cenário/Carnes"]
 position = Vector2( 62, -43 )
 texture = ExtResource( 32 )
 
-[node name="GroceryStoreSingles317" type="Sprite" parent="Carnes"]
+[node name="GroceryStoreSingles317" type="Sprite" parent="Cenário/Carnes"]
 position = Vector2( 49, -43 )
 texture = ExtResource( 29 )
 
-[node name="GroceryStoreSingles318" type="Sprite" parent="Carnes"]
+[node name="GroceryStoreSingles318" type="Sprite" parent="Cenário/Carnes"]
 position = Vector2( 77, -44 )
 texture = ExtResource( 30 )
 
-[node name="GroceryStoreSingles332" type="Sprite" parent="Carnes"]
+[node name="GroceryStoreSingles332" type="Sprite" parent="Cenário/Carnes"]
 position = Vector2( 47, 31 )
 scale = Vector2( 1.46875, 1.33333 )
 texture = ExtResource( 33 )
 
-[node name="GroceryStoreSingles311" type="Sprite" parent="Carnes"]
+[node name="GroceryStoreSingles311" type="Sprite" parent="Cenário/Carnes"]
 position = Vector2( 51, -77.3125 )
 scale = Vector2( 1.48437, 1.17969 )
 texture = ExtResource( 31 )
 
-[node name="GroceryStoreSingles312" type="Sprite" parent="Carnes"]
+[node name="GroceryStoreSingles312" type="Sprite" parent="Cenário/Carnes"]
 position = Vector2( 81, -77.1563 )
 scale = Vector2( 1.92969, 1.17318 )
 texture = ExtResource( 31 )
 
-[node name="GroceryStoreSingles302" type="Sprite" parent="Carnes"]
+[node name="GroceryStoreSingles302" type="Sprite" parent="Cenário/Carnes"]
 position = Vector2( -19, 33 )
 texture = ExtResource( 56 )
 
-[node name="GroceryStoreSingles304" type="Sprite" parent="Carnes"]
+[node name="GroceryStoreSingles304" type="Sprite" parent="Cenário/Carnes"]
 position = Vector2( 14, 35 )
 texture = ExtResource( 44 )
 
-[node name="Mesa1" type="StaticBody2D" parent="Carnes"]
+[node name="Mesa1" type="StaticBody2D" parent="Cenário/Carnes"]
 
-[node name="GroceryStoreSingles341" type="Sprite" parent="Carnes/Mesa1"]
+[node name="GroceryStoreSingles341" type="Sprite" parent="Cenário/Carnes/Mesa1"]
 position = Vector2( -29, 37.5 )
 scale = Vector2( 1.1875, 1.14583 )
 texture = ExtResource( 42 )
 
-[node name="GroceryStoreSingles342" type="Sprite" parent="Carnes/Mesa1"]
+[node name="GroceryStoreSingles342" type="Sprite" parent="Cenário/Carnes/Mesa1"]
 position = Vector2( -12.75, 37.5 )
 scale = Vector2( 1.10938, 1.14583 )
 texture = ExtResource( 43 )
 
-[node name="GroceryStoreSingles344" type="Sprite" parent="Carnes/Mesa1"]
+[node name="GroceryStoreSingles344" type="Sprite" parent="Cenário/Carnes/Mesa1"]
 position = Vector2( 5.25, 37.5 )
 scale = Vector2( 1.10938, 1.14583 )
 texture = ExtResource( 43 )
 
-[node name="GroceryStoreSingles343" type="Sprite" parent="Carnes/Mesa1"]
+[node name="GroceryStoreSingles343" type="Sprite" parent="Cenário/Carnes/Mesa1"]
 position = Vector2( 23.125, 37.5 )
 scale = Vector2( 1.11719, 1.14583 )
 texture = ExtResource( 41 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Carnes/Mesa1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Carnes/Mesa1"]
 build_mode = 1
 polygon = PoolVector2Array( -47, 38, -47, 64, 68, 63, 68, 38 )
 
-[node name="Hortifrutti" type="YSort" parent="."]
+[node name="Hortifrutti" type="YSort" parent="Cenário"]
 
-[node name="Laranja1" type="Sprite" parent="Hortifrutti"]
+[node name="Laranja1" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 370, 88 )
 texture = ExtResource( 68 )
 
-[node name="Pimenta2" type="Sprite" parent="Hortifrutti"]
+[node name="Pimenta2" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 430, 46 )
 texture = ExtResource( 66 )
 
-[node name="Laranja2" type="Sprite" parent="Hortifrutti"]
+[node name="Laranja2" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 401, 46 )
 texture = ExtResource( 63 )
 
-[node name="Bananas1" type="Sprite" parent="Hortifrutti"]
+[node name="Bananas1" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 434, 178 )
 texture = ExtResource( 70 )
 
-[node name="Bananas3" type="Sprite" parent="Hortifrutti"]
+[node name="Bananas3" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 431, 88 )
 texture = ExtResource( 70 )
 
-[node name="Bananas2" type="Sprite" parent="Hortifrutti"]
+[node name="Bananas2" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 386, 178 )
 texture = ExtResource( 70 )
 
-[node name="Limoes1" type="Sprite" parent="Hortifrutti"]
+[node name="Limoes1" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 419, 177 )
 texture = ExtResource( 65 )
 
-[node name="Limoes2" type="Sprite" parent="Hortifrutti"]
+[node name="Limoes2" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 369, 46 )
 texture = ExtResource( 65 )
 
-[node name="Tomates1" type="Sprite" parent="Hortifrutti"]
+[node name="Tomates1" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 402, 178 )
 texture = ExtResource( 64 )
 
-[node name="Tomates2" type="Sprite" parent="Hortifrutti"]
+[node name="Tomates2" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 415, 45 )
 texture = ExtResource( 64 )
 
-[node name="Maracuja3" type="Sprite" parent="Hortifrutti"]
+[node name="Maracuja3" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 384, 47 )
 z_index = 1
 texture = ExtResource( 62 )
 
-[node name="Cebolas1" type="Sprite" parent="Hortifrutti"]
+[node name="Cebolas1" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 371, 178 )
 texture = ExtResource( 69 )
 
-[node name="Cebolas2" type="Sprite" parent="Hortifrutti"]
+[node name="Cebolas2" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 401, 88 )
 texture = ExtResource( 69 )
 
-[node name="Meloes1" type="Sprite" parent="Hortifrutti"]
+[node name="Meloes1" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 436, 128 )
 texture = ExtResource( 71 )
 
-[node name="Melao2" type="Sprite" parent="Hortifrutti"]
+[node name="Melao2" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 385, 88 )
 texture = ExtResource( 71 )
 
-[node name="Pimentas1" type="Sprite" parent="Hortifrutti"]
+[node name="Pimentas1" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 392, 134 )
 texture = ExtResource( 66 )
 
-[node name="Maracuja1" type="Sprite" parent="Hortifrutti"]
+[node name="Maracuja1" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 362, 133 )
 texture = ExtResource( 62 )
 hframes = 2
 
-[node name="Berinjela" type="Sprite" parent="Hortifrutti"]
+[node name="Berinjela" type="Sprite" parent="Cenário/Hortifrutti"]
 position = Vector2( 416, 88 )
 texture = ExtResource( 67 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="Cenário"]
 script = ExtResource( 74 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Area2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenário/Area2D"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/Area2D"]
 build_mode = 1
 polygon = PoolVector2Array( 406, 414, 522, 414, 522, 457, 406, 457 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenário"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/StaticBody2D"]
 polygon = PoolVector2Array( -60, 8, -51, 9, -52, 374, -62, 374 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+[node name="StaticBody2D3" type="StaticBody2D" parent="Cenário"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/StaticBody2D3"]
 position = Vector2( 571, -6 )
 polygon = PoolVector2Array( -60, 8, -51, 9, -48, 549, -56, 549 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Cenário"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenário/StaticBody2D2"]
 polygon = PoolVector2Array( 415, 364, 415, 540, 406, 540, 406, 378, -62, 377, -61, 365 )

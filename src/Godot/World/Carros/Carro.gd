@@ -41,4 +41,4 @@ func _physics_process(delta):
 	if bodies:
 		for body in bodies:
 			if body.name == "Player":
-				body.position = Vector2(400, -557)
+				body.position = Vector2(400, -550)
