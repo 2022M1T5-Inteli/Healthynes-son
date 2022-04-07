@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://World/Mini-games/Trabalho/Cards/Card3.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Mini-games/Trabalho/Cards/Card2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/Mini-games/Trabalho/Cards/Card1.tscn" type="PackedScene" id=3]
+
+[node name="Card" type="YSort"]
+
+[node name="Card1" parent="." instance=ExtResource( 3 )]
+
+[node name="Card2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 161, 90 )
+
+[node name="Card3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 168, 89 )
+scale = Vector2( 1.03014, 1.03975 )

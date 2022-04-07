@@ -7,7 +7,7 @@ func _physics_process(delta):
 		for body in bodies:
 			if body.name == "Player":
 				print("corpo sobre o copo")
-				get_tree().change_scene("res://MenuTask2.tscn")
+				get_tree().change_scene("res://World/Mini-games/Trabalho/MenuTask2.tscn")
 				
 				if body.name != "Player":
 					print("corpo não esta sobre o copo")
