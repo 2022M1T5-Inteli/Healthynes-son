@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/Office/office.png" type="Texture" id=2]
@@ -34,7 +34,6 @@
 [ext_resource path="res://Tiles/Office/caixa-cigarro.png" type="Texture" id=32]
 [ext_resource path="res://Tiles/Office/cigarro.png" type="Texture" id=33]
 [ext_resource path="res://World/Cigarros.gd" type="Script" id=34]
-[ext_resource path="res://World/seta.png" type="Texture" id=35]
 [ext_resource path="res://World/Work.gd" type="Script" id=36]
 
 [sub_resource type="TileSet" id=1]
@@ -435,9 +434,3 @@ polygon = PoolVector2Array( -21.2019, 78.4166, -106.009, 78.4166, -107.175, 12.5
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="Seta" type="Sprite" parent="."]
-position = Vector2( 377, 209 )
-rotation = -1.57539
-scale = Vector2( 0.00561099, -0.00572911 )
-texture = ExtResource( 35 )

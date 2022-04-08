@@ -26,25 +26,20 @@ func _process(delta):# sistema de estrelas e musicas
 		$Sprite2.visible =true
 		$Sprite3.visible =true
 		$Sprite4.visible =true
-	
-	
+
 	elif tempo.time <= 60: # sistema de estrelas, menos que 60 segundos 2 estrelas
 		$Sprite2.visible =true
 		$Sprite3.visible =true
 		$Sprite4.visible = false
 		
-	
-		
 	if tempo.time > 60:# sistema de estrelas, maior que 60, 0 estrelas 
 		$Sprite2.visible = false
 		$Sprite3.visible = false
-		$Sprite4.visible = false	
-		$Button2.visible = false
+		$Sprite4.visible = false
+		$Button2.visible = true
+		$Button.visible = true
 		$ColorRect.visible = false
 		$ColorRect3.visible = true
-		
-
-		
 
 
 func _on_Button_pressed(): # sistema de reiniciar mini game
@@ -54,13 +49,8 @@ func _on_Button_pressed(): # sistema de reiniciar mini game
 	get_tree().paused = false
 	get_tree().reload_current_scene()
 	yield(get_tree().create_timer(3.0), "timeout")
-
 	
 	
-
-
-
-
 
 func _on_Button2_pressed():
 	get_tree().change_scene("res://World/Espacos/Casa/House2.tscn")

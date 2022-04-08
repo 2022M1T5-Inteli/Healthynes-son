@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://World/Pacman/Mapa/Minigame 1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://World/Pacman/Som/Musica/y2meta.com - Collect Item sound effect (128 kbps).mp3" type="AudioStream" id=13]
 [ext_resource path="res://World/Pacman/Som/Efeitos/y2meta.com - September - Earth, Wind and Fire 8bit Jazz Version (128 kbps).mp3" type="AudioStream" id=14]
 [ext_resource path="res://World/Pacman/Som/Efeitos/y2meta.com - Mr. Sandman - The Chordettes 8bit Jazz Version (128 kbps).mp3" type="AudioStream" id=15]
+[ext_resource path="res://Tiles/exitButton.png" type="Texture" id=16]
+[ext_resource path="res://Tiles/restartButton.png" type="Texture" id=17]
 
 [sub_resource type="DynamicFont" id=3]
 size = 7
@@ -101,11 +103,11 @@ scale = Vector2( 2.09375, 2.18311 )
 texture = ExtResource( 12 )
 
 [node name="ColorRect3" type="ColorRect" parent="CanvasLayer/Pontuacao"]
-visible = false
-margin_left = 109.0
-margin_top = 46.0
-margin_right = 198.0
-margin_bottom = 143.0
+margin_left = 107.0
+margin_top = 40.0
+margin_right = 196.0
+margin_bottom = 166.0
+rect_scale = Vector2( 1.01547, 1.15395 )
 color = Color( 0.517647, 0.45098, 0.45098, 0 )
 
 [node name="MenuPontuação2" type="Sprite" parent="CanvasLayer/Pontuacao/ColorRect3"]
@@ -115,22 +117,26 @@ texture = ExtResource( 12 )
 
 [node name="Button" type="Button" parent="CanvasLayer/Pontuacao"]
 pause_mode = 2
-margin_left = 147.0
-margin_top = 115.0
-margin_right = 223.0
-margin_bottom = 135.0
-text = "reiniciar"
+margin_left = 131.0
+margin_top = 98.0
+margin_right = 207.0
+margin_bottom = 120.0
+rect_scale = Vector2( 2, 2 )
+icon = ExtResource( 17 )
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button2" type="Button" parent="CanvasLayer/Pontuacao"]
 pause_mode = 2
-margin_left = 147.0
-margin_top = 140.0
-margin_right = 221.0
-margin_bottom = 160.0
-text = "continuar"
+margin_left = 131.0
+margin_top = 127.0
+margin_right = 205.0
+margin_bottom = 149.0
+rect_scale = Vector2( 2, 2 )
+icon = ExtResource( 16 )
+flat = true
 
 [node name="tempo" type="Label" parent="CanvasLayer/Pontuacao"]
 anchor_right = 1.0
