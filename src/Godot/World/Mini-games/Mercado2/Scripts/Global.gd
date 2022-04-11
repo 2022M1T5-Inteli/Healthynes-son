@@ -1,5 +1,8 @@
 extends Node2D
 
+var interacao = false
+var interacaoTimer = 0
+
 var pontos = 0
 var maca = preload("res://World/Mini-games/Mercado2/Scenes/Maca.tscn")
 var balas = preload("res://World/Mini-games/Mercado2/Scenes/Balas.tscn")
@@ -10,8 +13,13 @@ var chocolate = preload("res://World/Mini-games/Mercado2/Scenes/Chocolate.tscn")
 var agua = preload("res://World/Mini-games/Mercado2/Scenes/Agua.tscn")
 var salgadinho = preload("res://World/Mini-games/Mercado2/Scenes/Salgadinho.tscn")
 
-func _ready():
-	pass
+# Verifica se o botão de interação foi clicado e coloca a interacao como verdadeira, torna-se falsa depois de um segundo.
+func interacao():
+	if Input.is_action_just_pressed("ui_accept"):
+		print("foi")
+		interacao = true
+	if interacaoTimer >= 60:
+		interacao = false
 
 func _on_SpawnTimer_timeout():
 
@@ -72,3 +80,9 @@ func _on_SpawnTimer8_timeout():
 	$Spawn6.position = position
 	$Spawn7.position = position
 	$Spawn8.position = position
+	
+# Cria um Timer que limita o tempo de efetividade do botao de interacao para um segundo
+func _process(delta):
+	interacaoTimer += 1
+	if interacaoTimer > 60:
+		interacaoTimer = 0

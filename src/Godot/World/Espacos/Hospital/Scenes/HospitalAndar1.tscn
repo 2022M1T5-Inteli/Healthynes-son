@@ -13,9 +13,9 @@
 [ext_resource path="res://World/Espacos/Hospital/Sprites/animated_spider.png" type="Texture" id=11]
 [ext_resource path="res://World/Espacos/Hospital/Tiles/1_Generic_16x16.png" type="Texture" id=12]
 [ext_resource path="res://World/Espacos/Hospital/Tiles/Room_Builder_borders_16x16.png" type="Texture" id=13]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=14]
-[ext_resource path="res://World/Portas/VoltarHospital1.gd" type="Script" id=15]
-[ext_resource path="res://World/Portas/VoltarHospital2.gd" type="Script" id=16]
+[ext_resource path="res://Player/Scenes/Player.tscn" type="PackedScene" id=14]
+[ext_resource path="res://World/Portas/Scripts/VoltarHospital1.gd" type="Script" id=15]
+[ext_resource path="res://World/Portas/Scripts/VoltarHospital2.gd" type="Script" id=16]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Room_Builder_Floors_16x16.png 0"

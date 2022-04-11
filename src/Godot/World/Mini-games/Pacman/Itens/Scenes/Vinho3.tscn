@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://World/Mini-games/Pacman/Itens/Sprites/Garrafa.png" type="Texture" id=1]
+
+
+
+[node name="Vinho3" type="StaticBody2D" groups=["Itens"]]
+position = Vector2( 299, 17 )
+
+[node name="Vinho" type="Sprite" parent="."]
+position = Vector2( 2, 2 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -0.295072, -0.2 )
+scale = Vector2( 0.762707, 1.02083 )
+polygon = PoolVector2Array( -0.391602, -0.783673, -0.391602, 6.07347, 5.75427, 6.07347, 5.75427, -0.783673, 3.84573, -5.68163, 1.65146, -5.68163 )

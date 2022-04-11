@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/y2meta.com - Collect Item sound effect (128 kbps).mp3-fbbd842bffc697e98ed566016dbb074b.mp3str"
+
+[deps]
+
+source_file="res://World/Mini-games/Pacman/Level/y2meta.com - Collect Item sound effect (128 kbps).mp3"
+dest_files=[ "res://.import/y2meta.com - Collect Item sound effect (128 kbps).mp3-fbbd842bffc697e98ed566016dbb074b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
