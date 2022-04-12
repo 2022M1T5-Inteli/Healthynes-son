@@ -8,7 +8,7 @@
 
 ## BioCoding
 
-## Integrantes: <a href="">Henrique Schilder</a>, <a href="">Tainara Rodrigues</a>, <a href="https://www.linkedin.com/in/raduanmuarrek/">Raduan Muarrek</a>, <a href="https://www.linkedin.com/in/gabriela-rodrigues-matias/">Gabriela Matias</a>, <a href="">Daniel Barzilai</a>, <a href="">Vitor Moura</a>, <a href="">Arthur </a>
+## Integrantes: <a href="">Henrique Schilder</a>, <a href="">Tainara Rodrigues</a>, <a href="https://www.linkedin.com/in/raduanmuarrek/">Raduan Muarrek</a>, <a href="https://www.linkedin.com/in/gabriela-rodrigues-matias/">Gabriela Matias</a>, <a href="">Daniel Barzilai</a>, <a href="">Vitor Moura</a>, <a href="https://www.linkedin.com/in/arthur-fraige-b7608822a/">Arthur Fraige</a>
 
 ## Descrição
 
@@ -59,15 +59,6 @@ Há também 4 pastas que seguem da seguinte forma:
 <b>src</b>: Nesta pasta irá todo o código fonte do jogo/sistema, pronto para para ser baixado e modificado.
 
 ## 🛠 Instalação
-
-<b>Android:</b>
-
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
 
 <b>Windows:</b>
 
