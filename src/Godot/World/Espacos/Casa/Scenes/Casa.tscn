@@ -76,7 +76,7 @@
 [ext_resource path="res://Tiles/House/Kitchen_Singles_152.png" type="Texture" id=74]
 [ext_resource path="res://Tiles/House/fruits.png" type="Texture" id=75]
 [ext_resource path="res://Tiles/House/dresser2.png" type="Texture" id=76]
-[ext_resource path="res://inventario.tscn" type="PackedScene" id=77]
+[ext_resource path="res://World/Inventario/inventario.tscn" type="PackedScene" id=77]
 
 [sub_resource type="TileSet" id=61]
 0/name = "floor1.png 0"
@@ -2063,7 +2063,7 @@ script = ExtResource( 6 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bebida"]
 position = Vector2( 116.82, 9.7178 )
 frames = SubResource( 97 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bebida"]

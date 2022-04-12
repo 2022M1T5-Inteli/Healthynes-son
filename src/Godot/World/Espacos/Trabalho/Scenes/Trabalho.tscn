@@ -35,7 +35,7 @@
 [ext_resource path="res://Tiles/Office/gondola.png" type="Texture" id=33]
 [ext_resource path="res://Tiles/Office/cadeira-costas.png" type="Texture" id=34]
 [ext_resource path="res://Tiles/House/green.png" type="Texture" id=35]
-[ext_resource path="res://inventario.tscn" type="PackedScene" id=36]
+[ext_resource path="res://World/Inventario/inventario.tscn" type="PackedScene" id=36]
 
 [sub_resource type="TileSet" id=1]
 0/name = "green.png 0"

@@ -74,7 +74,7 @@
 [ext_resource path="res://Tiles/Market/Grocery_Store_Singles_418.png" type="Texture" id=72]
 [ext_resource path="res://Tiles/Market/Grocery_Store_Singles_415.png" type="Texture" id=73]
 [ext_resource path="res://Tiles/Market/Grocery_Store_Singles_416.png" type="Texture" id=74]
-[ext_resource path="res://inventario.tscn" type="PackedScene" id=75]
+[ext_resource path="res://World/Inventario/inventario.tscn" type="PackedScene" id=75]
 
 [sub_resource type="TileSet" id=2]
 0/name = "green.png 0"

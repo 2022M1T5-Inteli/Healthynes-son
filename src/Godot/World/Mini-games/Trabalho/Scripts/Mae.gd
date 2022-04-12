@@ -23,7 +23,7 @@ func _on_Reiniciar_pressed():
 func _on_Continuar_pressed():
 	get_tree().change_scene("res://World/Work.tscn")
 	get_tree().paused = false
-	Invent.pointsInv2 += 1
+	Invent.pointsInv2 =+ 1
 
 
 

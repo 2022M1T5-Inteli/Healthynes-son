@@ -57,4 +57,4 @@ func _on_Button_pressed(): # sistema de reiniciar mini game
 func _on_Button2_pressed():
 	get_tree().change_scene("res://World/Espacos/Casa/Scenes/Casa.tscn")
 	get_tree().paused = false
-	Invent.pointsInv += 1
+	Invent.pointsInv =+ 1

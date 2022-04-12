@@ -61,9 +61,9 @@
 [ext_resource path="res://World/NPCs/NPCsCorrendo.tscn" type="PackedScene" id=59]
 [ext_resource path="res://Tiles/Praia/Body_04.png" type="Texture" id=60]
 [ext_resource path="res://Tiles/Praia/9_Fishing_16x16.png" type="Texture" id=61]
-[ext_resource path="res://inventario.tscn" type="PackedScene" id=62]
-[ext_resource path="res://SetaRed3.gd" type="Script" id=63]
-[ext_resource path="res://SetaRed2.gd" type="Script" id=64]
+[ext_resource path="res://World/Inventario/inventario.tscn" type="PackedScene" id=62]
+[ext_resource path="res://World/Inventario/SetaRed3.gd" type="Script" id=63]
+[ext_resource path="res://World/Inventario/SetaRed2.gd" type="Script" id=64]
 
 [sub_resource type="GDScript" id=17]
 script/source = "extends Node2D
@@ -1020,7 +1020,6 @@ __meta__ = {
 position = Vector2( 0, 14 )
 frames = SubResource( 13 )
 animation = "Display"
-frame = 7
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -15125,10 +15124,11 @@ position = Vector2( -523, 456 )
 [node name="NPC praia" type="AnimatedSprite" parent="NPC"]
 position = Vector2( 347, 373 )
 frames = SubResource( 54 )
-frame = 3
+frame = 4
 playing = true
 
 [node name="NPC praia2" type="AnimatedSprite" parent="NPC"]
 position = Vector2( 380, 380 )
 frames = SubResource( 55 )
+frame = 1
 playing = true

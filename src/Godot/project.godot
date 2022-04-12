@@ -22,7 +22,7 @@ run/main_scene="res://World/Menu/MenuPrincipal.tscn"
 vars="*res://World/Mini-games/Pacman.tscn"
 tempo="*res://World/Mini-games/Pacman/Itens/Scripts/tempo.gd"
 Global="*res://World/Mini-games/Mercado2/Scripts/Global.gd"
-Invent="*res://Sprite.gd"
+Invent="*res://World/Inventario/Invent.gd"
 
 [display]
 
