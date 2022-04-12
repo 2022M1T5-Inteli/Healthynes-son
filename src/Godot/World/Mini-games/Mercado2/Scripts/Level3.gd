@@ -21,3 +21,4 @@ func _on_Button_pressed():
 	get_tree().change_scene("res://World/Mini-games/Mercado2/Scenes/Level3.tscn")
 	get_tree().paused = false
 	Global.pontos = 0
+	Invent.pointsInv3 += 1

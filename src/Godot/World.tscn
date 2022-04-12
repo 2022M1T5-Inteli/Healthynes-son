@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=2]
+[gd_scene load_steps=117 format=2]
 
 [ext_resource path="res://Tiles/Modern_Exteriors_v2.8/Modern_Exteriors_v1.0/Modern_Exteriors_16x16/Modern_Exteriors_Singles_16x16/Modern_Exteriors_Singles_44.png" type="Texture" id=1]
 [ext_resource path="res://Player/Scenes/Player.tscn" type="PackedScene" id=2]
@@ -61,6 +61,9 @@
 [ext_resource path="res://World/NPCs/NPCsCorrendo.tscn" type="PackedScene" id=59]
 [ext_resource path="res://Tiles/Praia/Body_04.png" type="Texture" id=60]
 [ext_resource path="res://Tiles/Praia/9_Fishing_16x16.png" type="Texture" id=61]
+[ext_resource path="res://inventario.tscn" type="PackedScene" id=62]
+[ext_resource path="res://SetaRed3.gd" type="Script" id=63]
+[ext_resource path="res://SetaRed2.gd" type="Script" id=64]
 
 [sub_resource type="GDScript" id=17]
 script/source = "extends Node2D
@@ -885,12 +888,14 @@ position = Vector2( 185, -10.001 )
 rotation = -1.55607
 scale = Vector2( 0.0135042, 0.0135042 )
 texture = ExtResource( 57 )
+script = ExtResource( 64 )
 
 [node name="SetaRed3" type="Sprite" parent="."]
 position = Vector2( 635, -6.99826 )
 rotation = -1.55607
 scale = Vector2( 0.0132879, 0.0134082 )
 texture = ExtResource( 57 )
+script = ExtResource( 63 )
 
 [node name="Mapa" type="YSort" parent="."]
 position = Vector2( -6, 9 )
@@ -929,6 +934,9 @@ current = true
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Node2D" parent="Mapa/Player" instance=ExtResource( 62 )]
+z_index = 20
 
 [node name="Enfeites" type="YSort" parent="Mapa"]
 position = Vector2( 433, -212 )
@@ -1012,7 +1020,7 @@ __meta__ = {
 position = Vector2( 0, 14 )
 frames = SubResource( 13 )
 animation = "Display"
-frame = 4
+frame = 7
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -15117,11 +15125,10 @@ position = Vector2( -523, 456 )
 [node name="NPC praia" type="AnimatedSprite" parent="NPC"]
 position = Vector2( 347, 373 )
 frames = SubResource( 54 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="NPC praia2" type="AnimatedSprite" parent="NPC"]
 position = Vector2( 380, 380 )
 frames = SubResource( 55 )
-frame = 1
 playing = true

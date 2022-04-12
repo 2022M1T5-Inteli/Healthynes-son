@@ -155,9 +155,6 @@ margin_right = 28.303
 margin_bottom = 12.303
 icon = ExtResource( 4 )
 flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Button2" type="Button" parent="Sprite"]
 pause_mode = 2

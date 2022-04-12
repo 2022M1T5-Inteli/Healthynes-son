@@ -1259,6 +1259,7 @@ texture = ExtResource( 50 )
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Pedro"]
 position = Vector2( 0, -44 )
 frames = SubResource( 49 )
+frame = 5
 playing = true
 
 [node name="Node2Db" type="Node2D" parent="."]
@@ -1294,7 +1295,6 @@ position = Vector2( 2847, 159 )
 position = Vector2( 28, 131 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 13 )
-frame = 5
 speed_scale = 2.0
 playing = true
 
@@ -1329,9 +1329,6 @@ margin_top = 43.0
 margin_right = 255.0
 margin_bottom = 69.0
 text = "Continuar"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pressed" from="Node2D2/Voltar" to="." method="_on_Voltar_pressed"]
 [connection signal="pressed" from="Node2D2/Reiniciar" to="." method="_on_Reiniciar_pressed"]
