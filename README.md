@@ -74,11 +74,20 @@ Encontre o index.html na pasta executáveis e execute-o como uma página WEB (at
 
 ## 📈 Exemplo de uso
 
-Alguns exemplos interessantes e úteis sobre como seu projeto pode ser utilizado.
+Como nosso projeto pode ser utilizado: 
 
-Adicione blocos de códigos e, se necessário, screenshots.
-
-Este modelo pode ser copiado e utilizado à vontade.
+<h3><strong>1. Ambientes de Desenvolvimento</h3></strong>
+<p>A estrutura de desenvolvimento pode ser reutilizada para outros projetos que possuam uma mecânica similar ao nosso.</p>
+<br>
+<br>
+<h3><strong>2. Ambientes Educacionais</h3></strong>
+<p>Locais de aprendizado para estimular o jogo como um meio instrutivo de métodos para que as pessoas tenham uma rotina saudável que colabore para a prevenção do câncer.</p> 
+<br>
+<br>
+<h3><strong>3. Lazer e Diversão</h3></strong>
+<p>O usuário pode utilizar nosso jogo como forma de lazer e divertimento.</p>
+<br>
+<br>
 
 Através da cópia/clone/ download do repositório, altere os dados do readme.md e carregue os arquivos de seu projeto.
 
@@ -99,6 +108,11 @@ A cada atualização os detalhes devem ser lançados aqui.
 ## 📋 Licença/License
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">INTELI, VICTOR BRUNO ALEXANDER ROSETTI DE QUIROZ</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+
+<p>Music</a> by <a href="https://www.youtube.com/c/8BitJazz/videos">8 Bt Jazz</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+
+<p>Free Tiles</a> by <a href="https://limezu.itch.io/moderninteriors">Limezu Itch io </a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+
 
 ## 🎓 Referências
 
