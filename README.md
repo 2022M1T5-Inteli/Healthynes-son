@@ -14,19 +14,17 @@
 
 📜 Descrição curta sobre o que seu projeto faz.
 <br><br>
-Meu projeto é um exemplo de como utilizar o github.
+O projeto tem como objetivo ser um método de instrução por meio de uma proposta gameficada aplicada a um jogo que busca informar ao mesmo tempo que diverte os jovens sobre os métodos e ações de uma rotina  que pode influenciar positivamente uma pessoa a prevenir alguns tipos de câncer ou até mesmo ações que promovem uma melhoria no status de saúde de uma pessoa que já possui esse tipo de doença. 
 <br><br>
 <p align="center">
 <img src="/imagens/BIO-CODING.png" alt="HealthynesSon" border="0" style="width: 300px; height: 300px;"><br/>
-  Game by <a href="http://www.nyphotographic.com/">BioCoding</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
+  Game by <a href=" ">BioCoding</a> 
 </p>
 
 
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
-<br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
-<br><br>
-May the force be with you!
+💡 A ideia principal do nosso jogo é encontrar uma forma de influenciar positivamente os jovens de forma atrativa para a prevenção do câncer, além de ressaltar a importância de hábitos mais saudáveis, tanto para ele quanto para seus pais ou cuidadores. 
+<br>
+🕹 Utilizando a diversão como forma de aprendizado para os usuários.
 <br><br>
 
 ## 🛠 Estrutura de pastas
@@ -63,7 +61,7 @@ Há também 4 pastas que seguem da seguinte forma:
 <b>Windows:</b>
 
 Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
+Encontre o HealthynesSon.exe na pasta executáveis e execute-o como qualquer outro programa.
 
 ```sh
 Coloque código do prompt de comnando se for necessário
@@ -86,34 +84,17 @@ Através da cópia/clone/ download do repositório, altere os dados do readme.md
 
 ## 💻 Configuração para Desenvolvimento
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
-
+Não existe nenhuma dependência necessária para a instalação, basta apenas, baixar os tiles (imagens) para a importação e rodar "project.godot". 
 Para abrir este projeto você necessita das seguintes ferramentas:
 
 -<a href="https://godotengine.org/download">GODOT</a>
-
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
-```
 
 ## 🗃 Histórico de lançamentos
 
 A cada atualização os detalhes devem ser lançados aqui.
 
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.0.1 - 13/04/2022
+    Primeiro MVP: Jogo + Mecânicas Iniciais - Completo 
 
 ## 📋 Licença/License
 
