@@ -173,6 +173,7 @@ __meta__ = {
 process_priority = 100
 
 [node name="Pontuacao" type="Node2D" parent="CanvasLayer"]
+visible = false
 script = ExtResource( 14 )
 
 [node name="Iten" type="AudioStreamPlayer2D" parent="CanvasLayer/Pontuacao"]
