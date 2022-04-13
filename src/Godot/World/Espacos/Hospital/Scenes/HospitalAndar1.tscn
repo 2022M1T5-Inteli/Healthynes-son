@@ -13,9 +13,9 @@
 [ext_resource path="res://World/Espacos/Hospital/Sprites/animated_spider.png" type="Texture" id=11]
 [ext_resource path="res://World/Espacos/Hospital/Tiles/1_Generic_16x16.png" type="Texture" id=12]
 [ext_resource path="res://World/Espacos/Hospital/Tiles/Room_Builder_borders_16x16.png" type="Texture" id=13]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=14]
-[ext_resource path="res://World/Portas/VoltarHospital1.gd" type="Script" id=15]
-[ext_resource path="res://World/Portas/VoltarHospital2.gd" type="Script" id=16]
+[ext_resource path="res://Player/Scenes/Player.tscn" type="PackedScene" id=14]
+[ext_resource path="res://World/Portas/Scripts/VoltarHospital1.gd" type="Script" id=15]
+[ext_resource path="res://World/Portas/Scripts/VoltarHospital2.gd" type="Script" id=16]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Room_Builder_Floors_16x16.png 0"
@@ -2568,12 +2568,13 @@ tile_data = PoolIntArray( 851976, 1, 0, 851977, 1, 0, 851978, 1, 0, 851979, 1, 0
 [node name="npc 2" type="AnimatedSprite" parent="YSort/Parede"]
 position = Vector2( 145, 311 )
 frames = SubResource( 85 )
+frame = 4
 playing = true
 
 [node name="Quadro" type="AnimatedSprite" parent="YSort"]
 position = Vector2( 401, 401 )
 frames = SubResource( 77 )
-frame = 2
+frame = 3
 speed_scale = 2.0
 playing = true
 
@@ -2622,7 +2623,7 @@ tile_data = PoolIntArray( 786448, 536870914, 0, 786451, 536870918, 0, 851975, 7,
 [node name="npc 1" type="AnimatedSprite" parent="YSort"]
 position = Vector2( 392, 412 )
 frames = SubResource( 26 )
-frame = 7
+frame = 11
 playing = true
 
 [node name="Camera" type="AnimatedSprite" parent="YSort"]
@@ -2640,20 +2641,19 @@ playing = true
 position = Vector2( 201, 421 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 122 )
-frame = 12
+frame = 4
 playing = true
 
 [node name="npc 3" type="AnimatedSprite" parent="YSort"]
 position = Vector2( 352, 305 )
 frames = SubResource( 129 )
-frame = 2
 speed_scale = 0.1
 playing = true
 
 [node name="npc 4" type="AnimatedSprite" parent="YSort"]
 position = Vector2( 234, 420 )
 frames = SubResource( 136 )
-frame = 4
+frame = 2
 playing = true
 
 [node name="VoltarHospital1" type="Area2D" parent="."]

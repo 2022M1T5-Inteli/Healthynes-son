@@ -1785,7 +1785,7 @@ texture = ExtResource( 50 )
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Pedro"]
 position = Vector2( 0, -44 )
 frames = SubResource( 49 )
-frame = 2
+frame = 5
 playing = true
 
 [node name="Node2Db" type="Node2D" parent="."]
@@ -1837,7 +1837,6 @@ shape = SubResource( 71 )
 position = Vector2( 28, 131 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 13 )
-frame = 3
 speed_scale = 2.0
 playing = true
 

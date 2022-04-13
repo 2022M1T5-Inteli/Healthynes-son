@@ -13,8 +13,8 @@
 [ext_resource path="res://World/Espacos/Hospital/Tiles/Room_Builder_Floors_16x16.png" type="Texture" id=11]
 [ext_resource path="res://World/Espacos/Hospital/Tiles/Room_Builder_Walls_16x16.png" type="Texture" id=12]
 [ext_resource path="res://World/Espacos/Hospital/Tiles/Room_Builder_borders_16x16.png" type="Texture" id=13]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=14]
-[ext_resource path="res://World/Portas/VoltarHospital3.gd" type="Script" id=15]
+[ext_resource path="res://Player/Scenes/Player.tscn" type="PackedScene" id=14]
+[ext_resource path="res://World/Portas/Scripts/VoltarHospital3.gd" type="Script" id=15]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Room_Builder_Floors_16x16.png 0"
@@ -2657,13 +2657,13 @@ playing = true
 [node name="Raio-X" type="AnimatedSprite" parent="."]
 position = Vector2( 436, 154 )
 frames = SubResource( 34 )
-frame = 14
+frame = 13
 playing = true
 
 [node name="Resonancia" type="AnimatedSprite" parent="."]
 position = Vector2( 67, 160 )
 frames = SubResource( 49 )
-frame = 5
+frame = 11
 playing = true
 
 [node name="Porta-operacao" type="AnimatedSprite" parent="."]
@@ -2675,25 +2675,24 @@ playing = true
 [node name="Xray screen" type="AnimatedSprite" parent="."]
 position = Vector2( 349, 202 )
 frames = SubResource( 70 )
-frame = 4
 playing = true
 
 [node name="Xray screen 2" type="AnimatedSprite" parent="."]
 position = Vector2( 364, 202 )
 frames = SubResource( 83 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="secretaria" type="AnimatedSprite" parent="."]
 position = Vector2( 164, 25 )
 frames = SubResource( 87 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="Enfermeiro" type="AnimatedSprite" parent="."]
 position = Vector2( 32, 156 )
 frames = SubResource( 100 )
-frame = 1
+frame = 9
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 14 )]
