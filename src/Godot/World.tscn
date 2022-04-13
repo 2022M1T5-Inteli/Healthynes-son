@@ -72,25 +72,7 @@
 [ext_resource path="res://Tiles/NPCs/Tudo/Premade_Character_07.png" type="Texture" id=70]
 [ext_resource path="res://Tiles/NPCs/Tudo/Premade_Character_06.png" type="Texture" id=71]
 [ext_resource path="res://Tiles/NPCs/Tudo/Premade_Character_08.png" type="Texture" id=72]
-
-[sub_resource type="GDScript" id=17]
-script/source = "extends Node2D
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"
+[ext_resource path="res://World.gd" type="Script" id=73]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Modern_Exteriors_Singles_44.png 0"
@@ -1316,7 +1298,7 @@ animations = [ {
 
 [node name="World" type="Node2D"]
 position = Vector2( 715, 37 )
-script = SubResource( 17 )
+script = ExtResource( 73 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -463.0 ]
 }
@@ -1361,34 +1343,37 @@ position = Vector2( -6, 9 )
 [node name="1" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 36, 262 )
 frames = SubResource( 68 )
+frame = 7
 playing = true
 
 [node name="2" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 570, -346 )
 frames = SubResource( 68 )
+frame = 7
 playing = true
 
 [node name="3" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 669, -41 )
 frames = SubResource( 68 )
+frame = 7
 playing = true
 
 [node name="4" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 573, -86 )
 frames = SubResource( 81 )
-frame = 8
+frame = 3
 playing = true
 
 [node name="5" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 201, 266 )
 frames = SubResource( 81 )
-frame = 7
+frame = 2
 playing = true
 
 [node name="6" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( -267, -348 )
 frames = SubResource( 81 )
-frame = 7
+frame = 2
 playing = true
 
 [node name="7" type="AnimatedSprite" parent="Mapa/NPCs"]
@@ -1406,83 +1391,83 @@ frames = SubResource( 94 )
 [node name="10" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 517, 267 )
 frames = SubResource( 107 )
-frame = 1
+frame = 8
 playing = true
 
 [node name="11" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 209, -350 )
 frames = SubResource( 107 )
+frame = 7
 playing = true
 
 [node name="12" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( -284, -22 )
 frames = SubResource( 107 )
+frame = 7
 playing = true
 
 [node name="13" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 696, -346 )
 frames = SubResource( 120 )
-frame = 6
+frame = 1
 playing = true
 
 [node name="14" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 679, 266 )
 frames = SubResource( 120 )
-frame = 5
 playing = true
 
 [node name="15" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 283, -44 )
 frames = SubResource( 120 )
-frame = 4
+frame = 11
 playing = true
 
 [node name="16" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 821, -347 )
 frames = SubResource( 133 )
-frame = 4
+frame = 11
 playing = true
 
 [node name="17" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 831, 267 )
 frames = SubResource( 133 )
-frame = 4
+frame = 11
 playing = true
 
 [node name="18" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( -535, 455 )
 frames = SubResource( 133 )
-frame = 3
+frame = 10
 playing = true
 
 [node name="19" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( -29, -348 )
 frames = SubResource( 146 )
-frame = 3
+frame = 10
 playing = true
 
 [node name="20" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 812, 97 )
 frames = SubResource( 146 )
-frame = 2
+frame = 9
 playing = true
 
 [node name="21" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 399, -315 )
 frames = SubResource( 159 )
-frame = 5
 playing = true
 
 [node name="22" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 29, -249 )
 frames = SubResource( 159 )
-frame = 4
+frame = 11
 playing = true
 
 [node name="23" type="AnimatedSprite" parent="Mapa/NPCs"]
 position = Vector2( 178, 99 )
 frames = SubResource( 159 )
-frame = 4
+frame = 11
 playing = true
 
 [node name="Carros" type="YSort" parent="Mapa"]
@@ -1605,7 +1590,7 @@ __meta__ = {
 position = Vector2( 0, 14 )
 frames = SubResource( 13 )
 animation = "Display"
-frame = 4
+frame = 7
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -15710,11 +15695,11 @@ position = Vector2( -545, 309 )
 [node name="NPC praia" type="AnimatedSprite" parent="NPC"]
 position = Vector2( 347, 373 )
 frames = SubResource( 54 )
-frame = 1
+frame = 6
 playing = true
 
 [node name="NPC praia2" type="AnimatedSprite" parent="NPC"]
 position = Vector2( 380, 380 )
 frames = SubResource( 55 )
-frame = 5
+frame = 3
 playing = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=130 format=2]
+[gd_scene load_steps=131 format=2]
 
 [ext_resource path="res://Player/Lurdes/Lurdes_ALL.png" type="Texture" id=1]
 [ext_resource path="res://Tiles/Modern_Office_Revamped_v1.1/Modern_Office_Revamped/1_Room_Builder_Office/Room_Builder_Office_16x16.png" type="Texture" id=2]
@@ -57,6 +57,7 @@
 [ext_resource path="res://World/Mini-games/Trabalho/Scripts/Pontuacao.gd" type="Script" id=55]
 [ext_resource path="res://World/Mini-games/Pacman/tempo/pngegg.png" type="Texture" id=56]
 [ext_resource path="res://World/Mini-games/Pacman/Mapa/menuPontuação.png" type="Texture" id=57]
+[ext_resource path="res://Som/SomMini-Games/Officer/X2Download.com - Bad Guy - Billie Eilish 8bit Jazz Version (128 kbps).mp3" type="AudioStream" id=58]
 
 [sub_resource type="AtlasTexture" id=43]
 atlas = ExtResource( 49 )
@@ -1785,7 +1786,7 @@ texture = ExtResource( 50 )
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Pedro"]
 position = Vector2( 0, -44 )
 frames = SubResource( 49 )
-frame = 5
+frame = 2
 playing = true
 
 [node name="Node2Db" type="Node2D" parent="."]
@@ -1837,6 +1838,7 @@ shape = SubResource( 71 )
 position = Vector2( 28, 131 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 13 )
+frame = 2
 speed_scale = 2.0
 playing = true
 
@@ -1928,6 +1930,9 @@ text = "Reiniciar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 58 )
 
 [connection signal="pressed" from="Pontuacao/Node2D2/Voltar" to="." method="_on_Voltar_pressed"]
 [connection signal="pressed" from="Pontuacao/Node2D2/Reiniciar" to="." method="_on_Reiniciar_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/X2Download.com - Bad Guy - Billie Eilish 8bit Jazz Version (128 kbps).mp3-c77d26405ec472268218ae4e042d08d9.mp3str"
+
+[deps]
+
+source_file="res://Som/SomMini-Games/Officer/X2Download.com - Bad Guy - Billie Eilish 8bit Jazz Version (128 kbps).mp3"
+dest_files=[ "res://.import/X2Download.com - Bad Guy - Billie Eilish 8bit Jazz Version (128 kbps).mp3-c77d26405ec472268218ae4e042d08d9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

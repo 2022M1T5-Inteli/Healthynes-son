@@ -5,6 +5,7 @@ var ganhou = false
 func _ready():
 	$Pontuacao.visible = false
 	get_tree().paused = false
+	$Music.play()
 	
 func _process(delta):
 	if $Pedro.position.x >= $Mae.position.x - 15 and $Pedro.position.x <= $Mae.position.x + 15:

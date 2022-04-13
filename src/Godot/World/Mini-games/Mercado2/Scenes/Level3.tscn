@@ -24,7 +24,7 @@
 [ext_resource path="res://World/Mini-games/Mercado2/Scenes/world.tscn" type="PackedScene" id=22]
 [ext_resource path="res://World/Mini-games/Mercado2/Scripts/Level3.gd" type="Script" id=23]
 [ext_resource path="res://World/Mini-games/Pacman/Som/Efeitos/y2meta.com - September - Earth, Wind and Fire 8bit Jazz Version (128 kbps).mp3" type="AudioStream" id=24]
-[ext_resource path="res://World/Mini-games/Pacman/Som/Efeitos/y2meta.com - Mr. Sandman - The Chordettes 8bit Jazz Version (128 kbps).mp3" type="AudioStream" id=25]
+[ext_resource path="res://Som/SomMini-Games/Market/X2Download.com - Pegasus - James Scott 8 Bit Jazz Version (128 kbps).mp3" type="AudioStream" id=26]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Room_Builder_free_16x16.png 0"
@@ -185,7 +185,7 @@ stream = ExtResource( 24 )
 
 [node name="MrSandman" type="AudioStreamPlayer2D" parent="CanvasLayer/Pontuacao"]
 pause_mode = 2
-stream = ExtResource( 25 )
+stream = ExtResource( 26 )
 
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Pontuacao"]
 margin_right = 368.0
@@ -259,6 +259,9 @@ texture = ExtResource( 16 )
 position = Vector2( 211, 88 )
 scale = Vector2( 0.0336914, 0.03125 )
 texture = ExtResource( 16 )
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 26 )
 
 [connection signal="pressed" from="CanvasLayer/Pontuacao/Button" to="CanvasLayer/Pontuacao" method="_on_Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pontuacao/Button2" to="CanvasLayer/Pontuacao" method="_on_Button2_pressed"]

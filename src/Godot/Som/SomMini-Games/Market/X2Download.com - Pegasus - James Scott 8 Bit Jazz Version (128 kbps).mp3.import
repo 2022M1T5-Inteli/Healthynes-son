@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/X2Download.com - Pegasus - James Scott 8 Bit Jazz Version (128 kbps).mp3-9fc1d43ae5ec4163dc3b4cd16c9e4413.mp3str"
+
+[deps]
+
+source_file="res://Som/SomMini-Games/Market/X2Download.com - Pegasus - James Scott 8 Bit Jazz Version (128 kbps).mp3"
+dest_files=[ "res://.import/X2Download.com - Pegasus - James Scott 8 Bit Jazz Version (128 kbps).mp3-9fc1d43ae5ec4163dc3b4cd16c9e4413.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
