@@ -1,29 +1,43 @@
 extends Node2D
 
-func _ready():
-	$Node2D2/Reiniciar.visible = false
-	$Node2D2/Voltar.visible = false
-	$Node2D2/Continuar.visible = false
+var ganhou = false
 
-func _process(delta):
+func _ready():
+	$Pontuacao.visible = false
+	get_tree().paused = false
 	
+func _process(delta):
 	if $Pedro.position.x >= $Mae.position.x - 15 and $Pedro.position.x <= $Mae.position.x + 15:
 		get_tree().paused = true
-		$Node2D2/Reiniciar.visible = true
-		$Node2D2/Voltar.visible = true
-
-func _on_Voltar_pressed():
-	get_tree().change_scene("res://World/Work.tscn")
-	get_tree().paused = false
+		$Pontuacao.visible = true
+	pontuacao()
 	
-func _on_Reiniciar_pressed():
-	get_tree().reload_current_scene()
+func _on_Voltar_pressed():
 	get_tree().paused = false
-
-func _on_Continuar_pressed():
-	get_tree().change_scene("res://World/Work.tscn")
-	get_tree().paused = false
+	get_tree().change_scene("res://World/Espacos/Trabalho/Scenes/Trabalho.tscn")
 	Invent.pointsInv2 =+ 1
 
-
-
+func _on_Reiniciar_pressed():
+	get_tree().paused = false
+	get_tree().reload_current_scene()
+	
+func pontuacao():
+	if $Pedro.position.x < 300 and $Pedro.position.x >= 150:
+		print("3 estrelas")
+		Global.estrela = 3
+		ganhou = true
+		
+	if $Pedro.position.x < 150 and $Pedro.position.x >= 100:
+		print("2 estrelas")
+		Global.estrela = 2
+		ganhou = true
+		
+	if $Pedro.position.x < 100 and $Pedro.position.x > 60:
+		print("1 estrela")
+		Global.estrela = 1
+		ganhou = true
+		
+	if $Pedro.position.x <= 60:
+		print("perdeuplayboy")
+		Global.estrela = 0
+		ganhou = false

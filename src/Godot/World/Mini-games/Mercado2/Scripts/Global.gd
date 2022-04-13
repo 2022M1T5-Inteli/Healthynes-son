@@ -3,6 +3,8 @@ extends Node2D
 var interacao = false
 var interacaoTimer = 0
 
+var estrela = null
+
 var pontos = 0
 var maca = preload("res://World/Mini-games/Mercado2/Scenes/Maca.tscn")
 var balas = preload("res://World/Mini-games/Mercado2/Scenes/Balas.tscn")

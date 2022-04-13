@@ -57,6 +57,7 @@
 extents = Vector2( 11, 18 )
 
 [node name="Work" type="Node2D"]
+pause_mode = 2
 position = Vector2( -313, -128 )
 script = ExtResource( 2 )
 

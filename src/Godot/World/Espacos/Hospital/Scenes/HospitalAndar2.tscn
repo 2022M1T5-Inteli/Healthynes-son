@@ -1,4 +1,4 @@
-[gd_scene load_steps=182 format=2]
+[gd_scene load_steps=181 format=2]
 
 [ext_resource path="res://World/Espacos/Hospital/Sprites/animated_hospital_xrayscreen_head.png" type="Texture" id=1]
 [ext_resource path="res://World/Espacos/Hospital/Sprites/animated_monitor.png" type="Texture" id=2]
@@ -13,9 +13,8 @@
 [ext_resource path="res://World/Espacos/Hospital/Tiles/Room_Builder_Floors_16x16.png" type="Texture" id=11]
 [ext_resource path="res://World/Espacos/Hospital/Tiles/Room_Builder_Walls_16x16.png" type="Texture" id=12]
 [ext_resource path="res://World/Espacos/Hospital/Tiles/Room_Builder_borders_16x16.png" type="Texture" id=13]
-[ext_resource path="res://Player/Scenes/Player.tscn" type="PackedScene" id=14]
-[ext_resource path="res://World/Portas/Scripts/VoltarHospital3.gd" type="Script" id=15]
-[ext_resource path="res://World/Inventario/inventario.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=14]
+[ext_resource path="res://World/Portas/VoltarHospital3.gd" type="Script" id=15]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Room_Builder_Floors_16x16.png 0"
@@ -2653,48 +2652,48 @@ tile_data = PoolIntArray( 19, 32, 0, 327702, 29, 0, 524293, 536870912, 0, 524294
 [node name="Monitor" type="AnimatedSprite" parent="."]
 position = Vector2( 194, 47 )
 frames = SubResource( 10 )
-frame = 4
 playing = true
 
 [node name="Raio-X" type="AnimatedSprite" parent="."]
 position = Vector2( 436, 154 )
 frames = SubResource( 34 )
-frame = 3
+frame = 14
 playing = true
 
 [node name="Resonancia" type="AnimatedSprite" parent="."]
 position = Vector2( 67, 160 )
 frames = SubResource( 49 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="Porta-operacao" type="AnimatedSprite" parent="."]
 position = Vector2( 408, 185 )
 frames = SubResource( 60 )
-frame = 1
+frame = 7
 playing = true
 
 [node name="Xray screen" type="AnimatedSprite" parent="."]
 position = Vector2( 349, 202 )
 frames = SubResource( 70 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="Xray screen 2" type="AnimatedSprite" parent="."]
 position = Vector2( 364, 202 )
 frames = SubResource( 83 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="secretaria" type="AnimatedSprite" parent="."]
 position = Vector2( 164, 25 )
 frames = SubResource( 87 )
+frame = 2
 playing = true
 
 [node name="Enfermeiro" type="AnimatedSprite" parent="."]
 position = Vector2( 32, 156 )
 frames = SubResource( 100 )
-frame = 11
+frame = 1
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 14 )]
@@ -2705,9 +2704,6 @@ current = true
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="Node2D" parent="Player" instance=ExtResource( 16 )]
-z_index = 20
 
 [node name="VoltarHospital3" type="Area2D" parent="."]
 position = Vector2( 289, -177 )
