@@ -7,7 +7,7 @@
 [ext_resource path="res://Player/Scenes/Mão.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/Mini-games/Pacman/Level/Enemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/Mini-games/Pacman/tempo/scripts/timer_label.gd" type="Script" id=7]
-[ext_resource path="res://World/Mini-games/Pacman/Pontuacao.gd" type="Script" id=8]
+[ext_resource path="res://World/Mini-games/Pacman/Level/Pontuacao2.gd" type="Script" id=8]
 [ext_resource path="res://World/Mini-games/Pacman/Itens/Scripts/Iten.gd" type="Script" id=9]
 [ext_resource path="res://World/Mini-games/Pacman/Itens/Sprites/Whisky.png" type="Texture" id=10]
 [ext_resource path="res://World/Mini-games/Pacman/Mapa/menuPontuação.png" type="Texture" id=11]
@@ -24,12 +24,12 @@ outline_size = 2
 outline_color = Color( 0.160784, 0.0117647, 0, 0 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFontData" id=2]
+[sub_resource type="DynamicFontData" id=5]
 font_path = "res://World/tempo/Basic Comical Regular NC.ttf"
 
 [sub_resource type="DynamicFont" id=4]
 size = 15
-font_data = SubResource( 2 )
+font_data = SubResource( 5 )
 
 [node name="Level" type="Node2D"]
 
