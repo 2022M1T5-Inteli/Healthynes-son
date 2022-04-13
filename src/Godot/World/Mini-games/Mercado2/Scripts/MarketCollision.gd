@@ -11,4 +11,4 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.is_in_group("AlimentosRuins"):
 			body.queue_free()
-			Global.pontos -= 200
+			Global.pontos -= 100

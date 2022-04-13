@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://World/Mini-games/Mercado2/Scripts/TextureProgressMercado.gd" type="Script" id=1]
 [ext_resource path="res://Tiles/Market/Grocery_Store_Singles_99.png" type="Texture" id=2]
@@ -13,18 +13,13 @@
 [ext_resource path="res://World/Mini-games/Mercado2/Sprites/pontuacao.png" type="Texture" id=11]
 [ext_resource path="res://World/Mini-games/Mercado2/Sprites/pontuacaoBackground.png" type="Texture" id=12]
 [ext_resource path="res://Tiles/Market/Grocery_Store_Singles_101.png" type="Texture" id=13]
-[ext_resource path="res://World/Mini-games/Pacman/Pontuacao.gd" type="Script" id=14]
 [ext_resource path="res://Tiles/cenaMercado/free_overview.png" type="Texture" id=15]
-[ext_resource path="res://World/Mini-games/Pacman/tempo/pngegg.png" type="Texture" id=16]
-[ext_resource path="res://World/Mini-games/Pacman/Som/Musica/y2meta.com - Collect Item sound effect (128 kbps).mp3" type="AudioStream" id=17]
 [ext_resource path="res://Tiles/cenaMercado/parede.png" type="Texture" id=18]
 [ext_resource path="res://Tiles/Market/Grocery_Store_Singles_103.png" type="Texture" id=19]
 [ext_resource path="res://Tiles/Market/Grocery_Store_Singles_69.png" type="Texture" id=20]
 [ext_resource path="res://World/Mini-games/Pacman/Mapa/menuPontuação.png" type="Texture" id=21]
 [ext_resource path="res://World/Mini-games/Mercado2/Scenes/world.tscn" type="PackedScene" id=22]
 [ext_resource path="res://World/Mini-games/Mercado2/Scripts/Level3.gd" type="Script" id=23]
-[ext_resource path="res://World/Mini-games/Pacman/Som/Efeitos/y2meta.com - September - Earth, Wind and Fire 8bit Jazz Version (128 kbps).mp3" type="AudioStream" id=24]
-[ext_resource path="res://World/Mini-games/Pacman/Som/Efeitos/y2meta.com - Mr. Sandman - The Chordettes 8bit Jazz Version (128 kbps).mp3" type="AudioStream" id=25]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Room_Builder_free_16x16.png 0"
@@ -83,13 +78,6 @@
 3/shape_one_way_margin = 0.0
 3/shapes = [  ]
 3/z_index = 0
-
-[sub_resource type="DynamicFontData" id=2]
-font_path = "res://World/tempo/Basic Comical Regular NC.ttf"
-
-[sub_resource type="DynamicFont" id=3]
-size = 15
-font_data = SubResource( 2 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 23 )
@@ -154,6 +142,32 @@ texture = ExtResource( 3 )
 
 [node name="world" parent="." instance=ExtResource( 22 )]
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 185, 107 )
+scale = Vector2( 2.0625, 2.0625 )
+texture = ExtResource( 21 )
+
+[node name="Button" type="Button" parent="Sprite"]
+pause_mode = 2
+margin_left = -25.697
+margin_top = -9.69697
+margin_right = 28.303
+margin_bottom = 12.303
+icon = ExtResource( 4 )
+flat = true
+
+[node name="Button2" type="Button" parent="Sprite"]
+pause_mode = 2
+margin_left = -26.1818
+margin_top = 7.27273
+margin_right = 27.8182
+margin_bottom = 29.2727
+icon = ExtResource( 10 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TextureProgress" type="TextureProgress" parent="."]
 margin_left = 237.0
 margin_top = 10.0
@@ -169,96 +183,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-process_priority = 100
-
-[node name="Pontuacao" type="Node2D" parent="CanvasLayer"]
-visible = false
-script = ExtResource( 14 )
-
-[node name="Iten" type="AudioStreamPlayer2D" parent="CanvasLayer/Pontuacao"]
-stream = ExtResource( 17 )
-
-[node name="September" type="AudioStreamPlayer2D" parent="CanvasLayer/Pontuacao"]
-pause_mode = 2
-stream = ExtResource( 24 )
-
-[node name="MrSandman" type="AudioStreamPlayer2D" parent="CanvasLayer/Pontuacao"]
-pause_mode = 2
-stream = ExtResource( 25 )
-
-[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Pontuacao"]
-margin_right = 368.0
-margin_bottom = 223.0
-color = Color( 0, 0, 0, 0.156863 )
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Pontuacao"]
-margin_left = 112.0
-margin_top = 40.0
-margin_right = 201.0
-margin_bottom = 163.0
-color = Color( 0.517647, 0.45098, 0.45098, 0 )
-
-[node name="MenuPontuação" type="Sprite" parent="CanvasLayer/Pontuacao/ColorRect"]
-position = Vector2( 72, 60 )
-scale = Vector2( 2.09375, 2.18311 )
-texture = ExtResource( 21 )
-
-[node name="ColorRect3" type="ColorRect" parent="CanvasLayer/Pontuacao"]
-margin_left = 107.0
-margin_top = 40.0
-margin_right = 196.0
-margin_bottom = 166.0
-rect_scale = Vector2( 1.01547, 1.15395 )
-color = Color( 0.517647, 0.45098, 0.45098, 0 )
-
-[node name="MenuPontuação2" type="Sprite" parent="CanvasLayer/Pontuacao/ColorRect3"]
-position = Vector2( 76, 54 )
-scale = Vector2( 2.09375, 1.83484 )
-texture = ExtResource( 21 )
-
-[node name="Button" type="Button" parent="CanvasLayer/Pontuacao"]
-pause_mode = 2
-margin_left = 131.0
-margin_top = 98.0
-margin_right = 207.0
-margin_bottom = 120.0
-rect_scale = Vector2( 2, 2 )
-icon = ExtResource( 4 )
-flat = true
-
-[node name="Button2" type="Button" parent="CanvasLayer/Pontuacao"]
-pause_mode = 2
-margin_left = 131.0
-margin_top = 127.0
-margin_right = 205.0
-margin_bottom = 149.0
-rect_scale = Vector2( 2, 2 )
-icon = ExtResource( 10 )
-flat = true
-
-[node name="P" type="Label" parent="CanvasLayer/Pontuacao"]
-margin_left = 125.0
-margin_top = 41.0
-margin_right = 191.0
-margin_bottom = 58.0
-custom_fonts/font = SubResource( 3 )
-text = "Pontuacao"
-
-[node name="Sprite2" type="Sprite" parent="CanvasLayer/Pontuacao"]
-position = Vector2( 160, 88 )
-scale = Vector2( 0.0336914, 0.03125 )
-texture = ExtResource( 16 )
-
-[node name="Sprite3" type="Sprite" parent="CanvasLayer/Pontuacao"]
-position = Vector2( 186, 88 )
-scale = Vector2( 0.0336914, 0.03125 )
-texture = ExtResource( 16 )
-
-[node name="Sprite4" type="Sprite" parent="CanvasLayer/Pontuacao"]
-position = Vector2( 211, 88 )
-scale = Vector2( 0.0336914, 0.03125 )
-texture = ExtResource( 16 )
-
-[connection signal="pressed" from="CanvasLayer/Pontuacao/Button" to="CanvasLayer/Pontuacao" method="_on_Button_pressed"]
-[connection signal="pressed" from="CanvasLayer/Pontuacao/Button2" to="CanvasLayer/Pontuacao" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Sprite/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Sprite/Button2" to="." method="_on_Button2_pressed"]
