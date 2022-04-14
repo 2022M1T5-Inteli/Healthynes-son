@@ -1,4 +1,4 @@
-extends Sprite
+extends AnimatedSprite
 
 func _ready():
 	visible = false

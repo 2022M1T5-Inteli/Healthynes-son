@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://Player/Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Espacos/Mercado/Scripts/Carrinho.gd" type="Script" id=2]
@@ -50,7 +50,7 @@
 [ext_resource path="res://Tiles/House/floor2-1.png" type="Texture" id=48]
 [ext_resource path="res://Tiles/Market/Grocery_Store_Singles_341.png" type="Texture" id=49]
 [ext_resource path="res://Tiles/Market/Grocery_Store_Singles_407.png" type="Texture" id=50]
-[ext_resource path="res://World/Sprites/seta.png" type="Texture" id=51]
+[ext_resource path="res://Tiles/UI/UI_arrow_pointing_up.png" type="Texture" id=51]
 [ext_resource path="res://Tiles/House/floor2-2.png" type="Texture" id=52]
 [ext_resource path="res://Tiles/Market/Grocery_Store_Singles_406.png" type="Texture" id=53]
 [ext_resource path="res://Tiles/Market/Grocery_Store_Singles_404.png" type="Texture" id=54]
@@ -205,6 +205,38 @@
 7/shape_one_way_margin = 0.0
 7/shapes = [  ]
 7/z_index = 0
+
+[sub_resource type="AtlasTexture" id=160]
+atlas = ExtResource( 51 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=161]
+atlas = ExtResource( 51 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=162]
+atlas = ExtResource( 51 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=163]
+atlas = ExtResource( 51 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=164]
+atlas = ExtResource( 51 )
+region = Rect2( 64, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=165]
+atlas = ExtResource( 51 )
+region = Rect2( 80, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=166]
+animations = [ {
+"frames": [ SubResource( 160 ), SubResource( 161 ), SubResource( 162 ), SubResource( 163 ), SubResource( 164 ), SubResource( 165 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Market" type="Node2D"]
 __meta__ = {
@@ -629,12 +661,6 @@ position = Vector2( 41, 55 )
 scale = Vector2( 0.0805367, 0.0831225 )
 script = ExtResource( 2 )
 
-[node name="Seta" type="Sprite" parent="Cenário/Carrinhos2/Carrinho5"]
-position = Vector2( 2763.85, 1671.79 )
-rotation = 1.57126
-scale = Vector2( 0.232091, 0.238893 )
-texture = ExtResource( 51 )
-
 [node name="GroceryStoreSingles31" type="Sprite" parent="Cenário/Carrinhos2/Carrinho5"]
 position = Vector2( 2756.51, 1900.81 )
 scale = Vector2( 11.5747, 11.4386 )
@@ -644,6 +670,14 @@ texture = ExtResource( 62 )
 position = Vector2( 2619.92, 1744.41 )
 build_mode = 1
 polygon = PoolVector2Array( 49.6675, 120.304, 50.4171, 388.548, 224.251, 400.578, 235.918, 120.304 )
+
+[node name="Seta1" type="AnimatedSprite" parent="Cenário/Carrinhos2/Carrinho5"]
+position = Vector2( 2756.51, 1708.32 )
+scale = Vector2( 12.4167, 12.0304 )
+frames = SubResource( 166 )
+frame = 4
+playing = true
+flip_v = true
 
 [node name="PrateleirasFrutas" type="YSort" parent="Cenário"]
 

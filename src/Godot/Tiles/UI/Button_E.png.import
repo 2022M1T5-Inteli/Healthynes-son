@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/setaRed.png-ee5e2c6ca343528f013ab682a92d99c4.stex"
+path="res://.import/Button_E.png-504b533eeb37fefecf045d475415ee11.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tiles/setaRed.png"
-dest_files=[ "res://.import/setaRed.png-ee5e2c6ca343528f013ab682a92d99c4.stex" ]
+source_file="res://Tiles/UI/Button_E.png"
+dest_files=[ "res://.import/Button_E.png-504b533eeb37fefecf045d475415ee11.stex" ]
 
 [params]
 

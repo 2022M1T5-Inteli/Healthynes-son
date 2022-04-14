@@ -3,14 +3,14 @@ extends Node2D
 var ganhou = false
 
 func _ready():
-	$Pontuacao.visible = false
+	$FiltroTV/Pontuacao.visible = false
 	get_tree().paused = false
 	$Music.play()
 	
 func _process(delta):
-	if $Pedro.position.x >= $Mae.position.x - 15 and $Pedro.position.x <= $Mae.position.x + 15:
+	if $FiltroTV/Pedro.position.x >= $FiltroTV/Mae.position.x - 15 and $FiltroTV/Pedro.position.x <= $FiltroTV/Mae.position.x + 15:
 		get_tree().paused = true
-		$Pontuacao.visible = true
+		$FiltroTV/Pontuacao.visible = true
 	pontuacao()
 	
 func _on_Voltar_pressed():
@@ -23,22 +23,22 @@ func _on_Reiniciar_pressed():
 	get_tree().reload_current_scene()
 	
 func pontuacao():
-	if $Pedro.position.x < 300 and $Pedro.position.x >= 150:
+	if $FiltroTV/Pedro.position.x < 300 and $FiltroTV/Pedro.position.x >= 150:
 		print("3 estrelas")
 		Global.estrela = 3
 		ganhou = true
 		
-	if $Pedro.position.x < 150 and $Pedro.position.x >= 100:
+	if $FiltroTV/Pedro.position.x < 150 and $FiltroTV/Pedro.position.x >= 100:
 		print("2 estrelas")
 		Global.estrela = 2
 		ganhou = true
 		
-	if $Pedro.position.x < 100 and $Pedro.position.x > 60:
+	if $FiltroTV/Pedro.position.x < 100 and $FiltroTV/Pedro.position.x > 60:
 		print("1 estrela")
 		Global.estrela = 1
 		ganhou = true
 		
-	if $Pedro.position.x <= 60:
+	if $FiltroTV/Pedro.position.x <= 60:
 		print("perdeuplayboy")
 		Global.estrela = 0
 		ganhou = false

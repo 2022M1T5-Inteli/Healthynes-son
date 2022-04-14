@@ -1,6 +1,6 @@
 extends Node2D
 var speed = -1.5
-var maxspeed = -3
+var maxspeed = -2.5
 # A cada frame o cenário se move
 func _process(delta):
 	if speed > maxspeed:

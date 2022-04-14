@@ -57,6 +57,8 @@ texture = ExtResource( 1 )
 hframes = 6
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 4.76837e-07, -2.68125 )
+scale = Vector2( 1.53409, 1.00284 )
 build_mode = 1
 polygon = PoolVector2Array( -11, 0, 11, 0, 11, 22, -11, 22 )
 

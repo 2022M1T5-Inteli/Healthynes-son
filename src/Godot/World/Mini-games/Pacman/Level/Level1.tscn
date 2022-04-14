@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://World/Mini-games/Pacman/tempo/Basic Comical Regular NC.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Player/Scenes/Player.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://World/Mini-games/Pacman/tempo/pngegg.png" type="Texture" id=15]
 [ext_resource path="res://Tiles/exitButton.png" type="Texture" id=16]
 [ext_resource path="res://Tiles/restartButton.png" type="Texture" id=17]
+[ext_resource path="res://World/Shader/crt_material.tres" type="Material" id=18]
 
 [sub_resource type="DynamicFont" id=3]
 size = 7
@@ -33,39 +34,171 @@ font_data = SubResource( 2 )
 
 [node name="Level" type="Node2D"]
 
-[node name="LevelNavigation" type="Navigation2D" parent="." groups=["LevelNavigation"]]
+[node name="FiltroTV" type="CanvasLayer" parent="."]
 
-[node name="Node2D" parent="LevelNavigation" instance=ExtResource( 3 )]
+[node name="LevelNavigation" type="Navigation2D" parent="FiltroTV" groups=["LevelNavigation"]]
+
+[node name="Node2D" parent="FiltroTV/LevelNavigation" instance=ExtResource( 3 )]
 position = Vector2( -16, -1 )
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
+[node name="Player" parent="FiltroTV" instance=ExtResource( 2 )]
 position = Vector2( 106, 93 )
 
-[node name="Mão" parent="Player" groups=["Player"] instance=ExtResource( 5 )]
+[node name="Mão" parent="FiltroTV/Player" groups=["Player"] instance=ExtResource( 5 )]
 position = Vector2( 0, -9 )
 
-[node name="Enemy" parent="." groups=["Enemy"] instance=ExtResource( 6 )]
+[node name="Enemy" parent="FiltroTV" groups=["Enemy"] instance=ExtResource( 6 )]
 position = Vector2( 99, 165 )
 
-[node name="Caminhos" type="Node2D" parent="."]
+[node name="Caminhos" type="Node2D" parent="FiltroTV"]
 
-[node name="caminho" parent="Caminhos" instance=ExtResource( 4 )]
+[node name="caminho" parent="FiltroTV/Caminhos" instance=ExtResource( 4 )]
 position = Vector2( 40, 125 )
 
-[node name="caminho2" parent="Caminhos" instance=ExtResource( 4 )]
+[node name="caminho2" parent="FiltroTV/Caminhos" instance=ExtResource( 4 )]
 position = Vector2( 263, 54 )
 
-[node name="caminho3" parent="Caminhos" instance=ExtResource( 4 )]
+[node name="caminho3" parent="FiltroTV/Caminhos" instance=ExtResource( 4 )]
 position = Vector2( 233, 197 )
 
-[node name="caminho6" parent="Caminhos" instance=ExtResource( 4 )]
+[node name="caminho6" parent="FiltroTV/Caminhos" instance=ExtResource( 4 )]
 position = Vector2( 200, 89 )
 
-[node name="caminho4" parent="Caminhos" instance=ExtResource( 4 )]
+[node name="caminho4" parent="FiltroTV/Caminhos" instance=ExtResource( 4 )]
 position = Vector2( 54, 53 )
 
-[node name="caminho5" parent="Caminhos" instance=ExtResource( 4 )]
+[node name="caminho5" parent="FiltroTV/Caminhos" instance=ExtResource( 4 )]
 position = Vector2( 245, 145 )
+
+[node name="MenuPontuação2" type="Sprite" parent="FiltroTV"]
+position = Vector2( 42, -55 )
+scale = Vector2( 1.6875, 2.26453 )
+texture = ExtResource( 11 )
+
+[node name="timer_label" type="Label" parent="FiltroTV"]
+margin_left = 12.0
+margin_top = 3.0
+margin_right = 71.0
+margin_bottom = 18.0
+custom_colors/font_color = Color( 1, 0.772549, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "\"00:00:00:00:00\""
+align = 1
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Itens" type="Node2D" parent="FiltroTV"]
+script = ExtResource( 9 )
+
+[node name="Whisky" type="StaticBody2D" parent="FiltroTV/Itens" groups=["Itens"]]
+position = Vector2( 207, 102 )
+collision_mask = 0
+
+[node name="Whisky" type="Sprite" parent="FiltroTV/Itens/Whisky"]
+position = Vector2( 2, 2 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FiltroTV/Itens/Whisky"]
+position = Vector2( 0.166667, 0 )
+scale = Vector2( 0.833333, 1 )
+polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Whisky2" type="StaticBody2D" parent="FiltroTV/Itens" groups=["Itens"]]
+position = Vector2( 107, 51 )
+collision_mask = 0
+
+[node name="Whisky" type="Sprite" parent="FiltroTV/Itens/Whisky2"]
+position = Vector2( 2, 2 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FiltroTV/Itens/Whisky2"]
+position = Vector2( 0.166667, 0 )
+scale = Vector2( 0.833333, 1 )
+polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Whisky3" type="StaticBody2D" parent="FiltroTV/Itens" groups=["Itens"]]
+position = Vector2( 246, 141 )
+collision_mask = 0
+
+[node name="Whisky" type="Sprite" parent="FiltroTV/Itens/Whisky3"]
+position = Vector2( 2, 2 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FiltroTV/Itens/Whisky3"]
+position = Vector2( 0.166667, 0 )
+scale = Vector2( 0.833333, 1 )
+polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Whisky4" type="StaticBody2D" parent="FiltroTV/Itens" groups=["Itens"]]
+position = Vector2( 39, 80 )
+collision_mask = 0
+
+[node name="Whisky" type="Sprite" parent="FiltroTV/Itens/Whisky4"]
+position = Vector2( 2, 2 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FiltroTV/Itens/Whisky4"]
+position = Vector2( 0.166667, 0 )
+scale = Vector2( 0.833333, 1 )
+polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Whisky5" type="StaticBody2D" parent="FiltroTV/Itens" groups=["Itens"]]
+position = Vector2( 288, 55 )
+collision_mask = 0
+
+[node name="Whisky" type="Sprite" parent="FiltroTV/Itens/Whisky5"]
+position = Vector2( 2, 2 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FiltroTV/Itens/Whisky5"]
+position = Vector2( 0.166667, 0 )
+scale = Vector2( 0.833333, 1 )
+polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="FiltroTV"]
+material = ExtResource( 18 )
+margin_right = 368.0
+margin_bottom = 223.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_priority = 100
@@ -178,128 +311,6 @@ texture = ExtResource( 15 )
 position = Vector2( 211, 88 )
 scale = Vector2( 0.0336914, 0.03125 )
 texture = ExtResource( 15 )
-
-[node name="MenuPontuação2" type="Sprite" parent="."]
-position = Vector2( 42, -55 )
-scale = Vector2( 1.6875, 2.26453 )
-texture = ExtResource( 11 )
-
-[node name="timer_label" type="Label" parent="."]
-margin_left = 12.0
-margin_top = 3.0
-margin_right = 71.0
-margin_bottom = 18.0
-custom_colors/font_color = Color( 1, 0.772549, 0, 1 )
-custom_fonts/font = SubResource( 3 )
-text = "\"00:00:00:00:00\""
-align = 1
-script = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Itens" type="Node2D" parent="."]
-script = ExtResource( 9 )
-
-[node name="Whisky" type="StaticBody2D" parent="Itens" groups=["Itens"]]
-position = Vector2( 207, 102 )
-collision_mask = 0
-
-[node name="Whisky" type="Sprite" parent="Itens/Whisky"]
-position = Vector2( 2, 2 )
-scale = Vector2( 0.05, 0.05 )
-texture = ExtResource( 10 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Itens/Whisky"]
-position = Vector2( 0.166667, 0 )
-scale = Vector2( 0.833333, 1 )
-polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Whisky2" type="StaticBody2D" parent="Itens" groups=["Itens"]]
-position = Vector2( 107, 51 )
-collision_mask = 0
-
-[node name="Whisky" type="Sprite" parent="Itens/Whisky2"]
-position = Vector2( 2, 2 )
-scale = Vector2( 0.05, 0.05 )
-texture = ExtResource( 10 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Itens/Whisky2"]
-position = Vector2( 0.166667, 0 )
-scale = Vector2( 0.833333, 1 )
-polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Whisky3" type="StaticBody2D" parent="Itens" groups=["Itens"]]
-position = Vector2( 246, 141 )
-collision_mask = 0
-
-[node name="Whisky" type="Sprite" parent="Itens/Whisky3"]
-position = Vector2( 2, 2 )
-scale = Vector2( 0.05, 0.05 )
-texture = ExtResource( 10 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Itens/Whisky3"]
-position = Vector2( 0.166667, 0 )
-scale = Vector2( 0.833333, 1 )
-polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Whisky4" type="StaticBody2D" parent="Itens" groups=["Itens"]]
-position = Vector2( 39, 80 )
-collision_mask = 0
-
-[node name="Whisky" type="Sprite" parent="Itens/Whisky4"]
-position = Vector2( 2, 2 )
-scale = Vector2( 0.05, 0.05 )
-texture = ExtResource( 10 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Itens/Whisky4"]
-position = Vector2( 0.166667, 0 )
-scale = Vector2( 0.833333, 1 )
-polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Whisky5" type="StaticBody2D" parent="Itens" groups=["Itens"]]
-position = Vector2( 288, 55 )
-collision_mask = 0
-
-[node name="Whisky" type="Sprite" parent="Itens/Whisky5"]
-position = Vector2( 2, 2 )
-scale = Vector2( 0.05, 0.05 )
-texture = ExtResource( 10 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Itens/Whisky5"]
-position = Vector2( 0.166667, 0 )
-scale = Vector2( 0.833333, 1 )
-polygon = PoolVector2Array( -2, -1, -2, 9, 4, 9, 4, -1, 2, -5, 0, -5 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [connection signal="pressed" from="CanvasLayer/Pontuacao/Button" to="CanvasLayer/Pontuacao" method="_on_Button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pontuacao/Button2" to="CanvasLayer/Pontuacao" method="_on_Button2_pressed"]

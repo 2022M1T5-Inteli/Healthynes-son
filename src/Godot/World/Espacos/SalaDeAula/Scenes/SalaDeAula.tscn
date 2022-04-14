@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Tiles/House/floor2-9.png" type="Texture" id=1]
 [ext_resource path="res://Tiles/5_Classroom_and_Library_Singles/Classroom_and_Library_Singles_5.png" type="Texture" id=2]
@@ -15,7 +15,7 @@
 [ext_resource path="res://Tiles/5_Classroom_and_Library_Singles/Classroom_and_Library_Singles_55.png" type="Texture" id=13]
 [ext_resource path="res://Tiles/5_Classroom_and_Library_Singles/Classroom_and_Library_Singles_26.png" type="Texture" id=14]
 [ext_resource path="res://Tiles/5_Classroom_and_Library_Singles/Classroom_and_Library_Singles_32.png" type="Texture" id=15]
-[ext_resource path="res://Tiles/House/Did you know interesting fact instagram post (12).png" type="Texture" id=16]
+[ext_resource path="res://Tiles/UI/UI_arrow_pointing_up.png" type="Texture" id=16]
 [ext_resource path="res://Tiles/5_Classroom_and_Library_Singles/Classroom_and_Library_Singles_35.png" type="Texture" id=17]
 [ext_resource path="res://Tiles/House/poster.png" type="Texture" id=18]
 [ext_resource path="res://Tiles/House/window.png" type="Texture" id=19]
@@ -71,6 +71,38 @@
 2/shapes = [  ]
 2/z_index = 0
 
+[sub_resource type="AtlasTexture" id=160]
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=161]
+atlas = ExtResource( 16 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=162]
+atlas = ExtResource( 16 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=163]
+atlas = ExtResource( 16 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=164]
+atlas = ExtResource( 16 )
+region = Rect2( 64, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=165]
+atlas = ExtResource( 16 )
+region = Rect2( 80, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=166]
+animations = [ {
+"frames": [ SubResource( 160 ), SubResource( 161 ), SubResource( 162 ), SubResource( 163 ), SubResource( 164 ), SubResource( 165 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 31.5 )
 
@@ -93,15 +125,19 @@ polygon = PoolVector2Array( 354.977, 122, 354.977, 140, 367.628, 140, 367.628, 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Saida"]
 
-[node name="Seta1" type="Sprite" parent="Saida"]
-position = Vector2( 355, 133 )
-scale = Vector2( 0.01, 0.01 )
-texture = ExtResource( 16 )
+[node name="Seta3" type="AnimatedSprite" parent="Saida"]
+position = Vector2( 341, 133 )
+rotation = 1.5708
+frames = SubResource( 166 )
+frame = 3
+playing = true
 
-[node name="Seta2" type="Sprite" parent="Saida"]
-position = Vector2( 339, 133 )
-scale = Vector2( 0.01, 0.01 )
-texture = ExtResource( 16 )
+[node name="Seta4" type="AnimatedSprite" parent="Saida"]
+position = Vector2( 353, 133 )
+rotation = 1.5708
+frames = SubResource( 166 )
+frame = 3
+playing = true
 
 [node name="ColisaoSuperior" type="StaticBody2D" parent="."]
 position = Vector2( 79, 99 )
@@ -289,4 +325,4 @@ position = Vector2( 18, 132 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cards"]
 build_mode = 1
-polygon = PoolVector2Array( 213, 117, 227, 117, 228, 129, 212, 129 )
+polygon = PoolVector2Array( 213, 117, 227, 117, 230, 141, 211, 141 )
