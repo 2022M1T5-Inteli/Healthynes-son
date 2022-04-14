@@ -67,10 +67,10 @@ texture = ExtResource( 1 )
 script = ExtResource( 7 )
 
 [node name="Button" type="Button" parent="YSort/Area2D4"]
-margin_left = 137.0
-margin_top = 77.0
-margin_right = 435.0
-margin_bottom = 155.0
+margin_left = 136.0
+margin_top = 105.0
+margin_right = 434.0
+margin_bottom = 183.0
 rect_scale = Vector2( 0.314007, 0.314007 )
 icon = ExtResource( 2 )
 flat = true
@@ -105,9 +105,9 @@ __meta__ = {
 
 [node name="Button4" type="Button" parent="YSort/Area2D4"]
 margin_left = 132.0
-margin_top = 142.0
+margin_top = 140.0
 margin_right = 489.0
-margin_bottom = 235.0
+margin_bottom = 233.0
 rect_scale = Vector2( 0.297194, 0.297194 )
 icon = ExtResource( 3 )
 flat = true
@@ -119,6 +119,7 @@ __meta__ = {
 position = Vector2( 185, 207 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 7 )
+frame = 1
 playing = true
 
 [connection signal="pressed" from="YSort/Area2D4/Button" to="YSort/Area2D4" method="_on_Button_pressed"]
