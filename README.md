@@ -34,14 +34,15 @@
 |<br>
 |-->documentos<br>
   &emsp;|-->antigos<br>
-  &emsp;|GDD - BioCoding - V11.pdf<br>
   &emsp;|GDD - BioCoding - V11.docx<br>
+  &emsp;|GDD - BioCoding - V11.pdf<br>
 |-->executáveis<br>
   &emsp;|-->Windows<br>
   &emsp;|-->HTML<br>
 |-->imagens<br>
   &emsp;|--> tilesets<br>
 |-->src<br>
+  &emsp;|--> Godot<br>
 |readme.md<br>
 
 A pasta raiz contém um arquivo principal:
